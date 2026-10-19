@@ -53,7 +53,7 @@ struct LessonRow: View {
         HStack(spacing: 14) {
             Image(systemName: lesson.category.map(Theme.icon(for:)) ?? "lightbulb")
                 .font(.title3)
-                .foregroundStyle(Theme.color(for: lesson.measure))
+                .foregroundStyle(Theme.color(forArea: lesson.measure))
                 .frame(width: 28)
             VStack(alignment: .leading, spacing: 3) {
                 Text(lesson.title).font(.headline)
@@ -84,7 +84,7 @@ struct LessonDetailView: View {
             VStack(alignment: .leading, spacing: 22) {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(spacing: 8) {
-                        Pill(text: lesson.measure.title, color: Theme.color(for: lesson.measure))
+                        Pill(text: lesson.measure.title, color: Theme.color(forArea: lesson.measure))
                         if let category = lesson.category { Pill(text: category.title) }
                         Pill(text: "\(lesson.minutes) min read")
                     }

@@ -15,7 +15,7 @@ enum Theme {
         measure == .verbal ? .indigo : .teal
     }
 
-    static func color(for area: Lesson.Area) -> Color {
+    static func color(forArea area: Lesson.Area) -> Color {
         switch area {
         case .general: return .gray
         case .writing: return .purple
