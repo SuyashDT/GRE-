@@ -1,0 +1,42 @@
+name: Build macOS app
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Validate content
+        run: python3 scripts/validate_content.py Sources/GRECore/Resources/Content/*.json
+
+      - name: Build
+        run: swift build
+
+      - name: Test
+        run: swift test
+
+      - name: Package app
+        run: scripts/build-app.sh --universal
+
+      - name: Upload app
+        uses: actions/upload-artifact@v4
+        with:
+          name: GRE-Prep-app
+          path: build/GRE-Prep.zip
+          retention-days: 14

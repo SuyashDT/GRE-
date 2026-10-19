@@ -1,0 +1,2006 @@
+{
+  "id": "mock-test-1",
+  "title": "Mock Test 1",
+  "description": "A full-length practice test in the current shorter GRE format: one Analyze an Issue essay, then two Verbal and two Quantitative sections. The second section of each measure adapts to how you did on the first.",
+  "formatVersion": "GRE General Test, shorter format (since September 2023)",
+  "essay": {
+    "id": "m1-awa",
+    "statement": "Communities benefit more from preserving their historic buildings than from replacing them with modern structures that better serve present-day needs.",
+    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
+    "minutes": 30
+  },
+  "order": [
+    "verbal-1",
+    "quant-1",
+    "verbal-2",
+    "quant-2"
+  ],
+  "routing": {
+    "verbal": 7,
+    "quant": 7
+  },
+  "stimuli": [
+    {
+      "id": "m1-vp1",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "For much of the twentieth century, ecologists assumed that most flowering plants were visited by a broad array of pollinators, so that the loss of any one pollinating species would be buffered by the others.",
+          "This assumption of functional redundancy encouraged a measure of complacency: if bees, flies, and beetles were largely interchangeable, the decline of a single species posed little threat to plant reproduction."
+        ],
+        [
+          "Recent field experiments have complicated this picture.",
+          "When researchers temporarily removed the most abundant bumblebee species from plots in a subalpine meadow, the remaining pollinators did not simply fill the gap it left.",
+          "Instead, many of them became less faithful to particular flowers, visiting several plant species in a single foraging bout.",
+          "Because a pollinator that moves indiscriminately among species deposits much of its pollen on flowers that cannot use it, the plants in these plots set markedly less seed, even though the total number of pollinator visits barely changed."
+        ],
+        [
+          "Such results suggest that redundancy measured by visit counts can be misleading.",
+          "What matters is not merely how many visitors a flower receives but how consistently those visitors carry pollen of the right kind.",
+          "On this view, a dominant species may play a disproportionate role in a pollinator community, not because it performs a task that no other species can perform, but because the competition it imposes keeps its rivals specialized."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp2",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "In 2019 the city of Halvorsen converted two of the four traffic lanes on Main Street, its principal commercial corridor, into protected bicycle lanes.",
+          "Merchants had opposed the plan, warning that slower traffic and fewer lanes for cars would drive customers away.",
+          "Instead, sales-tax receipts from businesses on Main Street rose by 12 percent over the next two years.",
+          "Citing this increase, city officials have concluded that the bicycle lanes stimulated commercial activity on Main Street, and they now intend to make similar conversions on three other commercial streets."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp3",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Seventeenth-century Dutch still lifes, with their gleaming goblets, half-peeled lemons, and toppled silver, have often been read as moral allegories.",
+          "On this interpretation, every wilting flower and guttering candle reminded viewers that worldly pleasures are fleeting.",
+          "Yet the allegorical reading, however ingenious, rests on surprisingly thin evidence.",
+          "Few contemporary inventories or letters describe still lifes in moral terms; collectors far more often praised the painters’ skill in rendering the textures of pewter, glass, and fruit.",
+          "Moreover, the very objects that supposedly warned against luxury were themselves luxury goods—costly imports that a prosperous merchant might well have wished to see celebrated rather than condemned.",
+          "None of this proves that the paintings lacked moral meaning.",
+          "It does suggest, however, that such meaning was one possibility among several, and perhaps not the one that mattered most to the people who bought them."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp4",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Before the 1880s, nearly every town in the United States kept its own time, setting its clocks by the moment when the sun stood highest overhead.",
+          "Because noon arrives slightly later at each point farther west, a single state might contain dozens of local times differing by a few minutes.",
+          "For most of the century this patchwork caused little trouble, since few people traveled far enough or fast enough to notice it."
+        ],
+        [
+          "The railroads changed that.",
+          "A train crossing hundreds of miles needed a timetable that made sense at every station, and each railroad company addressed the problem by adopting its own standard, usually the local time of the city where it had its headquarters.",
+          "The result was hardly an improvement: a station served by several lines might display several clocks, each showing a different “railroad time.”",
+          "In 1883, after years of discussion, the major railroads agreed to divide the continent into a few broad time zones, within each of which all clocks would be set alike."
+        ],
+        [
+          "What is striking is that this reform was carried out by private companies rather than by government.",
+          "Congress did not write the time zones into federal law until 1918, and in the interval a number of cities clung to local time, some out of civic pride and others out of suspicion of the railroads’ growing power.",
+          "Yet the holdouts were gradually worn down less by argument than by convenience: once most of the clocks around them showed railroad time, keeping a different hour became more trouble than it was worth."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp5",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "A regional hospital network recently introduced an online system that lets patients book their own appointments; patients remain free to book by telephone instead.",
+          "During the system’s first year, patients who booked online missed 30 percent fewer appointments than patients who booked by telephone.",
+          "Missed appointments cost the network an estimated $4 million a year.",
+          "Pointing to the difference between the two groups, the network’s administrators propose eliminating telephone booking altogether, arguing that requiring every patient to book online will substantially reduce the network’s overall rate of missed appointments."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp6",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "The epistolary novel, told entirely through letters, enjoyed great popularity in eighteenth-century Europe but had largely fallen out of favor by the middle of the nineteenth.",
+          "Literary historians have often blamed its decline on technical awkwardness: characters must implausibly pause at moments of crisis to compose long, detailed letters.",
+          "This explanation, however, overlooks the fact that eighteenth-century readers were well aware of the convention’s artificiality and enjoyed the form anyway, much as opera audiences accept that a dying heroine can sing.",
+          "A more persuasive account links the form’s decline to the maturing of the omniscient narrator, whose freedom to move among the thoughts of many characters offered the intimacy that letters had once supplied without confining the reader to a single correspondent’s point of view.",
+          "Letters, in other words, did not come to seem false; they came to seem unnecessary."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp7",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "For much of the twentieth century, the attribution of Old Master paintings rested on a premise so widely shared that it was seldom stated: that a great artist’s hand is singular and recognizable, and that a trained eye, attending closely to the handling of paint, can distinguish it from the work of even the most accomplished imitator.",
+          "Connoisseurs who accepted this premise conceived of their task largely as one of subtraction.",
+          "Beginning with catalogues swollen by generations of hopeful dealers and collectors, they struck from them every work that failed to display the master’s characteristic touch, and the accepted oeuvres of several major painters shrank dramatically as a result."
+        ],
+        [
+          "This program has been unsettled less by new findings about individual pictures than by a changed understanding of how pictures were made.",
+          "Archival research into the organization of seventeenth-century studios has established that many celebrated painters ran workshops in which assistants and pupils prepared canvases, copied compositions, and executed substantial portions of works that left the studio under the master’s name.",
+          "Contemporaries did not regard such practices as deceptive; a patron who commissioned a painting “by” a master was ordinarily purchasing the master’s design and supervision, and perhaps his finishing touches, rather than his unassisted labor.",
+          "If this is so, the connoisseur’s question—did the master paint this canvas?—may be less difficult to answer than poorly posed, since it presupposes a conception of authorship that the works themselves do not reflect."
+        ],
+        [
+          "It would be a mistake, however, to conclude that the revisionists have simply replaced one orthodoxy with another.",
+          "Their emphasis on collaboration, salutary as a corrective, can obscure real differences in quality among works produced in a single studio—differences that contemporaries themselves recognized when they paid considerably more for pictures on which the master had worked extensively.",
+          "Nor does the prevalence of workshop production render stylistic analysis obsolete; on the contrary, distinguishing the several hands at work within a single canvas demands a finer discrimination than the older connoisseurship ever required.",
+          "What has changed is the purpose such analysis serves: rather than policing a boundary between the authentic and the spurious, it now seeks to reconstruct the division of labor through which a painting came into being."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp8",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "At a Bronze Age settlement in the eastern Mediterranean, archaeologists have found that grain-storage pits dug after about 1200 BCE were, on average, three times as large as those dug earlier.",
+          "Moreover, whereas the earlier pits were scattered among individual houses, the later ones were clustered around a single large building near the center of the settlement.",
+          "On the basis of these findings, some researchers have concluded that around 1200 BCE control over the settlement’s grain stores passed from individual households to a central authority."
+        ]
+      ]
+    },
+    {
+      "id": "m1-vp9",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Economists have long puzzled over why firms in many industries pay wages well above the level needed to attract qualified workers.",
+          "One influential explanation, the efficiency-wage hypothesis, holds that such premiums reflect not generosity but strategy.",
+          "Because supervising employees is costly and imperfect, a firm that pays more than workers could earn elsewhere gives them something to lose, and the threat of dismissal thereby becomes a sharper spur to diligence.",
+          "The hypothesis carries an uncomfortable corollary.",
+          "If every firm pursues this strategy, wages throughout the economy settle above the level at which the supply of labor would match the demand for it, and some people who would gladly work at the prevailing wage cannot find jobs.",
+          "Unemployment, on this view, is not an aberration that a well-functioning market would eliminate but a condition on which the system of incentives itself depends."
+        ]
+      ]
+    },
+    {
+      "id": "m1-qd1",
+      "kind": "data",
+      "title": "Riverside Cycles: Bicycle Sales, 2020–2024",
+      "intro": "The bar graph shows the number of bicycles of each type sold by Riverside Cycles in each year from 2020 to 2024. The table shows the average selling price of each type of bicycle in 2024. The store sells only these three types of bicycles.",
+      "tables": [
+        {
+          "title": "Average Selling Price per Bicycle, 2024",
+          "columns": [
+            "Type of bicycle",
+            "Average selling price"
+          ],
+          "rows": [
+            [
+              "Road",
+              "$900"
+            ],
+            [
+              "Mountain",
+              "$1,100"
+            ],
+            [
+              "Electric",
+              "$2,400"
+            ]
+          ]
+        }
+      ],
+      "charts": [
+        {
+          "title": "Bicycles Sold by Type, 2020–2024",
+          "type": "bar",
+          "xLabel": "Year",
+          "yLabel": "Number of bicycles sold",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "series": [
+            {
+              "name": "Road",
+              "values": [
+                240,
+                260,
+                230,
+                250,
+                270
+              ]
+            },
+            {
+              "name": "Mountain",
+              "values": [
+                180,
+                210,
+                200,
+                190,
+                180
+              ]
+            },
+            {
+              "name": "Electric",
+              "values": [
+                40,
+                80,
+                120,
+                150,
+                210
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m1-qd2",
+      "kind": "data",
+      "title": "Monthly Household Budget",
+      "intro": "A household has a total monthly budget of $4,500. The circle graph shows the percent of this budget allotted to each category.",
+      "charts": [
+        {
+          "title": "Distribution of the $4,500 Monthly Budget",
+          "type": "pie",
+          "categories": [
+            "Housing (32%)",
+            "Food (15%)",
+            "Transportation (12%)",
+            "Savings (18%)",
+            "Utilities (8%)",
+            "Other (15%)"
+          ],
+          "series": [
+            {
+              "name": "Percent of budget",
+              "values": [
+                32,
+                15,
+                12,
+                18,
+                8,
+                15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m1-qd3",
+      "kind": "data",
+      "title": "Northgate Logistics: Staffing and Salaries",
+      "intro": "Northgate Logistics has exactly four offices. The table shows the number of employees and the average (arithmetic mean) annual salary at each office in 2024. The line graph shows the company's total numbers of full-time and part-time employees from 2019 to 2024.",
+      "tables": [
+        {
+          "title": "Employees and Average Annual Salary by Office, 2024",
+          "columns": [
+            "Office",
+            "Number of employees",
+            "Average annual salary"
+          ],
+          "rows": [
+            [
+              "Atlanta",
+              "48",
+              "$56,000"
+            ],
+            [
+              "Boston",
+              "30",
+              "$72,000"
+            ],
+            [
+              "Chicago",
+              "42",
+              "$64,000"
+            ],
+            [
+              "Denver",
+              "30",
+              "$60,000"
+            ]
+          ]
+        }
+      ],
+      "charts": [
+        {
+          "title": "Full-Time and Part-Time Employees, 2019–2024",
+          "type": "line",
+          "xLabel": "Year",
+          "yLabel": "Number of employees",
+          "categories": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "series": [
+            {
+              "name": "Full-time",
+              "values": [
+                80,
+                85,
+                95,
+                100,
+                110,
+                120
+              ]
+            },
+            {
+              "name": "Part-time",
+              "values": [
+                15,
+                20,
+                25,
+                25,
+                30,
+                30
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "V1",
+      "measure": "verbal",
+      "stage": 1,
+      "tier": "standard",
+      "minutes": 18,
+      "questions": [
+        {
+          "id": "m1-v1-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Far from being the _____ figure that popular biographies portray, the composer was deeply engaged in the business of music: he negotiated his own contracts, haggled with publishers over royalties, and kept meticulous accounts of every performance fee.",
+          "blanks": [
+            [
+              "mercenary",
+              "prolific",
+              "unworldly",
+              "litigious",
+              "gregarious"
+            ]
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "“Far from being” signals that the blank must name the opposite of what follows, and what follows is a composer immersed in practical business: contracts, royalties, accounts. *Unworldly* (naive about practical affairs) is that opposite. *Mercenary* is the trap: it describes what the composer actually was, not the popular image the sentence rejects."
+        },
+        {
+          "id": "m1-v1-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Critics who dismissed the novelist’s early stories as (i) _____—mere sketches of provincial life with no larger ambition—were forced to reconsider when her later work revealed that those modest scenes had been (ii) _____ a vast, interlocking chronicle all along.",
+          "blanks": [
+            [
+              "trenchant",
+              "ornate",
+              "slight"
+            ],
+            [
+              "departures from",
+              "fragments of",
+              "rebuttals to"
+            ]
+          ],
+          "correct": [
+            2,
+            1
+          ],
+          "explanation": "The dashes define blank (i): “mere sketches… with no larger ambition” calls for *slight* (insubstantial); *trenchant* and *ornate* describe sharpness or style, not a lack of ambition. For blank (ii), “interlocking” and “all along” show that the small scenes were parts of a larger whole, that is, *fragments of* the chronicle. *Departures from* reverses this, implying the early stories broke away from the later design."
+        },
+        {
+          "id": "m1-v1-03",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Because the drug’s side effects emerged only after years of continuous use, the initial clinical trials, which lasted a mere six months, were (i) _____ to detect them; the regulators who approved the drug on the basis of those trials can thus hardly be accused of (ii) _____.",
+          "blanks": [
+            [
+              "guaranteed",
+              "ill-equipped",
+              "intended"
+            ],
+            [
+              "clairvoyance",
+              "intransigence",
+              "dereliction"
+            ]
+          ],
+          "correct": [
+            1,
+            2
+          ],
+          "explanation": "The “because” clause supplies the cause: side effects that take years to appear cannot show up in a six-month trial, so the trials were *ill-equipped* to detect them. It follows (“thus”) that regulators relying on those trials can hardly be blamed for *dereliction* (neglect of duty). *Clairvoyance* is tempting because the regulators could not foresee the problem, but no one is “accused” of clairvoyance; the blank needs a fault."
+        },
+        {
+          "id": "m1-v1-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "The economist’s model was long admired for its (i) _____: with only three variables, it seemed to account for decades of price movements. Yet this very simplicity proved to be its (ii) _____, for the model could not (iii) _____ the sudden shocks—wars, droughts, financial panics—that dominated the historical record.",
+          "blanks": [
+            [
+              "parsimony",
+              "intricacy",
+              "novelty"
+            ],
+            [
+              "hallmark",
+              "salvation",
+              "undoing"
+            ],
+            [
+              "precipitate",
+              "accommodate",
+              "exaggerate"
+            ]
+          ],
+          "correct": [
+            0,
+            2,
+            1
+          ],
+          "explanation": "“With only three variables” defines blank (i): the model was admired for its *parsimony* (economy of means). “Yet this very simplicity” signals a reversal, so the virtue became its *undoing*; *hallmark* keeps the positive sense and ignores “Yet.” The model failed because it could not *accommodate* (take account of) sudden shocks; *precipitate* (cause) and *exaggerate* make no sense for a model that leaves such events out."
+        },
+        {
+          "id": "m1-v1-05",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp1",
+          "prompt": "The primary purpose of the passage is to",
+          "options": [
+            "defend the assumption of functional redundancy against recent experimental challenges",
+            "argue that bumblebees are more efficient pollinators than flies or beetles",
+            "explain why plants in subalpine meadows are especially vulnerable to pollinator decline",
+            "describe an experimental finding that complicates a long-standing assumption and consider what it implies",
+            "compare the foraging behavior of several pollinator species in the absence of competition"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "The passage reports an experiment that complicates the long-held assumption of functional redundancy (unchanged visit counts concealed a drop in seed set), concludes that “redundancy measured by visit counts can be misleading,” and then explains what this implies about dominant species. Choice D covers both parts. A reverses the author’s position, B and C raise issues the passage never addresses, and E describes only one detail of the experiment."
+        },
+        {
+          "id": "m1-v1-06",
+          "category": "readingComprehension",
+          "topic": "Detail",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m1-vp1",
+          "prompt": "Consider each of the choices separately and select all that apply. According to the passage, which of the following occurred in the plots from which the bumblebee species was removed?",
+          "options": [
+            "The flowers in the plots received, in total, about as many pollinator visits as before the removal.",
+            "Many of the remaining pollinators visited more than one plant species during a single foraging bout.",
+            "Other pollinator species increased in number until they had replaced the bumblebee’s contribution to seed production."
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "The passage states that “the total number of pollinator visits barely changed,” supporting the first choice, and that many remaining pollinators visited “several plant species in a single foraging bout,” supporting the second. The third is contradicted: the remaining pollinators “did not simply fill the gap,” and the plants “set markedly less seed.”"
+        },
+        {
+          "id": "m1-v1-07",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp1",
+          "prompt": "The author mentions that “the total number of pollinator visits barely changed” primarily in order to",
+          "options": [
+            "suggest that the removal experiment was flawed in its design",
+            "rule out a drop in the number of visits as the explanation for the decline in seed production",
+            "indicate that the remaining pollinators increased in abundance after the removal",
+            "support the traditional view that pollinator species are largely interchangeable",
+            "explain why the researchers chose to remove the most abundant bumblebee species"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Seed set fell even though visits held steady, so a decline in visits cannot explain the result; the detail isolates floral fidelity as the cause (B). D is the trap: steady visit counts might seem to support the redundancy view, but the author cites them to show that such counts are misleading. Nothing in the passage supports A, C, or E."
+        },
+        {
+          "id": "m1-v1-08",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Though the senator’s admirers described her readiness to compromise as statesmanlike, her critics regarded the same disposition as proof that she was merely _____, willing to abandon any conviction the moment it became politically costly.",
+          "options": [
+            "steadfast",
+            "pliant",
+            "dogmatic",
+            "resolute",
+            "malleable",
+            "candid"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            4
+          ],
+          "explanation": "The critics recast willingness to compromise as weakness: she bends under pressure and drops convictions when they become costly. *Pliant* and *malleable* both mean easily shaped or influenced and produce sentences alike in meaning. *Steadfast* and *resolute* are a synonym pair with the opposite meaning, and *dogmatic* and *candid* do not describe someone who abandons her convictions."
+        },
+        {
+          "id": "m1-v1-09",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Because the archive’s early records were kept by dozens of clerks, each with a private system of abbreviation, the documents are notoriously _____, and even specialists must spend weeks learning to decipher them.",
+          "options": [
+            "opaque",
+            "voluminous",
+            "apocryphal",
+            "impenetrable",
+            "copious",
+            "pristine"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            3
+          ],
+          "explanation": "Both the cause (dozens of private abbreviation systems) and the effect (weeks spent learning to decipher the records) point to documents that are hard to understand: *opaque* and *impenetrable*. *Voluminous* and *copious* are a tempting synonym pair, but sheer quantity would not explain why the records must be deciphered. *Apocryphal* (of doubtful authenticity) and *pristine* do not fit."
+        },
+        {
+          "id": "m1-v1-10",
+          "category": "readingComprehension",
+          "topic": "Strengthen/Weaken",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp2",
+          "prompt": "Which of the following, if true, most seriously weakens the officials’ conclusion?",
+          "options": [
+            "Several merchants on Main Street reported that some longtime customers complained about the new traffic pattern.",
+            "The number of cyclists using Main Street more than tripled in the two years after the conversion.",
+            "The three streets slated for conversion contain more businesses than Main Street does.",
+            "Protected bicycle lanes cost the city less to maintain than ordinary traffic lanes do.",
+            "Over the same two years, sales-tax receipts from businesses elsewhere in Halvorsen, including streets with no bicycle lanes, rose by an average of 18 percent."
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The officials credit the bicycle lanes with Main Street’s 12 percent rise in receipts. If receipts rose even more (18 percent) on streets without bicycle lanes, a citywide trend better explains the increase, and Main Street may actually have lagged, so E seriously weakens the conclusion. B shows the lanes were used but says nothing about sales, and A, C, and D do not bear on whether the lanes caused the increase."
+        },
+        {
+          "id": "m1-v1-11",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 2,
+          "format": "sentence",
+          "stimulusId": "m1-vp3",
+          "prompt": "Select the sentence in the passage that draws on period documents to indicate what the paintings’ first owners admired in them.",
+          "correct": [
+            3
+          ],
+          "explanation": "Only the sentence beginning “Few contemporary inventories or letters” cites documents from the period, and it reports that collectors “far more often praised the painters’ skill in rendering the textures” of objects. The sentence about luxury goods offers a conjecture about what a merchant “might well have wished,” not documentary evidence."
+        },
+        {
+          "id": "m1-v1-12",
+          "category": "readingComprehension",
+          "topic": "Author's Attitude",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp3",
+          "prompt": "The author’s attitude toward the allegorical reading of Dutch still lifes is best described as",
+          "options": [
+            "enthusiastic endorsement",
+            "reluctant acceptance",
+            "qualified skepticism",
+            "dismissive contempt",
+            "detached neutrality"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The author calls the allegorical reading “ingenious” but says it rests on “surprisingly thin evidence,” then cautions that “none of this proves” the paintings lacked moral meaning. That is real but limited doubt: *qualified skepticism*. D is too extreme given that concession, and A, B, and E ignore the doubts the author clearly states."
+        }
+      ]
+    },
+    {
+      "id": "V2E",
+      "measure": "verbal",
+      "stage": 2,
+      "tier": "easier",
+      "minutes": 23,
+      "questions": [
+        {
+          "id": "m1-v2e-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 1,
+          "format": "blanks",
+          "prompt": "The museum’s new director, unlike her famously _____ predecessor, answers every letter from the public and holds monthly open forums with visitors.",
+          "blanks": [
+            [
+              "affable",
+              "erudite",
+              "frugal",
+              "punctual",
+              "aloof"
+            ]
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "“Unlike” sets the predecessor against a new director who is highly accessible, answering every letter and meeting visitors monthly. The predecessor must therefore have been *aloof* (distant, unapproachable). *Affable* (friendly) describes the new director rather than the contrast, and the other choices have nothing to do with accessibility."
+        },
+        {
+          "id": "m1-v2e-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "Early reviewers dismissed the playwright’s dialogue as merely _____, but audiences today, accustomed to the clipped rhythms of film, tend to admire the same brevity as a kind of economy.",
+          "blanks": [
+            [
+              "verbose",
+              "curt",
+              "florid",
+              "sentimental",
+              "archaic"
+            ]
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "“The same brevity” shows that reviewers and today’s audiences judge one quality differently: what audiences now admire as economy, reviewers dismissed as *curt* (rudely brief). *Verbose* and *florid* contradict the dialogue’s brevity, and *sentimental* and *archaic* have nothing to do with it."
+        },
+        {
+          "id": "m1-v2e-03",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "The committee’s report was anything but (i) _____: it ran to more than six hundred pages and addressed in (ii) _____ detail every objection raised during the hearings.",
+          "blanks": [
+            [
+              "exhaustive",
+              "partisan",
+              "concise"
+            ],
+            [
+              "painstaking",
+              "cursory",
+              "ambiguous"
+            ]
+          ],
+          "correct": [
+            2,
+            0
+          ],
+          "explanation": "A report of more than six hundred pages is the opposite of *concise*, so “anything but concise” fits blank (i); *exhaustive* describes the report accurately and so cannot follow “anything but.” A report that answers every objection treats them in *painstaking* detail; *cursory* (hasty, superficial) contradicts that thoroughness."
+        },
+        {
+          "id": "m1-v2e-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "Although the theory was initially greeted with (i) _____ by most geologists, who found its proposed mechanism implausible, the steady accumulation of supporting evidence over the following decades gradually made it (ii) _____.",
+          "blanks": [
+            [
+              "acclaim",
+              "skepticism",
+              "indifference"
+            ],
+            [
+              "obsolete",
+              "esoteric",
+              "orthodox"
+            ]
+          ],
+          "correct": [
+            1,
+            2
+          ],
+          "explanation": "Geologists who found the mechanism implausible would greet the theory with *skepticism*; *acclaim* contradicts their judgment, and *indifference* does not follow from finding an idea implausible. “Although” signals a reversal, and mounting supporting evidence would make the theory *orthodox* (generally accepted), not *obsolete* or *esoteric*."
+        },
+        {
+          "id": "m1-v2e-05",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "The biographer’s portrait of the inventor is admirably (i) _____: she neither (ii) _____ his considerable achievements nor glosses over the ruthlessness with which he treated his business partners, and the result is a figure far more (iii) _____ than the saintly genius of earlier accounts.",
+          "blanks": [
+            [
+              "reverent",
+              "balanced",
+              "scathing"
+            ],
+            [
+              "celebrates",
+              "documents",
+              "belittles"
+            ],
+            [
+              "complex",
+              "heroic",
+              "obscure"
+            ]
+          ],
+          "correct": [
+            1,
+            2,
+            0
+          ],
+          "explanation": "The colon explains blank (i): a biographer who neither downplays achievements nor hides faults is *balanced*. Blank (ii) must parallel “glosses over,” naming an unfair treatment of the achievements, so *belittles* fits; *celebrates* and *documents* are not faults. The result is a figure more *complex* than the “saintly genius” of earlier books; *heroic* would make him resemble that earlier portrait."
+        },
+        {
+          "id": "m1-v2e-06",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m1-vp4",
+          "prompt": "The primary purpose of the passage is to",
+          "options": [
+            "explain how a practical problem created by rail travel led to the adoption of standard time zones",
+            "argue that the federal government should have established time zones before the railroads did",
+            "criticize the railroads for imposing their own standards of time on reluctant cities",
+            "describe the methods by which nineteenth-century towns determined local noon",
+            "compare the advantages of local time with those of railroad time"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The passage explains why local time caused little trouble until the railroads arrived, how the railroads’ first fix made matters worse, and how the 1883 time zones were adopted and eventually accepted, so A states its purpose. B and C impose judgments the author never makes, D focuses on a minor detail, and E misdescribes a passage that weighs no advantages."
+        },
+        {
+          "id": "m1-v2e-07",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m1-vp4",
+          "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that, before 1883,",
+          "options": [
+            "for much of the nineteenth century, differences among local times went largely unnoticed by most people",
+            "railroad companies did not all keep the same time",
+            "a traveler waiting at a single station might have seen clocks that disagreed with one another"
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "All three are supported. The passage says the patchwork “caused little trouble” because few people traveled far or fast enough “to notice it” (first choice), that each railroad adopted “its own standard” (second choice), and that a station served by several lines “might display several clocks, each showing a different ‘railroad time’” (third choice)."
+        },
+        {
+          "id": "m1-v2e-08",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 2,
+          "format": "sentence",
+          "stimulusId": "m1-vp4",
+          "prompt": "Select the sentence in the passage that explains why the railroads’ initial response to the problem of local time failed to eliminate confusion.",
+          "correct": [
+            5
+          ],
+          "explanation": "The sentence beginning “The result was hardly an improvement” gives the reason: because each railroad kept its own standard, a station served by several lines could show several conflicting times. The sentence before it describes the railroads’ response but does not say why it failed."
+        },
+        {
+          "id": "m1-v2e-09",
+          "category": "readingComprehension",
+          "topic": "Vocabulary in Context",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m1-vp4",
+          "prompt": "In the context in which it appears, “worn down” most nearly means",
+          "options": [
+            "physically eroded",
+            "outnumbered",
+            "induced to give way",
+            "diminished in importance",
+            "defeated in debate"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The holdouts were “worn down less by argument than by convenience”: as more of the clocks around them followed railroad time, their resistance gradually gave way. *Induced to give way* captures this. *Defeated in debate* contradicts “less by argument,” and *physically eroded* is a literal sense that cannot apply to a city’s resistance."
+        },
+        {
+          "id": "m1-v2e-10",
+          "category": "sentenceEquivalence",
+          "topic": "Definition",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "The professor’s lectures were famously _____: she might begin with a question about medieval trade routes and end, ninety minutes later, discussing the chemistry of dyes, with little apparent connection between the two.",
+          "options": [
+            "concise",
+            "digressive",
+            "riveting",
+            "succinct",
+            "abstruse",
+            "rambling"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            5
+          ],
+          "explanation": "The colon introduces an example: a lecture that wanders from trade routes to the chemistry of dyes “with little apparent connection.” *Digressive* and *rambling* both describe such wandering. *Concise* and *succinct* are a synonym pair with the opposite sense, and *riveting* and *abstruse* do not describe a lack of connection."
+        },
+        {
+          "id": "m1-v2e-11",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Because rainfall in the region is so _____, farmers there have learned never to count on a good harvest, planting drought-tolerant crops even in years that begin wet.",
+          "options": [
+            "meager",
+            "erratic",
+            "abundant",
+            "scant",
+            "capricious",
+            "seasonal"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            4
+          ],
+          "explanation": "Farmers who can “never count on a good harvest” and who plant drought-tolerant crops “even in years that begin wet” are coping with unpredictable rainfall: *erratic* and *capricious*. *Meager* and *scant* are a tempting synonym pair, but rainfall that was always low would not produce years that “begin wet.” *Abundant* contradicts the need for drought-tolerant crops, and *seasonal* does not explain the uncertainty."
+        },
+        {
+          "id": "m1-v2e-12",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Far from being _____, the new regulations were the product of nearly a decade of public hearings, expert testimony, and careful revision.",
+          "options": [
+            "hasty",
+            "deliberate",
+            "draconian",
+            "considered",
+            "lenient",
+            "precipitate"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            5
+          ],
+          "explanation": "“Far from being” sets up a contrast with what follows: regulations shaped over “nearly a decade” of hearings and revision were anything but rushed. *Hasty* and *precipitate* (done without careful thought) both supply that contrasting idea. *Deliberate* and *considered* are a synonym pair describing what the regulations actually were, so they cannot follow “far from being.”"
+        },
+        {
+          "id": "m1-v2e-13",
+          "category": "readingComprehension",
+          "topic": "Assumption",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp5",
+          "prompt": "The administrators’ argument depends on the assumption that",
+          "options": [
+            "most patients prefer booking appointments online to booking them by telephone",
+            "telephone booking costs the network more to operate than online booking does",
+            "missed appointments are the largest source of the network’s lost revenue",
+            "the patients who chose to book online were not, as a group, already more likely than telephone users to keep their appointments",
+            "the online system will eventually send automated reminders to patients"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "The administrators assume the online system itself makes patients keep appointments. Because patients chose their booking method, the online group may simply have been more reliable to begin with; if so, forcing everyone online would not reduce missed appointments. The argument therefore depends on D. A, B, C, and E might be true, but the argument does not need any of them."
+        },
+        {
+          "id": "m1-v2e-14",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m1-vp6",
+          "prompt": "The author mentions opera audiences primarily in order to",
+          "options": [
+            "suggest that the epistolary novel influenced the development of opera",
+            "illustrate the point that audiences can enjoy a convention while recognizing that it is unrealistic",
+            "indicate that opera declined in popularity at the same time as the epistolary novel",
+            "imply that eighteenth-century readers were less sophisticated than modern ones",
+            "provide an example of the technical awkwardness that doomed the epistolary novel"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Opera audiences, who accept that a dying heroine can sing, serve as an analogy for eighteenth-century readers who knew the letter convention was artificial yet enjoyed it anyway (B). E reverses the point: the comparison shows that technical awkwardness did not cause the decline. The passage says nothing about the history of opera (A, C) or about readers’ sophistication (D)."
+        },
+        {
+          "id": "m1-v2e-15",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-vp6",
+          "prompt": "It can be inferred that the author believes which of the following about the omniscient narrator?",
+          "options": [
+            "It was developed specifically to correct the implausibility of the epistolary novel.",
+            "It struck eighteenth-century readers as more artificial than the letter form.",
+            "It required characters to pause at moments of crisis to reveal their thoughts.",
+            "It was less popular than the epistolary novel throughout the nineteenth century.",
+            "It could provide a closeness to characters’ inner lives comparable to that once offered by letters."
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The author says the omniscient narrator “offered the intimacy that letters had once supplied,” which supports E. A goes too far, since the author never says the narrator was developed for this purpose, and C assigns to the narrator a flaw the passage attributes to letters. B and D are never discussed."
+        }
+      ]
+    },
+    {
+      "id": "V2H",
+      "measure": "verbal",
+      "stage": 2,
+      "tier": "harder",
+      "minutes": 23,
+      "questions": [
+        {
+          "id": "m1-v2h-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "Though the reviewer’s praise was lavish, it was also curiously _____: for all her admiration of the novel’s ambition and its sentences, she never committed herself to the claim that the book actually succeeds.",
+          "blanks": [
+            [
+              "fulsome",
+              "trenchant",
+              "perfunctory",
+              "equivocal",
+              "censorious"
+            ]
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "“Though… lavish, it was also curiously” calls for a quality in tension with lavish praise, and the colon explains it: the reviewer never commits herself on whether the book succeeds. *Equivocal* (noncommittal, open to more than one reading) fits. *Fulsome* merely restates “lavish,” while *perfunctory* and *censorious* contradict it."
+        },
+        {
+          "id": "m1-v2h-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "Scholars once regarded the medieval craft guilds as (i) _____ institutions, cartels that existed chiefly to shield their members from competition and so retarded economic growth; more recent work has (ii) _____ this picture, showing that guilds often transmitted technical skills and enforced standards of quality that made long-distance trade possible.",
+          "blanks": [
+            [
+              "salutary",
+              "ephemeral",
+              "retrograde"
+            ],
+            [
+              "buttressed",
+              "undercut",
+              "burnished"
+            ]
+          ],
+          "correct": [
+            2,
+            1
+          ],
+          "explanation": "Institutions that shielded members from competition and “retarded economic growth” were seen as *retrograde* (backward, obstructive to progress); *salutary* (beneficial) is the reverse, and *ephemeral* is unsupported. Recent work showing that guilds spread skills and enabled trade challenges that view, so it has *undercut* the picture; *buttressed* (supported) and *burnished* (polished) point the wrong way."
+        },
+        {
+          "id": "m1-v2h-03",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "The diarist’s prose is so (i) _____ that readers often mistake its restraint for indifference; only on a second reading does one notice how much grief is (ii) _____ in her brief, almost clinical entries about her son’s illness.",
+          "blanks": [
+            [
+              "reticent",
+              "florid",
+              "mannered"
+            ],
+            [
+              "vented",
+              "latent",
+              "feigned"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "Prose whose “restraint” is mistaken for indifference must be *reticent* (holding back feeling); *florid* contradicts the restraint, and *mannered* (affected) would not cause the misreading. A second reading reveals grief that is *latent* (present but hidden) in the “almost clinical” entries. *Vented* contradicts the clinical tone, and *feigned* wrongly implies the grief is fake."
+        },
+        {
+          "id": "m1-v2h-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "That the treaty’s architects regarded it as a diplomatic triumph is (i) _____; what remains in doubt is whether its provisions, so (ii) _____ that each signatory could read them as confirming its own claims, did anything more than (iii) _____ the disputes they were meant to resolve.",
+          "blanks": [
+            [
+              "uncontroversial",
+              "apocryphal",
+              "regrettable"
+            ],
+            [
+              "exacting",
+              "equivocal",
+              "punitive"
+            ],
+            [
+              "adjudicate",
+              "exacerbate",
+              "defer"
+            ]
+          ],
+          "correct": [
+            0,
+            1,
+            2
+          ],
+          "explanation": "The contrast with “what remains in doubt” shows that the first claim is not in doubt: it is *uncontroversial*; *apocryphal* (of doubtful authenticity) would put it in doubt too, and *regrettable* is a judgment the sentence gives no grounds for. Provisions that let each signatory read them as confirming its own claims are *equivocal*. Such provisions please everyone only by leaving the disagreement unsettled, so they may have done no more than *defer* the disputes; *adjudicate* would mean settling them, and *exacerbate* does not fit the limiting phrase “anything more than.”"
+        },
+        {
+          "id": "m1-v2h-05",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "Although the philosopher was celebrated in his lifetime as a (i) _____ thinker, one whose system appeared to have no antecedents, recent scholarship has revealed how much he (ii) _____ predecessors he never acknowledged; still, to dismiss him as merely (iii) _____ would be to overlook the genuinely novel uses to which he put his borrowings.",
+          "blanks": [
+            [
+              "doctrinaire",
+              "singular",
+              "pedantic"
+            ],
+            [
+              "departed from",
+              "prefigured",
+              "owed to"
+            ],
+            [
+              "derivative",
+              "prescient",
+              "recondite"
+            ]
+          ],
+          "correct": [
+            1,
+            2,
+            0
+          ],
+          "explanation": "A thinker whose system seemed to have “no antecedents” was celebrated as *singular* (unique). Recent scholarship shows the opposite: how much he *owed to* unacknowledged predecessors. *Departed from* conflicts with “his borrowings,” and no one can have *prefigured* his own predecessors. The “genuinely novel uses” of those borrowings mean he should not be dismissed as merely *derivative*; *prescient* and *recondite* do not answer the charge of borrowing."
+        },
+        {
+          "id": "m1-v2h-06",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m1-vp7",
+          "prompt": "The primary purpose of the passage is to",
+          "options": [
+            "describe how a revised understanding of studio practice has altered the aims, though not the importance, of a traditional method of attribution",
+            "defend twentieth-century connoisseurship against critics who have misread the archival record",
+            "argue that the revisionist emphasis on collaboration has rendered the stylistic analysis of paintings obsolete",
+            "trace the development of the market for Old Master paintings from the seventeenth century to the present",
+            "contend that it is impossible to determine which portions of a workshop painting were executed by the master"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The passage sets out the premise and method of traditional connoisseurship, shows how research on workshops makes its central question “poorly posed,” and then argues that stylistic analysis remains essential but now serves a different purpose. A captures this. C contradicts the statement that workshop production does not “render stylistic analysis obsolete,” and E is too extreme, since the author holds that the several hands in a canvas can be distinguished with finer discrimination."
+        },
+        {
+          "id": "m1-v2h-07",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 5,
+          "format": "multiple",
+          "stimulusId": "m1-vp7",
+          "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that the author would agree with which of the following statements?",
+          "options": [
+            "Patrons who received paintings executed partly by assistants had generally been misled about what they were buying.",
+            "Some works struck from a master’s catalogue by twentieth-century connoisseurs may nonetheless have left the master’s studio as his paintings.",
+            "Seventeenth-century buyers were largely indifferent to how much of a painting the master had executed himself."
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Only the second choice is supported. Connoisseurs struck every work lacking the master’s “characteristic touch,” yet pictures executed largely by assistants still “left the studio under the master’s name,” so some struck works may have been such pictures. The first choice contradicts the statement that contemporaries “did not regard such practices as deceptive,” and the third contradicts the report that buyers paid “considerably more” for pictures the master had worked on extensively."
+        },
+        {
+          "id": "m1-v2h-08",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 4,
+          "format": "sentence",
+          "stimulusId": "m1-vp7",
+          "prompt": "Select the sentence in the passage in which the author suggests that a traditional line of inquiry is misconceived rather than merely difficult.",
+          "correct": [
+            6
+          ],
+          "explanation": "The sentence beginning “If this is so” says the connoisseur’s question “may be less difficult to answer than poorly posed,” because it presupposes a conception of authorship the works do not reflect. The sentence beginning “This program has been unsettled” reports that the program was challenged but makes no claim that its question is misconceived."
+        },
+        {
+          "id": "m1-v2h-09",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m1-vp7",
+          "prompt": "The author refers to the higher prices paid for pictures on which the master had worked extensively primarily in order to",
+          "options": [
+            "suggest that seventeenth-century patrons were often deceived by workshop practices",
+            "explain why masters delegated substantial portions of their work to assistants",
+            "show that the older connoisseurs’ program of subtraction was justified after all",
+            "support the claim that an exclusive focus on collaboration can obscure distinctions that mattered even at the time",
+            "demonstrate that the art market of the seventeenth century was more discerning than that of the twentieth"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "The price detail appears in the sentence arguing that the emphasis on collaboration “can obscure real differences in quality”; buyers’ willingness to pay more shows that those differences mattered to contemporaries (D). C overstates the point, since the author never says the program of subtraction was justified. A contradicts the passage, and B and E raise issues it does not address."
+        },
+        {
+          "id": "m1-v2h-10",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Despite the author’s reputation for _____, her memoir is remarkably forthcoming, dwelling candidly on failures that most public figures would prefer to forget.",
+          "options": [
+            "candor",
+            "erudition",
+            "forthrightness",
+            "reticence",
+            "prolixity",
+            "reserve"
+          ],
+          "selectCount": 2,
+          "correct": [
+            3,
+            5
+          ],
+          "explanation": "“Despite” requires a reputation that contrasts with a memoir that is “remarkably forthcoming” and candid. *Reticence* and *reserve* both mean a disposition to keep one’s thoughts and feelings to oneself. *Candor* and *forthrightness* are a synonym pair that matches the memoir instead of contrasting with it, and *erudition* and *prolixity* create no contrast."
+        },
+        {
+          "id": "m1-v2h-11",
+          "category": "sentenceEquivalence",
+          "topic": "Definition",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "The young scientist’s _____ was evident in her willingness to challenge the field’s most eminent figures in print, a habit that won her admirers among her peers but few friends among her elders.",
+          "options": [
+            "diffidence",
+            "erudition",
+            "temerity",
+            "timidity",
+            "sycophancy",
+            "audacity"
+          ],
+          "selectCount": 2,
+          "correct": [
+            2,
+            5
+          ],
+          "explanation": "Publicly challenging the field’s most eminent figures shows a boldness that her elders, at least, found presumptuous. *Temerity* and *audacity* both name that bold, even reckless, quality. *Diffidence* and *timidity* are a synonym pair with the opposite meaning, *sycophancy* is the reverse of challenging authority, and *erudition* is unrelated to the behavior described."
+        },
+        {
+          "id": "m1-v2h-12",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "The historian’s account, though rich in incidental detail, is ultimately _____: it accumulates facts about the period without ever shaping them into an argument about what they mean.",
+          "options": [
+            "inchoate",
+            "tendentious",
+            "lucid",
+            "polemical",
+            "amorphous",
+            "meticulous"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            4
+          ],
+          "explanation": "“Though rich in incidental detail” sets up a shortcoming, and the colon defines it: the facts never take shape as an argument. *Inchoate* (not yet fully formed) and *amorphous* (lacking definite shape) both convey this. *Tendentious* and *polemical* are a tempting pair, but they describe writing that argues too aggressively, the opposite problem; *meticulous* restates “rich in detail” rather than naming a flaw, and *lucid* is a virtue."
+        },
+        {
+          "id": "m1-v2h-13",
+          "category": "readingComprehension",
+          "topic": "Strengthen/Weaken",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m1-vp8",
+          "prompt": "Which of the following, if true, would most strengthen the researchers’ conclusion?",
+          "options": [
+            "The settlement’s population roughly tripled in the century after 1200 BCE.",
+            "Clay sealings stamped with a single emblem, of a type used at other sites to mark goods under official control, have been found on the later pits but not on the earlier ones.",
+            "Grain stored in large pits is less vulnerable to spoilage than grain stored in small ones.",
+            "Several other settlements in the region also used pits for grain storage during the Bronze Age.",
+            "The large building near the later pits was constructed several decades before 1200 BCE."
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The researchers infer central control from the size and clustering of the later pits, features that could have other causes. Sealings of a kind used to mark officially controlled goods, found only on the later pits, give direct evidence that an authority managed the stores (B). A and C offer other explanations for the larger pits and so weaken the conclusion, while D and E say nothing about who controlled the grain."
+        },
+        {
+          "id": "m1-v2h-14",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 5,
+          "format": "single",
+          "stimulusId": "m1-vp9",
+          "prompt": "It can be inferred from the passage that, according to the efficiency-wage hypothesis, the threat of dismissal would do least to encourage diligence among workers who",
+          "options": [
+            "worked for firms that found supervising them costly and difficult",
+            "were paid substantially more than they could earn elsewhere",
+            "could, if dismissed, promptly find other jobs at the same wage",
+            "lived in an economy with a high rate of unemployment",
+            "worked for firms that paid wages above the market-clearing level"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The hypothesis says the threat works because workers have “something to lose”: a job that pays more than they could otherwise get, or, when every firm pays the premium, a job rather than unemployment. A worker who could promptly find another job at the same wage would lose little by dismissal, so the threat would be weakest (C). B, D, and E describe conditions that make dismissal more costly, and A describes the very circumstance in which, according to the hypothesis, the threat matters most."
+        },
+        {
+          "id": "m1-v2h-15",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m1-vp9",
+          "prompt": "The final sentence of the passage serves primarily to",
+          "options": [
+            "draw out an implication of the hypothesis that conflicts with a familiar view of unemployment",
+            "reject the efficiency-wage hypothesis on the grounds that it fails to account for unemployment",
+            "propose a policy by which governments might reduce unemployment",
+            "present empirical evidence that confirms the efficiency-wage hypothesis",
+            "reconcile the efficiency-wage hypothesis with the view that markets naturally eliminate unemployment"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The last sentence states the “uncomfortable corollary”: unemployment is not “an aberration that a well-functioning market would eliminate” but something the incentive system depends on, contrary to a familiar assumption (A). B misreads the passage, which presents unemployment as a consequence of the hypothesis, not a failure of it; E reverses the sentence’s point, and the passage offers no policy (C) or data (D)."
+        }
+      ]
+    },
+    {
+      "id": "Q1",
+      "measure": "quant",
+      "stage": 1,
+      "tier": "standard",
+      "minutes": 21,
+      "questions": [
+        {
+          "id": "m1-q1-01",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "35% of 80",
+          "quantityB": "80% of 35",
+          "correct": [
+            2
+          ],
+          "explanation": "35% of 80 = 0.35 × 80 = 28, and 80% of 35 = 0.80 × 35 = 28, so the quantities are equal. In general, x% of y and y% of x both equal xy/100, so you can answer without computing."
+        },
+        {
+          "id": "m1-q1-02",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "x² = 4x",
+          "quantityA": "x",
+          "quantityB": "2",
+          "correct": [
+            3
+          ],
+          "explanation": "Rewrite the equation as x² − 4x = 0, so x(x − 4) = 0 and x = 0 or x = 4. If x = 4, Quantity A is greater; if x = 0, Quantity B is greater. Trap: dividing both sides by x gives only x = 4 and silently discards the solution x = 0."
+        },
+        {
+          "id": "m1-q1-03",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "In triangle PQR, the measure of angle P is 50° and the measure of angle Q is 65°.",
+          "quantityA": "The length of side QR",
+          "quantityB": "The length of side PQ",
+          "correct": [
+            1
+          ],
+          "explanation": "The third angle is R = 180° − 50° − 65° = 65°. In a triangle, the longer side is opposite the larger angle. Side QR is opposite angle P (50°), and side PQ is opposite angle R (65°), so PQ is longer and Quantity B is greater."
+        },
+        {
+          "id": "m1-q1-04",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "0 < x < 1",
+          "quantityA": "√x",
+          "quantityB": "x",
+          "correct": [
+            0
+          ],
+          "explanation": "For any x strictly between 0 and 1, √x > x. For example, x = 1/4 gives √x = 1/2, and x = 0.81 gives √x = 0.9. Algebraically, x = √x · √x, and since 0 < √x < 1, multiplying √x by √x makes it smaller. Trap: assuming a square root is always smaller than the number itself."
+        },
+        {
+          "id": "m1-q1-05",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "The price of a jacket was $80. The price was increased by 25 percent, and later the new price was decreased by 20 percent. What was the final price of the jacket?",
+          "options": [
+            "$76",
+            "$78",
+            "$80",
+            "$82",
+            "$84"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "After the increase the price is 80 × 1.25 = $100. After the decrease it is 100 × 0.80 = $80. Trap: the percents do not simply net to +5% (which would give $84), because the 20 percent decrease is taken of the larger price; here 1.25 × 0.80 = 1."
+        },
+        {
+          "id": "m1-q1-06",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "If (x + y)² = 49 and xy = 6, what is the value of x² + y²?",
+          "options": [
+            "25",
+            "31",
+            "37",
+            "43",
+            "55"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Expand: (x + y)² = x² + 2xy + y². So 49 = x² + y² + 2(6), and x² + y² = 49 − 12 = 37. Trap: using xy instead of 2xy gives 49 − 6 = 43."
+        },
+        {
+          "id": "m1-q1-07",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A rectangle has a perimeter of 34 and a diagonal of length 13. What is the area of the rectangle?",
+          "options": [
+            "30",
+            "52",
+            "60",
+            "72",
+            "120"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Let the sides be l and w. The perimeter gives l + w = 17, and the Pythagorean theorem gives l² + w² = 13² = 169. Since (l + w)² = l² + w² + 2lw, 289 = 169 + 2lw, so lw = 60. (The sides are 5 and 12.) Trap: 120 is 2lw, not lw."
+        },
+        {
+          "id": "m1-q1-08",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "The positive integer n is divisible by both 6 and 15. Which of the following must also be a divisor of n? Indicate all such integers.",
+          "options": [
+            "2",
+            "4",
+            "9",
+            "10",
+            "15",
+            "30",
+            "45"
+          ],
+          "correct": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "explanation": "n must be a multiple of the least common multiple of 6 = 2 × 3 and 15 = 3 × 5, which is 2 × 3 × 5 = 30. Every divisor of 30 must divide n, so 2, 10, 15 and 30 qualify. But n could be exactly 30, which is not divisible by 4, 9 or 45. Trap: using 6 × 15 = 90 as if it must divide n."
+        },
+        {
+          "id": "m1-q1-09",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "numeric",
+          "prompt": "A square is inscribed in a circle whose circumference is 10π. What is the area of the square?",
+          "answerValue": 50,
+          "answerDisplay": "50",
+          "explanation": "The circumference is 2πr = 10π, so r = 5 and the diameter is 10. A diagonal of an inscribed square is a diameter of the circle, so the square's diagonal is 10. A square with diagonal d has area d²/2 = 100/2 = 50. (Its side is 10/√2 = 5√2.)"
+        },
+        {
+          "id": "m1-q1-10",
+          "category": "numericEntry",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "fraction",
+          "prompt": "A bag contains 4 red marbles and 3 blue marbles. Two marbles are drawn at random, one after the other, without replacement. What is the probability that the two marbles are the same color?",
+          "answerValue": 0.42857142857142855,
+          "answerDisplay": "3/7",
+          "explanation": "P(both red) = (4/7)(3/6) = 12/42 and P(both blue) = (3/7)(2/6) = 6/42. The two cases cannot both happen, so add them: 18/42 = 3/7. Trap: treating the draws as if the first marble were replaced gives 16/49 + 9/49 = 25/49."
+        },
+        {
+          "id": "m1-q1-11",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m1-qd1",
+          "prompt": "By what percent did the number of electric bicycles sold increase from 2022 to 2024?",
+          "options": [
+            "43%",
+            "57%",
+            "75%",
+            "90%",
+            "175%"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Electric bicycle sales rose from 120 in 2022 to 210 in 2024, an increase of 90. Percent increase = 90/120 × 100% = 75%. Traps: dividing by the new value (90/210 ≈ 43%), reporting the raw increase of 90 as a percent, or computing 210/120 = 175%, which is the new value as a percent of the old."
+        },
+        {
+          "id": "m1-q1-12",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "numeric",
+          "stimulusId": "m1-qd1",
+          "prompt": "In 2024, the revenue from electric bicycles was what percent of the store's total revenue from bicycle sales? Give your answer to the nearest whole percent.",
+          "answerValue": 53,
+          "answerDisplay": "53",
+          "entrySuffix": "%",
+          "explanation": "Revenue = number sold × average price. Road: 270 × $900 = $243,000; mountain: 180 × $1,100 = $198,000; electric: 210 × $2,400 = $504,000. The total is $945,000, and 504,000/945,000 ≈ 0.533, or 53%. Trap: using numbers of bicycles instead of revenue gives 210/660 ≈ 32%."
+        }
+      ]
+    },
+    {
+      "id": "Q2E",
+      "measure": "quant",
+      "stage": 2,
+      "tier": "easier",
+      "minutes": 26,
+      "questions": [
+        {
+          "id": "m1-q2e-01",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 1,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "5/8",
+          "quantityB": "0.65",
+          "correct": [
+            1
+          ],
+          "explanation": "Convert the fraction: 5/8 = 0.625. Since 0.625 < 0.650, Quantity B is greater."
+        },
+        {
+          "id": "m1-q2e-02",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A square has sides of length 6, and a circle has a diameter of length 6.",
+          "quantityA": "The perimeter of the square",
+          "quantityB": "The circumference of the circle",
+          "correct": [
+            0
+          ],
+          "explanation": "The perimeter of the square is 4 × 6 = 24. The circumference of the circle is π × 6 = 6π ≈ 18.85. Because π < 4, Quantity A is greater. (A circle of diameter 6 fits inside the square, so its boundary is shorter.)"
+        },
+        {
+          "id": "m1-q2e-03",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "x² − 5x + 6 = 0",
+          "quantityA": "x",
+          "quantityB": "5/2",
+          "correct": [
+            3
+          ],
+          "explanation": "Factor: (x − 2)(x − 3) = 0, so x = 2 or x = 3. If x = 2, Quantity B is greater; if x = 3, Quantity A is greater. Because both values are possible, the relationship cannot be determined."
+        },
+        {
+          "id": "m1-q2e-04",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Set S consists of the numbers 3, 6, 8, 10, and 13.",
+          "quantityA": "The average (arithmetic mean) of the numbers in S",
+          "quantityB": "The median of the numbers in S",
+          "correct": [
+            2
+          ],
+          "explanation": "The sum is 3 + 6 + 8 + 10 + 13 = 40, so the mean is 40/5 = 8. The numbers are already in increasing order, and the middle (third) number is 8. The quantities are equal."
+        },
+        {
+          "id": "m1-q2e-05",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "The number of prime numbers between 30 and 50",
+          "quantityB": "4",
+          "correct": [
+            0
+          ],
+          "explanation": "The primes between 30 and 50 are 31, 37, 41, 43 and 47, so there are five. (33, 35, 39, 45 and 49 = 7 × 7 are not prime.) Since 5 > 4, Quantity A is greater. Trap: overlooking 47 makes the quantities look equal."
+        },
+        {
+          "id": "m1-q2e-06",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 1,
+          "format": "single",
+          "prompt": "A recipe uses 3 cups of flour for every 2 cups of sugar. How many cups of flour are needed if 8 cups of sugar are used?",
+          "options": [
+            "10",
+            "11",
+            "12",
+            "14",
+            "16"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The ratio of flour to sugar is 3 : 2. Eight cups of sugar is 4 times 2 cups, so the flour is 4 × 3 = 12 cups. Equivalently, solve 3/2 = f/8 to get f = 12."
+        },
+        {
+          "id": "m1-q2e-07",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "If 3(x − 2) = x + 10, what is the value of 2x?",
+          "options": [
+            "4",
+            "8",
+            "12",
+            "16",
+            "20"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Distribute: 3x − 6 = x + 10. Subtract x from both sides and add 6: 2x = 16. The question asks for 2x, so the answer is 16. Trap: stopping at x = 8."
+        },
+        {
+          "id": "m1-q2e-08",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A right triangle has legs of lengths 9 and 12. What is the perimeter of the triangle?",
+          "options": [
+            "21",
+            "30",
+            "36",
+            "42",
+            "54"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The hypotenuse is √(9² + 12²) = √(81 + 144) = √225 = 15. The perimeter is 9 + 12 + 15 = 36. (This is a 3-4-5 right triangle scaled by 3.)"
+        },
+        {
+          "id": "m1-q2e-09",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Maria is 4 years older than twice her brother's age. The sum of their ages is 31 years. How old is Maria?",
+          "options": [
+            "9",
+            "13",
+            "18",
+            "22",
+            "27"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Let b be the brother's age, so Maria's age is 2b + 4. Then b + (2b + 4) = 31, so 3b = 27 and b = 9. Maria is 2(9) + 4 = 22. Trap: answering 9, which is the brother's age."
+        },
+        {
+          "id": "m1-q2e-10",
+          "category": "multipleAnswer",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Which of the following values of x satisfy the inequality |x − 3| ≤ 4? Indicate all such values.",
+          "options": [
+            "−3",
+            "−1",
+            "2",
+            "5",
+            "7",
+            "9"
+          ],
+          "correct": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "|x − 3| ≤ 4 means −4 ≤ x − 3 ≤ 4, so −1 ≤ x ≤ 7. The values −1, 2, 5 and 7 lie in this interval (the endpoints count because the inequality is ≤). Both −3 and 9 are 6 units from 3, so they do not satisfy it."
+        },
+        {
+          "id": "m1-q2e-11",
+          "category": "numericEntry",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "numeric",
+          "prompt": "The price of a shirt was reduced from $40 to $34. By what percent was the price reduced?",
+          "answerValue": 15,
+          "answerDisplay": "15",
+          "entrySuffix": "%",
+          "explanation": "The reduction is 40 − 34 = $6. As a percent of the original price, 6/40 = 0.15 = 15%. Trap: dividing by the new price (6/34 ≈ 17.6%)."
+        },
+        {
+          "id": "m1-q2e-12",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "numeric",
+          "prompt": "A rectangular box has length 5, width 4, and height 3. What is the total surface area of the box?",
+          "answerValue": 94,
+          "answerDisplay": "94",
+          "explanation": "The box has three pairs of congruent faces with areas 5 × 4 = 20, 5 × 3 = 15 and 4 × 3 = 12. The surface area is 2(20 + 15 + 12) = 2(47) = 94. Trap: 5 × 4 × 3 = 60 is the volume, not the surface area."
+        },
+        {
+          "id": "m1-q2e-13",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 1,
+          "format": "single",
+          "stimulusId": "m1-qd2",
+          "prompt": "How many dollars per month does the household budget for food?",
+          "options": [
+            "$450",
+            "$540",
+            "$675",
+            "$720",
+            "$810"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Food is 15% of $4,500: 0.15 × 4,500 = $675. ($540 is the transportation amount at 12%, and $810 is the savings amount at 18%.)"
+        },
+        {
+          "id": "m1-q2e-14",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 2,
+          "format": "numeric",
+          "stimulusId": "m1-qd2",
+          "prompt": "How many more dollars per month are budgeted for housing than for transportation?",
+          "answerValue": 900,
+          "answerDisplay": "900",
+          "entryPrefix": "$",
+          "explanation": "Housing is 32% and transportation is 12% of the budget, a difference of 20 percentage points. 0.20 × $4,500 = $900. (Check: $1,440 − $540 = $900.)"
+        },
+        {
+          "id": "m1-q2e-15",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m1-qd2",
+          "prompt": "Which of the following categories are each budgeted more than $600 per month? Indicate all such categories.",
+          "options": [
+            "Housing",
+            "Food",
+            "Transportation",
+            "Savings",
+            "Utilities"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "$600 is 600/4,500 ≈ 13.3% of the budget, so a category qualifies only if its share is greater than 13.3%. Housing (32%, $1,440), food (15%, $675) and savings (18%, $810) qualify. Transportation (12%, $540) and utilities (8%, $360) do not."
+        }
+      ]
+    },
+    {
+      "id": "Q2H",
+      "measure": "quant",
+      "stage": 2,
+      "tier": "harder",
+      "minutes": 26,
+      "questions": [
+        {
+          "id": "m1-q2h-01",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "xy < 0",
+          "quantityA": "(x + y)²",
+          "quantityB": "x² + y²",
+          "correct": [
+            1
+          ],
+          "explanation": "Expand: (x + y)² = x² + 2xy + y². Because xy < 0, the term 2xy is negative, so (x + y)² is always less than x² + y². Quantity B is greater for every allowed x and y."
+        },
+        {
+          "id": "m1-q2h-02",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "a/b > 1",
+          "quantityA": "a",
+          "quantityB": "b",
+          "correct": [
+            3
+          ],
+          "explanation": "If a and b are both positive, a/b > 1 means a > b (for example, a = 6 and b = 3). But a and b can both be negative: a = −6 and b = −3 give a/b = 2 > 1, yet a < b. Trap: multiplying both sides of a/b > 1 by b without knowing whether b is positive or negative."
+        },
+        {
+          "id": "m1-q2h-03",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "x > 0",
+          "quantityA": "The standard deviation of the four numbers x, x + 3, x + 6, and x + 9",
+          "quantityB": "The standard deviation of the four numbers 3x, 3x + 3, 3x + 6, and 3x + 9",
+          "correct": [
+            2
+          ],
+          "explanation": "Standard deviation measures spread, not location. In each list the four numbers are equally spaced, 3 apart; the second list is just the first list with 2x added to every number. Adding the same amount to every value does not change the standard deviation, so the quantities are equal. Trap: thinking the 3 in 3x triples the spread; only stretching the gaps between the values would change it."
+        },
+        {
+          "id": "m1-q2h-04",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "A circle with radius r and a square with side length s have equal areas.",
+          "quantityA": "The perimeter of the square",
+          "quantityB": "The circumference of the circle",
+          "correct": [
+            0
+          ],
+          "explanation": "From πr² = s², s = r√π, so the perimeter of the square is 4s = 4√π · r ≈ 7.09r, while the circumference is 2πr ≈ 6.28r. To compare exactly, divide 4√π and 2π by 2√π: you get 2 versus √π ≈ 1.77. Since 2 > √π, Quantity A is greater for every r. (Of all shapes with a given area, the circle has the smallest perimeter.)"
+        },
+        {
+          "id": "m1-q2h-05",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "The number of positive integers less than 100 that are multiples of 6 or multiples of 8 (or both)",
+          "quantityB": "25",
+          "correct": [
+            1
+          ],
+          "explanation": "Multiples of 6 below 100: 6, 12, …, 96, which is 16 numbers. Multiples of 8: 8, 16, …, 96, which is 12 numbers. Multiples of both are multiples of lcm(6, 8) = 24: 24, 48, 72 and 96, which were counted twice. Total = 16 + 12 − 4 = 24, so Quantity B is greater. Trap: 16 + 12 = 28 ignores the overlap, and using 48 instead of 24 as the common multiple gives 26."
+        },
+        {
+          "id": "m1-q2h-06",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "Pipe A can fill an empty tank in 6 hours, and pipe B can fill it in 9 hours. A drain can empty the full tank in 12 hours. If the tank is empty and both pipes and the drain are opened at the same time, how many hours will it take to fill the tank?",
+          "options": [
+            "18/5",
+            "9/2",
+            "36/7",
+            "45/8",
+            "36/5"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Add the rates in tanks per hour, subtracting the drain: 1/6 + 1/9 − 1/12 = 6/36 + 4/36 − 3/36 = 7/36. The time is 1 ÷ (7/36) = 36/7 ≈ 5.14 hours. Trap: ignoring the drain gives 1 ÷ (5/18) = 18/5 hours."
+        },
+        {
+          "id": "m1-q2h-07",
+          "category": "problemSolving",
+          "topic": "Data Analysis",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "A 4-person committee is to be chosen from a group of 5 women and 4 men. The committee must include at least 2 women, and two of the men, Raj and Tom, refuse to serve on the committee together. How many different committees are possible?",
+          "options": [
+            "60",
+            "85",
+            "95",
+            "100",
+            "105"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "First count committees with at least 2 women: 2 women and 2 men, C(5,2) × C(4,2) = 10 × 6 = 60; 3 women and 1 man, C(5,3) × C(4,1) = 10 × 4 = 40; 4 women, C(5,4) = 5. That is 105. A committee with both Raj and Tom must fill its other 2 seats with women: C(5,2) = 10 such committees. So 105 − 10 = 95. Traps: 105 ignores the restriction, and 60 counts only committees with exactly 2 women."
+        },
+        {
+          "id": "m1-q2h-08",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "Points A, B, and C lie on a circle, and line segment AB is a diameter of the circle. If AC = 6 and BC = 8, what is the area of the region that is inside the circle but outside triangle ABC?",
+          "options": [
+            "25π − 48",
+            "25π − 24",
+            "25π − 12",
+            "100π − 48",
+            "100π − 24"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "An angle inscribed in a semicircle is a right angle, so angle ACB = 90°. Then AB = √(6² + 8²) = 10, the radius is 5, and the circle's area is 25π. The triangle's area is (1/2)(6)(8) = 24, so the region's area is 25π − 24. Traps: using 10 as the radius (100π) or forgetting the 1/2 in the triangle's area (48)."
+        },
+        {
+          "id": "m1-q2h-09",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A retailer sets the price of an item by marking up its cost by 40 percent. During a sale, the item is sold at 15 percent off this marked price, and the retailer's profit on the sale is $57. What was the retailer's cost for the item?",
+          "options": [
+            "$190",
+            "$228",
+            "$285",
+            "$300",
+            "$380"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Let the cost be c. The marked price is 1.40c, and the sale price is 0.85 × 1.40c = 1.19c. The profit is 1.19c − c = 0.19c = 57, so c = 57/0.19 = 300. Trap: treating the net change as 40 − 15 = 25 percent gives 0.25c = 57 and c = $228."
+        },
+        {
+          "id": "m1-q2h-10",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "If x and y are integers such that x² − y² = 13, which of the following could be the value of x + y? Indicate all such values.",
+          "options": [
+            "−13",
+            "−7",
+            "−1",
+            "0",
+            "1",
+            "7",
+            "13"
+          ],
+          "correct": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "explanation": "Factor: (x + y)(x − y) = 13. Both factors are integers and 13 is prime, so (x + y, x − y) is (1, 13), (13, 1), (−1, −13) or (−13, −1). Each pair gives integers x and y; for example, x + y = 1 and x − y = 13 give x = 7 and y = −6. So x + y can be −13, −1, 1 or 13, but not −7, 0 or 7. Trap: assuming x and y are positive and finding only 13."
+        },
+        {
+          "id": "m1-q2h-11",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "numeric",
+          "prompt": "In the xy-plane, line k passes through the points (1, 2) and (5, 10). Line m is perpendicular to line k and passes through the point (6, 1). What is the x-intercept of line m?",
+          "answerValue": 8,
+          "answerDisplay": "8",
+          "explanation": "The slope of k is (10 − 2)/(5 − 1) = 2, so the slope of the perpendicular line m is the negative reciprocal, −1/2. An equation of m is y − 1 = −(1/2)(x − 6). Setting y = 0 gives −1 = −(1/2)(x − 6), so x − 6 = 2 and x = 8."
+        },
+        {
+          "id": "m1-q2h-12",
+          "category": "numericEntry",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "fraction",
+          "prompt": "If x/y = 3/5 and y/z = 10/7, what is the value of (x + y)/z?",
+          "answerValue": 2.2857142857142856,
+          "answerDisplay": "16/7",
+          "explanation": "Split the fraction: (x + y)/z = x/z + y/z. Here x/z = (x/y)(y/z) = (3/5)(10/7) = 6/7, so (x + y)/z = 6/7 + 10/7 = 16/7. Check by choosing y = 10: then x = 6 and z = 7, and (6 + 10)/7 = 16/7."
+        },
+        {
+          "id": "m1-q2h-13",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m1-qd3",
+          "prompt": "What was the average (arithmetic mean) annual salary of all the employees at the four offices in 2024?",
+          "options": [
+            "$61,500",
+            "$62,240",
+            "$63,000",
+            "$63,360",
+            "$64,000"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Weight each office's average by its number of employees. Total payroll = 48($56,000) + 30($72,000) + 42($64,000) + 30($60,000) = $2,688,000 + $2,160,000 + $2,688,000 + $1,800,000 = $9,336,000. Dividing by the 150 employees gives $62,240. Trap: the simple average of the four office averages is $63,000, which ignores that the offices have different numbers of employees."
+        },
+        {
+          "id": "m1-q2h-14",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "numeric",
+          "stimulusId": "m1-qd3",
+          "prompt": "Suppose that in 2025 the number of employees at the Denver office increases by 20 percent and the average annual salary at the Denver office rises to $62,000. By how many dollars would the total annual payroll of the Denver office increase from 2024 to 2025?",
+          "answerValue": 432000,
+          "answerDisplay": "432,000",
+          "entryPrefix": "$",
+          "explanation": "The 2024 Denver payroll is 30 × $60,000 = $1,800,000. In 2025 Denver would have 30 × 1.20 = 36 employees and a payroll of 36 × $62,000 = $2,232,000. The increase is $2,232,000 − $1,800,000 = $432,000."
+        },
+        {
+          "id": "m1-q2h-15",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "multiple",
+          "stimulusId": "m1-qd3",
+          "prompt": "For which of the following years was the ratio of the number of full-time employees to the number of part-time employees greater than 4 to 1? Indicate all such years.",
+          "options": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "Divide full-time by part-time for each year: 2019: 80/15 ≈ 5.33; 2020: 85/20 = 4.25; 2021: 95/25 = 3.8; 2022: 100/25 = 4; 2023: 110/30 ≈ 3.67; 2024: 120/30 = 4. Only 2019 and 2020 are greater than 4. Trap: in 2022 and 2024 the ratio is exactly 4 to 1, which is not greater than 4 to 1."
+        }
+      ]
+    }
+  ]
+}

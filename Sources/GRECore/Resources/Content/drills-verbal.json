@@ -1,0 +1,611 @@
+{
+  "stimuli": [
+    {
+      "id": "d-p1",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Histories of eighteenth-century astronomy have traditionally been written as the story of observers and theorists, with the craftsmen who built telescopes and quadrants relegated to footnotes.",
+          "On this view, an instrument was simply a tool, and its maker a supplier whose skill, however considerable, contributed nothing to the content of the knowledge the instrument produced.",
+          "Recent work by historians of science has challenged this division of labor, arguing that the boundary between making an instrument and making a discovery was far less distinct than the conventional narrative allows."
+        ],
+        [
+          "Consider the divided arc, the graduated scale against which an astronomer read off the position of a star.",
+          "Because no two scales were divided with identical accuracy, every measurement bore the idiosyncrasies of the hand that had engraved it.",
+          "The most sought-after makers did not merely execute astronomers' specifications; they devised new methods of division, and in doing so they effectively determined the degree of precision a given observatory could claim.",
+          "Astronomers, for their part, frequently visited workshops, debated techniques with craftsmen, and occasionally learned to divide scales themselves."
+        ],
+        [
+          "None of this means that instrument makers should simply be reclassified as scientists.",
+          "Their workshops were commercial enterprises, and their reputations rested as much on reliability and prompt delivery as on innovation.",
+          "But to treat them as mere suppliers is to mistake the social hierarchy of the period, in which gentlemen observers outranked paid artisans, for an accurate map of where knowledge was actually made."
+        ]
+      ]
+    },
+    {
+      "id": "d-p2",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Two years ago the city of Halvorsen made its buses and trams free to ride on weekends.",
+          "Since then, weekend sales at shops in the downtown district, which the transit network serves heavily, have risen by 18 percent, while weekend sales at suburban malls that the network does not reach have remained essentially flat.",
+          "The city council concludes that free transit drew weekend shoppers downtown.",
+          "It therefore proposes making transit free on weekdays as well, predicting that weekday sales downtown will rise by a comparable amount."
+        ]
+      ]
+    },
+    {
+      "id": "d-p3",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "For several decades, many economists treated the depletion of shared resources such as fisheries and grazing lands as all but inevitable.",
+          "Each user, the reasoning went, captures the full benefit of taking a little more while bearing only a fraction of the resulting cost, so that individually rational choices add up to collective ruin.",
+          "The remedy seemed to follow directly: either the state must regulate the resource, or the resource must be divided into private holdings."
+        ],
+        [
+          "Field studies of communities that have managed common pastures, forests, and irrigation systems for generations complicate this tidy dichotomy.",
+          "Such communities typically devise their own rules of access, monitor one another's compliance, and impose graduated penalties on those who take more than their share.",
+          "The model's error, it now appears, lay less in its logic than in its premise that users cannot communicate or bind themselves to agreements—an assumption that describes strangers far better than neighbors."
+        ]
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "d-tc",
+      "title": "Text Completion",
+      "measure": "verbal",
+      "category": "textCompletion",
+      "summary": "Practice reading signal words and predicting each blank before looking at the choices, from single-blank sentences up to three-blank passages whose answers must fit together.",
+      "questions": [
+        {
+          "id": "d-tc-01",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "The botanist was famously _____ in her fieldwork, recording not only the location of each specimen but also the soil, the weather, and the time of day at which it was collected.",
+          "blanks": [
+            [
+              "cavalier",
+              "prolific",
+              "reluctant",
+              "itinerant",
+              "meticulous"
+            ]
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The clue is the \"not only … but also\" list: she recorded soil, weather and even the time of day for every specimen, which is exhaustive attention to detail. Predict \"thorough\" before you look at the choices, and *meticulous* matches. *Prolific* and *itinerant* are traps because they relate to fieldwork in general (many specimens, much travel) but say nothing about how detailed her records were; *cavalier* reverses the meaning."
+        },
+        {
+          "id": "d-tc-02",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "Because the committee's final report was so _____, hedging nearly every claim with qualifications and caveats, legislators on both sides of the debate were able to cite it in support of their own positions.",
+          "blanks": [
+            [
+              "incisive",
+              "equivocal",
+              "partisan",
+              "succinct",
+              "inflammatory"
+            ]
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The phrase \"hedging nearly every claim with qualifications and caveats\" defines the blank, and \"Because\" tells you the blank explains why both sides could cite the report. Predict \"noncommittal\" or \"ambiguous\": *equivocal* fits. *Partisan* is the main trap—it sounds political, but a partisan report would help only one side, not both. *Incisive* and *succinct* clash with all that hedging."
+        },
+        {
+          "id": "d-tc-03",
+          "category": "textCompletion",
+          "topic": "Definition",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Readers expecting either an indictment or a eulogy will be disappointed by the historian's account of the expedition, which is resolutely _____, reporting the explorers' cruelty and their courage in the same even tone.",
+          "blanks": [
+            [
+              "dispassionate",
+              "hagiographic",
+              "polemical",
+              "cursory",
+              "elegiac"
+            ]
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "Two clues work together: readers who want \"an indictment or a eulogy\" will be disappointed, and the account reports cruelty and courage \"in the same even tone.\" Predict \"neutral\" or \"detached\"—*dispassionate*. *Polemical* (attacking) and *hagiographic* or *elegiac* (idealizing or mourning) are exactly the indictment and eulogy the sentence says readers will not get, and *cursory* brings in an idea, brevity, that the sentence never mentions."
+        },
+        {
+          "id": "d-tc-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Earlier biographers took the composer's reputation for reclusiveness at face value, but his recently published letters (i) _____ that image: far from shunning company, he maintained a wide and (ii) _____ correspondence with musicians across Europe.",
+          "blanks": [
+            [
+              "corroborate",
+              "undercut",
+              "romanticize"
+            ],
+            [
+              "convivial",
+              "perfunctory",
+              "grudging"
+            ]
+          ],
+          "correct": [
+            1,
+            0
+          ],
+          "explanation": "Start with the blank that has the strongest clue. \"Far from shunning company\" requires a word showing sociability, so blank (ii) is *convivial*; *perfunctory* and *grudging* would actually support the reclusive image. Now blank (i): \"but\" sets the letters against a reputation that earlier writers accepted \"at face value,\" so the letters *undercut* it. *Corroborate* is the wrong-polarity trap, and *romanticize* has nothing to do with disproving an image."
+        },
+        {
+          "id": "d-tc-05",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "Ecologists long regarded the region's periodic wildfires as an unmitigated (i) _____, a destructive force to be suppressed at all costs; only after decades of suppression had filled the forests with dense, fire-prone undergrowth did they recognize that the fires had been (ii) _____ the very forests they seemed to threaten.",
+          "blanks": [
+            [
+              "calamity",
+              "boon",
+              "curiosity"
+            ],
+            [
+              "imperiling",
+              "renewing",
+              "disguising"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "Blank (i) is defined by the phrase right after it, \"a destructive force to be suppressed at all costs,\" so *calamity*. For blank (ii), the cause-and-effect clue is that suppressing the fires produced dangerous undergrowth, and \"the very forests they seemed to threaten\" sets up an ironic reversal: the fires only *seemed* to threaten the forests, so they had in fact been *renewing* them. *Imperiling* is the trap—it echoes \"threaten\" on the surface but ignores the word \"seemed.\""
+        },
+        {
+          "id": "d-tc-06",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "The very quality for which critics most admire the painter's late canvases—their air of (i) _____—turns out to have been hard-won: X-ray analysis reveals layer upon layer of revision beneath surfaces that seem to have been (ii) _____.",
+          "blanks": [
+            [
+              "deliberation",
+              "melancholy",
+              "improvisation"
+            ],
+            [
+              "worked over obsessively",
+              "executed in a single sitting",
+              "rendered with photographic exactness"
+            ]
+          ],
+          "correct": [
+            2,
+            1
+          ],
+          "explanation": "The pivot is \"turns out to have been hard-won\": the admired quality must be one that looks effortless, while the X-rays reveal the hidden labor. So blank (i) is a quality suggesting ease—*improvisation*—and blank (ii) describes how the surfaces merely *seem*, in contrast to the revisions beneath: *executed in a single sitting*. *Deliberation* and *worked over obsessively* are traps because they describe what the X-rays show, not what the surface suggests, so they destroy the contrast. Always reread the completed sentence to confirm the blanks agree with each other."
+        },
+        {
+          "id": "d-tc-07",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "The novelist's admirers often call her prose (i) _____, but such praise mistakes economy for simplicity. Her sentences are short, to be sure, yet each is so densely allusive that a reader who moves through them quickly will (ii) _____ much of their meaning; indeed, the apparent (iii) _____ of her style is precisely what conceals its complexity.",
+          "blanks": [
+            [
+              "baroque",
+              "limpid",
+              "recondite"
+            ],
+            [
+              "savor",
+              "embellish",
+              "overlook"
+            ],
+            [
+              "artlessness",
+              "erudition",
+              "opacity"
+            ]
+          ],
+          "correct": [
+            1,
+            2,
+            0
+          ],
+          "explanation": "\"Such praise mistakes economy for simplicity\" tells you the admirers' word means simple or clear, so blank (i) is *limpid*; *baroque* and *recondite* are not praise of simplicity. Because each sentence is \"densely allusive,\" a hasty reader will *overlook* much of its meaning. Finally, \"apparent\" and \"conceals\" show that blank (iii) names the simplicity the style only seems to have—*artlessness*. *Erudition* is tempting because it matches \"allusive,\" but it describes the hidden complexity, not the deceptive surface."
+        },
+        {
+          "id": "d-tc-08",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "Historians once portrayed the medical profession's adoption of germ theory as swift and (i) _____, a matter of physicians recognizing compelling evidence and promptly discarding older ideas. Recent scholarship has made that picture difficult to sustain: for decades many practitioners (ii) _____ the new theory and their long-held belief in miasma, blaming a single outbreak on germs and foul air at once, and the boundary between the old medicine and the new was correspondingly (iii) _____.",
+          "blanks": [
+            [
+              "piecemeal",
+              "grudging",
+              "decisive"
+            ],
+            [
+              "reconciled",
+              "chose between",
+              "repudiated"
+            ],
+            [
+              "rigidly enforced",
+              "porous",
+              "self-evident"
+            ]
+          ],
+          "correct": [
+            2,
+            0,
+            1
+          ],
+          "explanation": "\"Swift\" and \"promptly discarding older ideas\" describe a clean break, so blank (i) is *decisive*; *piecemeal* and *grudging* would contradict the very picture the sentence describes. After the colon, the detail that practitioners blamed one outbreak \"on germs and foul air at once\" shows them holding old and new ideas together, so they *reconciled* the two; *chose between* is the trap for anyone who reads \"for decades\" and stops there. \"Correspondingly\" then makes blank (iii) follow from blank (ii): ideas that were being combined left a *porous* boundary, whereas *rigidly enforced* and *self-evident* fit the old clean-break story the passage rejects."
+        }
+      ]
+    },
+    {
+      "id": "d-se",
+      "title": "Sentence Equivalence",
+      "measure": "verbal",
+      "category": "sentenceEquivalence",
+      "summary": "Practice predicting the blank and then choosing the two words that complete the sentence with the same meaning, without falling for synonym pairs that do not fit.",
+      "questions": [
+        {
+          "id": "d-se-01",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "Although the senator was known for her _____ speeches, her written statements were models of brevity.",
+          "options": [
+            "verbose",
+            "concise",
+            "prolix",
+            "eloquent",
+            "terse",
+            "candid"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "\"Although\" sets the speeches against written statements that were \"models of brevity,\" so predict \"long-winded.\" *Verbose* and *prolix* both mean using too many words and produce sentences alike in meaning. *Concise* and *terse* are a genuine synonym pair, which makes them tempting, but they describe the written statements, not the contrasting speeches. A pair must fit the sentence, not just each other."
+        },
+        {
+          "id": "d-se-02",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "Because the sample in the original study was so _____, few researchers were willing to accept its striking conclusions until the experiment had been repeated with many more participants.",
+          "options": [
+            "robust",
+            "meager",
+            "diverse",
+            "ample",
+            "paltry",
+            "random"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            4
+          ],
+          "explanation": "\"Because\" links the blank to the researchers' doubts, and \"repeated with many more participants\" tells you the problem was size: predict \"small.\" *Meager* and *paltry* both mean scanty. *Robust* and *ample* form a synonym pair with the opposite meaning, and *random* and *diverse* describe how a sample is drawn, not how large it is."
+        },
+        {
+          "id": "d-se-03",
+          "category": "sentenceEquivalence",
+          "topic": "Definition",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "The new curator is _____ by temperament: she will not approve an acquisition until months of technical analysis have confirmed what the dealer claims.",
+          "options": [
+            "circumspect",
+            "credulous",
+            "impetuous",
+            "wary",
+            "gullible",
+            "flamboyant"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            3
+          ],
+          "explanation": "The colon introduces a definition of her temperament: she approves nothing until analysis confirms the dealer's claims. Predict \"cautious\" or \"skeptical\"; *circumspect* and *wary* both fit and give sentences alike in meaning. *Credulous* and *gullible* are a synonym pair with exactly the wrong polarity—a credulous curator would simply take the dealer's word. *Impetuous* is also reversed, and *flamboyant* has no support in the sentence."
+        },
+        {
+          "id": "d-se-04",
+          "category": "sentenceEquivalence",
+          "topic": "Continuation",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "The invasive mussel has proved remarkably _____: it can survive for days out of water, tolerates wide swings in temperature, and recolonizes lakes within a few seasons of an eradication campaign.",
+          "options": [
+            "fragile",
+            "prolific",
+            "resilient",
+            "conspicuous",
+            "hardy",
+            "dormant"
+          ],
+          "selectCount": 2,
+          "correct": [
+            2,
+            4
+          ],
+          "explanation": "Everything after the colon—surviving out of water, tolerating temperature swings, returning after eradication—shows an ability to withstand harsh conditions, so predict \"tough.\" *Resilient* and *hardy* both fit. *Prolific* is the partial-fit trap: quick recolonization might hint at heavy reproduction, but surviving drying and heat has nothing to do with fertility, and no other choice means \"prolific,\" so it cannot form a pair. *Fragile* and *dormant* contradict the evidence."
+        },
+        {
+          "id": "d-se-05",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "Readers who know the poet only through her lush early lyrics may be startled by the _____ of her final collection, in which each poem is pared down to a few plain, unadorned lines.",
+          "options": [
+            "luxuriance",
+            "obscurity",
+            "austerity",
+            "exuberance",
+            "whimsy",
+            "starkness"
+          ],
+          "selectCount": 2,
+          "correct": [
+            2,
+            5
+          ],
+          "explanation": "Readers who know the poet \"only through her lush early lyrics\" may be \"startled,\" which signals a contrast, and the end of the sentence defines the blank: poems \"pared down to a few plain, unadorned lines.\" Predict \"bareness\"; *austerity* and *starkness* both fit. *Luxuriance* and *exuberance* form a tempting pair, but they describe the lush early lyrics—the very thing the final collection departs from. *Obscurity* does not follow from plainness."
+        },
+        {
+          "id": "d-se-06",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "The diplomat's reputation for _____ served her well at the negotiating table: because she was known never to make a promise she could not keep, her rare commitments were accepted without question.",
+          "options": [
+            "volubility",
+            "probity",
+            "guile",
+            "rectitude",
+            "loquacity",
+            "intransigence"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            3
+          ],
+          "explanation": "The \"because\" clause explains the reputation: she never made a promise she could not keep, so others trusted her word. Predict \"integrity\"; *probity* and *rectitude* both denote honesty and moral uprightness. *Volubility* and *loquacity* are a synonym pair (talkativeness) that has nothing to do with keeping promises—and her commitments are described as \"rare.\" *Guile* is the opposite of what is needed, and *intransigence* (stubbornness) would not explain why her word was trusted."
+        },
+        {
+          "id": "d-se-07",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "The essayist's apparent _____ is deceptive: beneath the casual tone and offhand digressions lies an argument as carefully constructed as any legal brief.",
+          "options": [
+            "rigor",
+            "insouciance",
+            "pedantry",
+            "meticulousness",
+            "candor",
+            "nonchalance"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            5
+          ],
+          "explanation": "\"Apparent\" and \"is deceptive\" signal that the blank names a surface impression contradicted by what lies beneath. The surface is \"the casual tone and offhand digressions,\" so predict \"casualness\" or \"unconcern\": *insouciance* and *nonchalance*. *Rigor* and *meticulousness* are the trap pair—they describe the carefully built argument underneath, the reality rather than the misleading appearance. *Candor* might seem to suit a casual tone, but a frank manner is not contradicted by careful construction, and it has no partner among the choices; *pedantry* has no support at all."
+        },
+        {
+          "id": "d-se-08",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "The naturalist's private notebooks reveal a thinker far less _____ than the assured prose of his published work would suggest: page after page records hypotheses proposed, doubted, and quietly abandoned.",
+          "options": [
+            "tentative",
+            "speculative",
+            "diffident",
+            "dogmatic",
+            "categorical",
+            "prolific"
+          ],
+          "selectCount": 2,
+          "correct": [
+            3,
+            4
+          ],
+          "explanation": "Watch the word \"less.\" The notebooks, full of hypotheses \"doubted, and quietly abandoned,\" show a thinker less certain than his \"assured\" published prose implies, so the blank needs a word meaning \"certain\" or \"absolute\": *dogmatic* and *categorical*. *Tentative* and *diffident* are the trap pair—they describe the notebooks accurately, but \"far less tentative\" would say the opposite of what the sentence means. *Speculative* fails the same way, and *prolific* has no partner."
+        }
+      ]
+    },
+    {
+      "id": "d-rc",
+      "title": "Reading Comprehension",
+      "measure": "verbal",
+      "category": "readingComprehension",
+      "summary": "Practice main-idea, function, inference, attitude, vocabulary, select-in-passage and select-all questions on academic passages, plus weaken and assumption questions on a short argument.",
+      "questions": [
+        {
+          "id": "d-rc-01",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "d-p1",
+          "prompt": "The primary purpose of the passage is to",
+          "options": [
+            "demonstrate that eighteenth-century astronomical measurements were less precise than historians have assumed",
+            "argue that instrument makers should be recognized as scientists on a par with the astronomers who employed them",
+            "challenge a conventional account of eighteenth-century astronomy by showing that instrument makers helped shape the knowledge their instruments produced",
+            "explain why eighteenth-century astronomers preferred to divide their own scales rather than rely on craftsmen",
+            "describe the commercial pressures that governed the work of eighteenth-century instrument workshops"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "For a primary-purpose question, map the structure: the first paragraph states a traditional view and says recent work challenges it, the second gives an example, and the third qualifies the claim without retreating from it. Predict \"to argue that instrument makers helped shape astronomical knowledge, contrary to the traditional account.\" The choice about recognizing makers as scientists \"on a par\" with astronomers is the main trap—the third paragraph explicitly rejects simply reclassifying them. The remaining choices are too narrow (commercial pressures) or unsupported (overestimated precision, astronomers preferring to divide their own scales)."
+        },
+        {
+          "id": "d-rc-02",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "d-p1",
+          "prompt": "The discussion of the divided arc in the second paragraph serves primarily to",
+          "options": [
+            "illustrate the technical obstacles that prevented eighteenth-century astronomers from obtaining reliable observations",
+            "suggest that astronomers came to distrust the instruments supplied by commercial workshops",
+            "introduce an exception to the generalization that instrument makers were primarily businessmen",
+            "provide a specific case in which the work of instrument makers bore directly on the content of astronomical knowledge",
+            "contrast the methods of the most sought-after makers with those of their less skilled competitors"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Function questions ask why a part is there, so look at what comes just before it: the first paragraph ends by claiming that making an instrument and making a discovery were not clearly separate, and \"Consider\" introduces a test case. The case shows makers' methods determining \"the degree of precision a given observatory could claim,\" which is a direct effect on the content of knowledge. The trap about technical obstacles seizes on the detail that no two scales were identical, but the paragraph's point is who shaped the knowledge, not that observations were unreliable; nothing in it concerns distrust of workshops, businessmen, or a contrast among makers."
+        },
+        {
+          "id": "d-rc-03",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 4,
+          "format": "sentence",
+          "stimulusId": "d-p1",
+          "prompt": "Select the sentence in the passage that identifies the source of the error the author attributes to traditional histories of astronomy.",
+          "correct": [
+            9
+          ],
+          "explanation": "First pin down the error: the traditional view that makers were mere suppliers, stated in the passage's second sentence. The question asks where that view came from, and only the last sentence answers: historians mistook \"the social hierarchy of the period, in which gentlemen observers outranked paid artisans,\" for a map of where knowledge was made. The second sentence states the misconception without explaining it, and the sentence about commercial enterprises is a concession the author accepts as true, not the source of an error."
+        },
+        {
+          "id": "d-rc-04",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 4,
+          "format": "multiple",
+          "stimulusId": "d-p1",
+          "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about eighteenth-century astronomy?",
+          "options": [
+            "The precision an observatory could claim for its measurements depended partly on decisions made by an instrument maker.",
+            "Astronomers typically regarded the techniques used to divide scales as beneath their notice.",
+            "Two measurements of the same star's position, taken with scales engraved by different makers, would not necessarily agree."
+          ],
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "Treat each choice as a separate true/false statement that needs support in the text. The first is supported by the claim that makers \"effectively determined the degree of precision a given observatory could claim.\" The third follows from the second paragraph: since no two scales were divided with identical accuracy and every measurement bore the engraver's idiosyncrasies, readings taken with different makers' scales need not agree. The second is contradicted—astronomers visited workshops, debated techniques, and even learned to divide scales themselves."
+        },
+        {
+          "id": "d-rc-05",
+          "category": "readingComprehension",
+          "topic": "Strengthen/Weaken",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "d-p2",
+          "prompt": "Which of the following, if true, most seriously weakens the council's conclusion that free transit drew weekend shoppers downtown?",
+          "options": [
+            "Since the program began, the number of weekend riders on the city's buses and trams has more than doubled.",
+            "Downtown shops are, on average, considerably smaller than the stores in the suburban malls.",
+            "Weekday transit ridership in Halvorsen has long been far higher than weekend ridership.",
+            "Several owners of suburban malls have publicly opposed the council's proposal to extend the program.",
+            "Weekend sales at downtown shops had been growing by about 9 percent a year for several years before the program began."
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The council infers cause from a before-and-after change, so before reading the choices ask, \"What else could explain the rise?\" The strongest weakener shows the rise would have happened anyway: if downtown weekend sales were already growing about 9 percent a year, an 18 percent rise over two years is simply the old trend continuing. Doubled ridership actually supports the council, and store size, weekday ridership, and the mall owners' opposition say nothing about whether the program drew weekend shoppers."
+        },
+        {
+          "id": "d-rc-06",
+          "category": "readingComprehension",
+          "topic": "Assumption",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "d-p2",
+          "prompt": "The council's prediction about weekday sales depends on which of the following assumptions?",
+          "options": [
+            "Most people who shop downtown on weekdays also shop there on weekends.",
+            "Transit fares discourage potential weekday shoppers from traveling downtown about as much as they discouraged potential weekend shoppers.",
+            "Weekday sales downtown are currently lower than weekend sales downtown.",
+            "The fares lost by making weekday transit free will be offset by higher sales-tax receipts.",
+            "Suburban malls have seen no decline in weekday sales over the past two years."
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The prediction carries a result from weekends over to weekdays, so the gap lies between the two: it works only if weekday shoppers respond to free fares the way weekend shoppers did. Confirm with the negation test—if fares barely deter weekday shoppers (say, because most are already downtown for work), dropping fares would not produce a comparable rise, and the prediction collapses. Negate any other choice and the argument still stands; they concern the budget, current sales levels, or shopping habits the prediction does not rely on."
+        },
+        {
+          "id": "d-rc-07",
+          "category": "readingComprehension",
+          "topic": "Author's Attitude",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "d-p3",
+          "prompt": "The author's attitude toward the reasoning described in the first paragraph is best described as",
+          "options": [
+            "acceptance of its internal logic combined with doubt that one of its premises describes many actual communities",
+            "unqualified endorsement of both its logic and the remedies it was thought to imply",
+            "scorn for its logic and for the economists who relied on it",
+            "agreement with its premises combined with rejection of the reasoning built on them",
+            "detached interest in its history, without any judgment of its merits"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "Attitude questions turn on the author's evaluative language, which here is concentrated in the last sentence: the model's error \"lay less in its logic than in its premise,\" a premise that \"describes strangers far better than neighbors.\" So the author accepts the reasoning but doubts that its starting assumption fits real communities. The reversed choice (accepting the premises, rejecting the logic) is the classic trap, and \"scorn\" and \"unqualified endorsement\" are too extreme for the author's measured tone."
+        },
+        {
+          "id": "d-rc-08",
+          "category": "readingComprehension",
+          "topic": "Vocabulary in Context",
+          "difficulty": 5,
+          "format": "single",
+          "stimulusId": "d-p3",
+          "prompt": "In the context in which it appears, *tidy* (second paragraph, first sentence) most nearly means",
+          "options": [
+            "considerable",
+            "fastidious",
+            "facile",
+            "hygienic",
+            "provisional"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Cover the word and predict from context: field studies \"complicate\" the choice between state regulation and private property, so the author sees that dichotomy as too neat—oversimplified. *Facile* (superficially simple, ignoring complexities) matches. *Considerable* is the trap built on a different sense of the word (\"a tidy sum\"), while *fastidious* and *hygienic* reflect the literal sense of neat and clean, which cannot describe a dichotomy."
+        }
+      ]
+    }
+  ]
+}
