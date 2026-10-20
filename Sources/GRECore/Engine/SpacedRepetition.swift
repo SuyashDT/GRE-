@@ -47,13 +47,14 @@ public enum SpacedRepetition {
         case .good:
             switch repetitions {
             case 0: interval = 1
-            case 1: interval = 3
+            // Never shorter than Hard or than the interval the card already had.
+            case 1: interval = max(3, previous + 1, Int((Double(previous) * ease).rounded()))
             default: interval = max(previous + 1, Int((Double(previous) * ease).rounded()))
             }
             repetitions += 1
         case .easy:
             ease += 0.15
-            interval = repetitions == 0 ? 4 : max(previous + 2, Int((Double(previous) * ease * 1.3).rounded()))
+            interval = repetitions == 0 ? 4 : max(4, previous + 2, Int((Double(previous) * ease * 1.3).rounded()))
             repetitions += 1
         }
 

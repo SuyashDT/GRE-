@@ -166,40 +166,74 @@ public enum ClaudeCodeLocator {
         let path = pathEntries.filter { !$0.isEmpty && seen.insert($0).inserted }.joined(separator: ":")
 
         var environment = processEnvironment
+        environment.merge(lookup.environment) { _, fromShell in fromShell }
         environment["PATH"] = path
         environment["HOME"] = home
         return Location(executable: URL(fileURLWithPath: found), environment: environment)
     }
 
-    /// Asks the user's login shell for its PATH and the location of `claude`.
-    static func loginShellLookup(environment: [String: String]) -> (path: String?, claude: String?) {
-        let shell = environment["SHELL"].flatMap { FileManager.default.isExecutableFile(atPath: $0) ? $0 : nil } ?? "/bin/zsh"
-        guard FileManager.default.isExecutableFile(atPath: shell) else { return (nil, nil) }
+    /// Variables from the login shell that describe the shell itself rather than the user's setup.
+    static let shellOnlyVariables: Set<String> = ["PWD", "OLDPWD", "SHLVL", "_", "PS1", "PS2", "PROMPT", "RPROMPT"]
+
+    /// Asks the user's login shell for its PATH, the location of `claude` and its environment
+    /// (proxy, certificate and Claude Code settings that a Finder-launched app wouldn't otherwise see).
+    static func loginShellLookup(environment: [String: String]) -> (path: String?, claude: String?, environment: [String: String]) {
+        let fileManager = FileManager.default
+        let shell = environment["SHELL"].flatMap { fileManager.isExecutableFile(atPath: $0) ? $0 : nil } ?? "/bin/zsh"
+        guard fileManager.isExecutableFile(atPath: shell) else { return (nil, nil, [:]) }
+
+        // Write to a file rather than a pipe: a background process started by the user's
+        // shell config could hold a pipe open and block reading forever.
+        let outputURL = fileManager.temporaryDirectory.appendingPathComponent("gre-prep-shell-\(UUID().uuidString)")
+        guard fileManager.createFile(atPath: outputURL.path, contents: nil),
+              let output = try? FileHandle(forWritingTo: outputURL)
+        else { return (nil, nil, [:]) }
+        defer {
+            try? output.close()
+            try? fileManager.removeItem(at: outputURL)
+        }
+
         let process = Process()
         process.executableURL = URL(fileURLWithPath: shell)
-        process.arguments = ["-ilc", "echo __GRE_PATH__=$PATH; echo __GRE_CLAUDE__=$(command -v claude)"]
-        let output = Pipe()
+        process.arguments = ["-ilc", "echo __GRE_PATH__=$PATH; echo __GRE_CLAUDE__=$(command -v claude); echo __GRE_ENV__; /usr/bin/env -0"]
         process.standardOutput = output
         process.standardError = FileHandle.nullDevice
         process.standardInput = FileHandle.nullDevice
-        do { try process.run() } catch { return (nil, nil) }
+        do { try process.run() } catch { return (nil, nil, [:]) }
         let deadline = Date().addingTimeInterval(5)
         while process.isRunning && Date() < deadline { Thread.sleep(forTimeInterval: 0.05) }
         if process.isRunning {
-            process.terminate()
-            return (nil, nil)
+            // Interactive shells ignore SIGTERM.
+            kill(process.processIdentifier, SIGKILL)
+            return (nil, nil, [:])
         }
-        let text = String(decoding: output.fileHandleForReading.readDataToEndOfFile(), as: UTF8.self)
+        let data = (try? Data(contentsOf: outputURL)) ?? Data()
+        return parseShellOutput(data, isExecutable: { fileManager.isExecutableFile(atPath: $0) })
+    }
+
+    static func parseShellOutput(_ data: Data, isExecutable: (String) -> Bool) -> (path: String?, claude: String?, environment: [String: String]) {
+        let text = String(decoding: data, as: UTF8.self)
+        var head = Substring(text)
+        var variables: [String: String] = [:]
+        if let marker = text.range(of: "__GRE_ENV__\n") {
+            head = text[..<marker.lowerBound]
+            for entry in text[marker.upperBound...].split(separator: "\0") {
+                guard let equals = entry.firstIndex(of: "=") else { continue }
+                let key = String(entry[..<equals])
+                guard !key.isEmpty, !key.contains(where: { $0.isWhitespace }), !shellOnlyVariables.contains(key) else { continue }
+                variables[key] = String(entry[entry.index(after: equals)...])
+            }
+        }
         var path: String?
         var claude: String?
-        for line in text.split(whereSeparator: \.isNewline) {
+        for line in head.split(whereSeparator: \.isNewline) {
             if line.hasPrefix("__GRE_PATH__=") { path = String(line.dropFirst("__GRE_PATH__=".count)) }
             if line.hasPrefix("__GRE_CLAUDE__=") {
                 let value = String(line.dropFirst("__GRE_CLAUDE__=".count)).trimmingCharacters(in: .whitespaces)
-                if value.hasPrefix("/"), FileManager.default.isExecutableFile(atPath: value) { claude = value }
+                if value.hasPrefix("/"), isExecutable(value) { claude = value }
             }
         }
-        return (path, claude)
+        return (path, claude, variables)
     }
 }
 

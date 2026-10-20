@@ -115,7 +115,13 @@ struct DrillSessionView: View {
         }
         .navigationTitle(drill.title)
         .onAppear { shownAt = Date() }
-        .onDisappear { recordIfNeeded() }
+        .onDisappear {
+            recordIfNeeded()
+            // Leaving via the sidebar: don't reopen this (already recorded) drill from question 1 later.
+            if model.selection != .drills {
+                model.drillPath.removeAll { $0 == drill.id }
+            }
+        }
     }
 
     private var progressHeader: some View {

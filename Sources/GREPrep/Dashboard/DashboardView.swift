@@ -6,8 +6,16 @@ struct DashboardView: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {
+        // Re-render every minute so "cards due" and the streak stay current.
+        TimelineView(.everyMinute) { _ in
+            dashboard
+        }
+        .navigationTitle("Dashboard")
+    }
+
+    private var dashboard: some View {
         let analytics = model.analytics
-        ScrollView {
+        return ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Dashboard").font(.largeTitle.weight(.semibold))
@@ -39,7 +47,7 @@ struct DashboardView: View {
                     StatTile(
                         title: "Accuracy",
                         value: analytics.overallAccuracy.map(Format.percent) ?? "—",
-                        detail: "\(analytics.questionsPracticed) questions answered",
+                        detail: "\(analytics.questionsPracticed) questions practiced",
                         systemImage: "target"
                     )
                     StatTile(
@@ -85,7 +93,6 @@ struct DashboardView: View {
             .frame(maxWidth: 1100, alignment: .leading)
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("Dashboard")
     }
 
     private func greeting(_ analytics: Analytics) -> String {

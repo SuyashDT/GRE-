@@ -245,6 +245,30 @@ final class SpacedRepetitionTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(missed.ease, SpacedRepetition.minimumEase)
     }
 
+    /// For every rating history up to five reviews: Hard ≤ Good < Easy, and Good never
+    /// shortens a card's interval once it has been learned.
+    func testRatingsStayOrdered() {
+        let now = Date(timeIntervalSince1970: 1_800_000_000)
+        var states: [CardState?] = [nil]
+        for _ in 0..<5 {
+            var next: [CardState?] = []
+            for state in states {
+                let hard = SpacedRepetition.review(state, wordId: "w", rating: .hard, now: now, calendar: calendar)
+                let good = SpacedRepetition.review(state, wordId: "w", rating: .good, now: now, calendar: calendar)
+                let easy = SpacedRepetition.review(state, wordId: "w", rating: .easy, now: now, calendar: calendar)
+                XCTAssertLessThanOrEqual(hard.intervalDays, good.intervalDays)
+                XCTAssertLessThan(good.intervalDays, easy.intervalDays)
+                if let state, state.repetitions > 0 {
+                    XCTAssertGreaterThan(good.intervalDays, state.intervalDays)
+                }
+                next += ReviewRating.allCases.map {
+                    SpacedRepetition.review(state, wordId: "w", rating: $0, now: now, calendar: calendar)
+                }
+            }
+            states = next
+        }
+    }
+
     func testQueueRespectsNewCardLimit() {
         let now = Date(timeIntervalSince1970: 1_800_000_000)
         let words = (0..<30).map {

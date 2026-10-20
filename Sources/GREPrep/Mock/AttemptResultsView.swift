@@ -104,6 +104,11 @@ struct EssayResultSection: View {
                     .background(.background.secondary, in: RoundedRectangle(cornerRadius: 10))
                 } else if let grade = essay.grade {
                     EssayGradeView(grade: grade)
+                    if let error = model.gradingErrors[attempt.id] {
+                        Label(error, systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                     Button("Grade Again") { Task { await model.gradeEssay(attemptId: attempt.id) } }
                         .controlSize(.small)
                 } else {

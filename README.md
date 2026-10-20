@@ -52,9 +52,10 @@ open "build/GRE Prep.app"
 
 **Without building:** every push builds the app on GitHub Actions. Download
 `GRE-Prep-app` from the run's **Artifacts**, unzip it and move it to Applications.
-That build is signed ad hoc, not notarized, so macOS blocks the first launch.
-Either right-click the app and choose **Open**, or run
-`xattr -dr com.apple.quarantine "/Applications/GRE Prep.app"`.
+That build is signed ad hoc, not notarized, so macOS blocks the first launch. On macOS 14,
+right-click the app and choose **Open**. On macOS 15 or later, try to open it once, then go to
+**System Settings → Privacy & Security** and click **Open Anyway**. On any version you can
+instead run `xattr -dr com.apple.quarantine "/Applications/GRE Prep.app"`.
 
 ## Essay grading with Claude Code
 

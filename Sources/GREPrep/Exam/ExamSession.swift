@@ -60,6 +60,8 @@ final class ExamSession {
     }
 
     func finishEssay() {
+        // A confirmation alert left open when time runs out must not advance a second time.
+        guard phase == .essay else { return }
         stopTimer()
         run.advance()
         prepareNextStep()
@@ -73,6 +75,7 @@ final class ExamSession {
     }
 
     func exitSection() {
+        guard phase == .question || phase == .review else { return }
         stopTimer()
         isCalculatorVisible = false
         run.advance()
@@ -210,7 +213,8 @@ final class ExamSession {
 
     private func tick() {
         let now = Date()
-        let elapsed = now.timeIntervalSince(lastTick)
+        // Cap at the deadline so sleep or App Nap can't inflate recorded time.
+        let elapsed = max(0, min(now, deadline).timeIntervalSince(lastTick))
         lastTick = now
         switch phase {
         case .essay:

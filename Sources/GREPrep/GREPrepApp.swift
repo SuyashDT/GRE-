@@ -11,7 +11,10 @@ struct GREPrepApp: App {
             RootView()
                 .environment(model)
                 .frame(minWidth: 1080, minHeight: 700)
-                .task { await model.start() }
+                .task {
+                    appDelegate.model = model
+                    await model.start()
+                }
         }
         .defaultSize(width: 1280, height: 820)
         .commands {
@@ -37,7 +40,10 @@ struct GREPrepApp: App {
     }
 }
 
+@MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    weak var model: AppModel?
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         // When launched with `swift run` there is no app bundle; make sure the app
         // still gets a Dock icon, a menu bar and keyboard focus.
@@ -45,7 +51,20 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
     }
 
+    /// Closing the window during a test keeps the app (and the test clock) running;
+    /// clicking the Dock icon brings the test back.
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        true
+        model?.exam == nil
+    }
+
+    /// ⌘Q during a test asks first, like the Quit Test button.
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        guard model?.exam != nil else { return .terminateNow }
+        let alert = NSAlert()
+        alert.messageText = "Quit the test?"
+        alert.informativeText = "Your answers will be discarded and no score will be recorded."
+        alert.addButton(withTitle: "Keep Going")
+        alert.addButton(withTitle: "Quit")
+        return alert.runModal() == .alertSecondButtonReturn ? .terminateNow : .terminateCancel
     }
 }

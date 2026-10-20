@@ -92,14 +92,20 @@ public extension Question {
         }
     }
 
+    /// Adds the entry box's labels around a value: "$12.50", "45%", "12 cm".
+    func withUnits(_ value: String) -> String {
+        let suffix = entrySuffix.map { $0.first?.isLetter == true ? " " + $0 : $0 } ?? ""
+        return (entryPrefix ?? "") + value + suffix
+    }
+
     /// The user's answer rendered as text for review screens.
     func responseText(_ response: Response?) -> String {
         guard let response, state(of: response) != .unanswered else { return "No answer" }
         switch format {
         case .numeric:
-            return [entryPrefix, response.numberText, entrySuffix].compactMap { $0 }.joined()
+            return withUnits(response.numberText)
         case .fraction:
-            return "\(response.numberText)/\(response.denominatorText)"
+            return withUnits("\(response.numberText)/\(response.denominatorText)")
         case .sentence:
             return response.selected.sorted().map { "Sentence \($0 + 1)" }.joined(separator: ", ")
         case .blanks:

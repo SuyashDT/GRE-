@@ -27,6 +27,11 @@ struct ExamView: View {
                 }
         }
         .background(Color(nsColor: .textBackgroundColor))
+        .onChange(of: session.phase) { _, _ in
+            // Close confirmations that no longer apply (e.g. time ran out while one was open).
+            confirmExitSection = false
+            confirmFinishEssay = false
+        }
         .alert("Quit the test?", isPresented: $confirmQuit) {
             Button("Quit Test", role: .destructive) { model.quitExam() }
             Button("Keep Going", role: .cancel) {}
@@ -95,9 +100,9 @@ struct ExamView: View {
                 }
                 ExamBarButton("Back", systemImage: "chevron.left") { session.back() }
                     .disabled(!session.canGoBack)
-                    .keyboardShortcut(.leftArrow, modifiers: .command)
+                    .keyboardShortcut("[", modifiers: .command)
                 ExamBarButton("Next", systemImage: "chevron.right") { session.next() }
-                    .keyboardShortcut(.rightArrow, modifiers: .command)
+                    .keyboardShortcut("]", modifiers: .command)
             case .review:
                 ExamBarButton("Quit Test", systemImage: "xmark.circle") { confirmQuit = true }
                 ExamBarButton("Exit Section", systemImage: "rectangle.portrait.and.arrow.right") { confirmExitSection = true }

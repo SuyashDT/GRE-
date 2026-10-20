@@ -154,6 +154,34 @@ final class ClaudeCodeGraderProcessTests: XCTestCase {
         }
     }
 
+    func testParsesLoginShellOutput() {
+        let output = "Welcome to zsh!\n__GRE_PATH__=/opt/homebrew/bin:/usr/bin\n__GRE_CLAUDE__=/opt/homebrew/bin/claude\n__GRE_ENV__\n"
+            + "HTTPS_PROXY=http://proxy:8080\u{0}PWD=/tmp\u{0}MULTI=line one\nline two\u{0}CLAUDE_CONFIG_DIR=/Users/me/.claude\u{0}"
+        let parsed = ClaudeCodeLocator.parseShellOutput(Data(output.utf8), isExecutable: { $0 == "/opt/homebrew/bin/claude" })
+        XCTAssertEqual(parsed.path, "/opt/homebrew/bin:/usr/bin")
+        XCTAssertEqual(parsed.claude, "/opt/homebrew/bin/claude")
+        XCTAssertEqual(parsed.environment["HTTPS_PROXY"], "http://proxy:8080")
+        XCTAssertEqual(parsed.environment["CLAUDE_CONFIG_DIR"], "/Users/me/.claude")
+        XCTAssertEqual(parsed.environment["MULTI"], "line one\nline two")
+        XCTAssertNil(parsed.environment["PWD"], "shell-only variables are dropped")
+
+        let missing = ClaudeCodeLocator.parseShellOutput(Data("__GRE_PATH__=/usr/bin\n__GRE_CLAUDE__=\n".utf8), isExecutable: { _ in true })
+        XCTAssertNil(missing.claude)
+        XCTAssertTrue(missing.environment.isEmpty)
+    }
+
+    func testNumericAnswerTextIncludesUnits() {
+        let question = Question(id: "n", category: .numericEntry, topic: "Arithmetic", difficulty: 2, format: .numeric,
+                                prompt: "p", answerValue: 12.5, answerDisplay: "12.50", entryPrefix: "$",
+                                explanation: "explanation text here")
+        XCTAssertEqual(question.correctAnswerText, "$12.50")
+        XCTAssertEqual(question.responseText(Response(numberText: "12")), "$12")
+        let length = Question(id: "l", category: .numericEntry, topic: "Geometry", difficulty: 2, format: .numeric,
+                              prompt: "p", answerValue: 7, answerDisplay: "7", entrySuffix: "cm",
+                              explanation: "explanation text here")
+        XCTAssertEqual(length.correctAnswerText, "7 cm")
+    }
+
     func testLocatorHonoursCustomPath() throws {
         let script = try makeScript("exit 0\n")
         let location = ClaudeCodeLocator.locate(customPath: script.path, processEnvironment: ["HOME": folder.path, "SHELL": "/nonexistent"])

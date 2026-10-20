@@ -163,7 +163,7 @@ public struct Question: Codable, Identifiable, Hashable, Sendable {
     public var correctAnswerText: String {
         switch format {
         case .numeric, .fraction:
-            return answerDisplay ?? answerValue.map { NumberFormatting.plain($0) } ?? "—"
+            return withUnits(answerDisplay ?? answerValue.map { NumberFormatting.plain($0) } ?? "—")
         case .blanks:
             guard let blanks, let correct else { return "—" }
             return zip(blanks, correct).enumerated().map { index, pair in

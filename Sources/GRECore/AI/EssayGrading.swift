@@ -97,12 +97,14 @@ public enum EssayGradingPrompt {
     or point to passages. Give two to four strengths, three to five concrete improvements, and a \
     short nextSteps paragraph saying what to practice before the next essay.
 
-    Reply with only a JSON object with the keys score, summary, criteria (array of {name, score, \
-    comment}), strengths, improvements, nextSteps. Do not use any tools.
+    Return the grade as a JSON object with the keys score, summary, criteria (array of {name, \
+    score, comment}), strengths, improvements, nextSteps. If a StructuredOutput tool is available, \
+    return it by calling that tool exactly once; otherwise reply with only the JSON object. Do not \
+    use any other tools.
     """
 
     /// The short instruction passed as the `-p` argument; the essay itself goes on stdin.
-    public static let instruction = "Grade the GRE Analyze an Issue practice essay provided in the input, following your instructions. Reply with only the JSON object."
+    public static let instruction = "Grade the GRE Analyze an Issue practice essay provided in the input, following your instructions."
 
     public static func input(task: EssayTask, essay: String, minutesUsed: Double?) -> String {
         let words = essay.split(whereSeparator: { $0.isWhitespace || $0.isNewline }).count

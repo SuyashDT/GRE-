@@ -81,6 +81,11 @@ struct PlainTextEditor: NSViewRepresentable {
         textView.isAutomaticLinkDetectionEnabled = false
         textView.isAutomaticDataDetectionEnabled = false
         textView.smartInsertDeleteEnabled = false
+        textView.inlinePredictionType = .no
+        if #available(macOS 15.0, *) {
+            textView.writingToolsBehavior = .none
+            textView.mathExpressionCompletionType = .no
+        }
         textView.font = NSFont.systemFont(ofSize: 15)
         textView.textContainerInset = NSSize(width: 10, height: 12)
         textView.isEditable = isEditable

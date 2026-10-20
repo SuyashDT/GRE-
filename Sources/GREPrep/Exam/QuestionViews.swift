@@ -182,6 +182,12 @@ struct ChoiceList: View {
                 } label: {
                     HStack(alignment: .firstTextBaseline, spacing: 12) {
                         indicator(index)
+                        if correct != nil {
+                            // Explanations refer to choices by letter.
+                            Text(Question.letter(index) + ".")
+                                .font(.body.monospaced())
+                                .foregroundStyle(.secondary)
+                        }
                         RichText(option)
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
