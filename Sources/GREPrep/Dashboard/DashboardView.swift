@@ -109,6 +109,18 @@ struct DashboardView: View {
         let hasMock = !analytics.scoreHistory.isEmpty
         VStack(alignment: .leading, spacing: 10) {
             Text("Suggested next steps").font(.title2.weight(.semibold))
+            if model.studyPlan == nil {
+                suggestion("Set your test date to get a day-by-day study plan.", systemImage: "calendar") {
+                    model.selection = .studyPlan
+                }
+            } else {
+                let left = model.openPlanTaskCount()
+                if left > 0 {
+                    suggestion("Today's study plan: \(left) task\(left == 1 ? "" : "s") left.", systemImage: "calendar") {
+                        model.selection = .studyPlan
+                    }
+                }
+            }
             if !hasMock {
                 suggestion("Take Mock Test 1 to get a baseline score.", systemImage: "doc.text.magnifyingglass") {
                     model.selection = .mockTests

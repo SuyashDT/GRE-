@@ -4,6 +4,7 @@ import GRECore
 
 enum SidebarItem: String, CaseIterable, Identifiable, Hashable {
     case dashboard
+    case studyPlan
     case mockTests
     case drills
     case vocabulary
@@ -14,6 +15,7 @@ enum SidebarItem: String, CaseIterable, Identifiable, Hashable {
     var title: String {
         switch self {
         case .dashboard: return "Dashboard"
+        case .studyPlan: return "Study Plan"
         case .mockTests: return "Mock Tests"
         case .drills: return "Practice Drills"
         case .vocabulary: return "Vocabulary"
@@ -24,6 +26,7 @@ enum SidebarItem: String, CaseIterable, Identifiable, Hashable {
     var systemImage: String {
         switch self {
         case .dashboard: return "chart.bar.xaxis"
+        case .studyPlan: return "calendar"
         case .mockTests: return "doc.text.magnifyingglass"
         case .drills: return "target"
         case .vocabulary: return "character.book.closed"
@@ -39,6 +42,7 @@ final class AppModel {
     private(set) var content: ContentLibrary?
     private(set) var loadError: String?
     private(set) var progress = ProgressData()
+    private(set) var studyPlan: StudyPlan?
     var saveError: String?
 
     var selection: SidebarItem? = .dashboard
@@ -103,6 +107,7 @@ final class AppModel {
             saveError = "Your saved progress couldn't be read, so a fresh file was started."
                 + (backup.map { " The old file was kept at \($0.path)." } ?? "")
         }
+        rebuildPlan()
     }
 
     // MARK: Progress
@@ -162,6 +167,7 @@ final class AppModel {
         get { progress.newCardsPerDay }
         set {
             progress.newCardsPerDay = max(1, min(100, newValue))
+            rebuildPlan()
             persist()
         }
     }
@@ -184,7 +190,107 @@ final class AppModel {
     func resetProgress() {
         progress = ProgressData()
         mockPath = []
+        rebuildPlan()
         persist()
+    }
+
+    // MARK: Study plan
+
+    /// Builds (or rebuilds) the plan starting today.
+    func setStudyPlan(examDate: Date, minutesPerDay: Int, restWeekday: Int?) {
+        progress.studyPlan = StudyPlanSettings(
+            examDate: examDate, startDate: Date(), minutesPerDay: minutesPerDay, restWeekday: restWeekday
+        )
+        rebuildPlan()
+        persist()
+    }
+
+    func deleteStudyPlan() {
+        progress.studyPlan = nil
+        progress.planChecked = []
+        rebuildPlan()
+        persist()
+    }
+
+    private func rebuildPlan() {
+        guard let settings = progress.studyPlan, let content else {
+            studyPlan = nil
+            return
+        }
+        studyPlan = StudyPlan.make(settings: settings, content: content, newCardsPerDay: progress.newCardsPerDay)
+    }
+
+    func isDone(_ task: PlanTask, on day: PlanDay) -> Bool {
+        StudyPlan.isDone(task, on: day.date, progress: progress)
+    }
+
+    func isCompletedInApp(_ task: PlanTask, on day: PlanDay) -> Bool {
+        StudyPlan.isCompletedInApp(task, on: day.date, progress: progress)
+    }
+
+    func togglePlanTask(_ task: PlanTask) {
+        if progress.planChecked.contains(task.id) {
+            progress.planChecked.remove(task.id)
+        } else {
+            progress.planChecked.insert(task.id)
+            markStudiedToday()
+        }
+        persist()
+    }
+
+    /// Tasks still open today, for the sidebar badge.
+    func openPlanTaskCount(now: Date = Date()) -> Int {
+        guard let day = studyPlan?.day(for: now) else { return 0 }
+        return day.tasks.filter { $0.kind != .rest && $0.kind != .examDay && !isDone($0, on: day) }.count
+    }
+
+    /// The drill to practise for a weak-spot task: the weakest question type so far (with its stats),
+    /// or the plan's pick until enough questions have been answered.
+    func weakSpotDrill(fallback: String) -> (set: DrillSet, weakest: CategoryStat?)? {
+        if let weakest = analytics.weakestCategories(limit: 1).first,
+           let set = content?.drills.sets.first(where: { $0.category == weakest.category }) {
+            return (set, weakest)
+        }
+        return content?.drillSet(id: fallback).map { ($0, nil) }
+    }
+
+    /// Whether a task has a place in the app to go to.
+    func canOpen(_ task: PlanTask) -> Bool {
+        switch task.kind {
+        case .rest, .examDay: return false
+        case .reviewMock: return !progress.mockAttempts.isEmpty
+        default: return true
+        }
+    }
+
+    func open(_ task: PlanTask) {
+        switch task.kind {
+        case let .lesson(id):
+            selection = .lessons
+            lessonPath = [id]
+        case let .drill(id):
+            selection = .drills
+            drillPath = [id]
+        case let .weakSpot(fallback):
+            selection = .drills
+            drillPath = weakSpotDrill(fallback: fallback).map { [$0.set.id] } ?? []
+        case .vocabulary:
+            selection = .vocabulary
+        case .mockTest:
+            selection = .mockTests
+            mockPath = []
+        case .reviewMock:
+            selection = .mockTests
+            mockPath = progress.mockAttempts.max { $0.finishedAt < $1.finishedAt }.map { [$0.id] } ?? []
+        case .essayOutline:
+            selection = .lessons
+            lessonPath = ["awa-issue"]
+        case .lightReview:
+            selection = .lessons
+            lessonPath = ["pacing"]
+        case .rest, .examDay:
+            break
+        }
     }
 
     // MARK: Mock tests

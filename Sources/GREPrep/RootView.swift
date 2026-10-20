@@ -35,13 +35,13 @@ struct MainView: View {
     var body: some View {
         @Bindable var model = model
         NavigationSplitView {
-            // Re-render every minute so the "cards due" badge stays current.
+            // Re-render every minute so the "cards due" and plan badges stay current.
             TimelineView(.everyMinute) { context in
                 List(selection: $model.selection) {
                     Section("Study") {
                         ForEach(SidebarItem.allCases) { item in
                             Label(item.title, systemImage: item.systemImage)
-                                .badge(item == .vocabulary ? model.analytics.dueCardCount(now: context.date) : 0)
+                                .badge(badge(for: item, now: context.date))
                                 .tag(item)
                         }
                     }
@@ -51,6 +51,7 @@ struct MainView: View {
         } detail: {
             switch model.selection ?? .dashboard {
             case .dashboard: DashboardView()
+            case .studyPlan: StudyPlanView()
             case .mockTests: MockTestsView()
             case .drills: DrillsView()
             case .vocabulary: VocabularyView()
@@ -59,4 +60,11 @@ struct MainView: View {
         }
     }
 
+    private func badge(for item: SidebarItem, now: Date) -> Int {
+        switch item {
+        case .vocabulary: return model.analytics.dueCardCount(now: now)
+        case .studyPlan: return model.openPlanTaskCount(now: now)
+        default: return 0
+        }
+    }
 }

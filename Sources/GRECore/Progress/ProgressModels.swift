@@ -104,11 +104,14 @@ public struct ProgressData: Codable, Hashable, Sendable {
     public var studyDays: Set<String> = []
     public var lessonsRead: Set<String> = []
     public var newCardsPerDay: Int = 20
+    public var studyPlan: StudyPlanSettings?
+    /// Ids of study-plan tasks ticked off by hand.
+    public var planChecked: Set<String> = []
 
     public init() {}
 
     enum CodingKeys: String, CodingKey {
-        case version, mockAttempts, drillAttempts, cards, studyDays, lessonsRead, newCardsPerDay
+        case version, mockAttempts, drillAttempts, cards, studyDays, lessonsRead, newCardsPerDay, studyPlan, planChecked
     }
 
     // Decode leniently so files written by older versions of the app keep loading.
@@ -121,5 +124,7 @@ public struct ProgressData: Codable, Hashable, Sendable {
         studyDays = try container.decodeIfPresent(Set<String>.self, forKey: .studyDays) ?? []
         lessonsRead = try container.decodeIfPresent(Set<String>.self, forKey: .lessonsRead) ?? []
         newCardsPerDay = try container.decodeIfPresent(Int.self, forKey: .newCardsPerDay) ?? 20
+        studyPlan = try container.decodeIfPresent(StudyPlanSettings.self, forKey: .studyPlan)
+        planChecked = try container.decodeIfPresent(Set<String>.self, forKey: .planChecked) ?? []
     }
 }

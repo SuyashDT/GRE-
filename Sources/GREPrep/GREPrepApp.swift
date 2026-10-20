@@ -22,14 +22,16 @@ struct GREPrepApp: App {
             CommandMenu("Study") {
                 Button("Dashboard") { model.selection = .dashboard }
                     .keyboardShortcut("1", modifiers: .command)
-                Button("Mock Tests") { model.selection = .mockTests }
+                Button("Study Plan") { model.selection = .studyPlan }
                     .keyboardShortcut("2", modifiers: .command)
-                Button("Practice Drills") { model.selection = .drills }
+                Button("Mock Tests") { model.selection = .mockTests }
                     .keyboardShortcut("3", modifiers: .command)
-                Button("Vocabulary") { model.selection = .vocabulary }
+                Button("Practice Drills") { model.selection = .drills }
                     .keyboardShortcut("4", modifiers: .command)
-                Button("Strategy Lessons") { model.selection = .lessons }
+                Button("Vocabulary") { model.selection = .vocabulary }
                     .keyboardShortcut("5", modifiers: .command)
+                Button("Strategy Lessons") { model.selection = .lessons }
+                    .keyboardShortcut("6", modifiers: .command)
             }
         }
 

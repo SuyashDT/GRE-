@@ -16,6 +16,7 @@ dashboard.
 | **Practice drills** | 58 untimed questions in 8 sets, one per question type, with an explanation after each answer. |
 | **Vocabulary** | 320 high-frequency GRE words with definitions, example sentences and synonyms, scheduled with spaced repetition (SM-2). |
 | **Strategy lessons** | 15 lessons: test format, pacing, the Issue essay, every question type, the calculator and a quant review. |
+| **Study plan** | Set your test date, daily study time and a rest day, and the app lays out every day until the test: a diagnostic mock test, every lesson with its drill, daily vocabulary, weak-spot practice, a dress rehearsal a week out and a light day before. Lessons, drills, tests and vocabulary tick themselves off as you do them. |
 | **Dashboard** | Score history, accuracy by question type and content area, time per question against target pace, study streak and suggested next steps. |
 
 ### The test format it follows
