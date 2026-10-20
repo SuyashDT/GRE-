@@ -1,7 +1,7 @@
 # GRE Prep for Mac
 
-A native macOS app (SwiftUI) for GRE General Test preparation, with a full-length
-mock test built to the **current shorter GRE format**, essay grading by Claude through
+A native macOS app (SwiftUI) for GRE General Test preparation, with two full-length
+mock tests built to the **current shorter GRE format**, essay grading by Claude through
 **Claude Code**, practice drills, vocabulary flashcards, strategy lessons and a progress
 dashboard.
 
@@ -9,7 +9,7 @@ dashboard.
 
 | | |
 | --- | --- |
-| **Mock Test 1** | Analyze an Issue essay, two Verbal and two Quant sections. Section 2 of each measure adapts to how you did in section 1. 84 original questions (the easier and harder second sections are both included). |
+| **Mock Tests 1 and 2** | Each has an Analyze an Issue essay, two Verbal and two Quant sections. Section 2 of each measure adapts to how you did in section 1. 84 original questions per test (the easier and harder second sections are both included). The study plan uses Mock Test 1 as the diagnostic and Mock Test 2 as the dress rehearsal. |
 | **Exam interface** | Modelled on the real test: Quit / Exit Section / Review / Mark / Back / Next, a section timer you can hide, a Review screen, the on-screen calculator (order of operations, memory, Transfer Display), and an essay editor with spell-check turned off. |
 | **Score report** | Estimated Verbal and Quant scores (130–170) with likely range, which second-section tier you reached, per-question correctness and timing, and full explanations. |
 | **Essay grading** | Claude grades the essay on the 0–6 Issue rubric through the Claude Code CLI, with a score per criterion, strengths, improvements and next steps. You can also score it yourself against the rubric. |
@@ -120,5 +120,6 @@ swift test                                                   # runs on macOS or 
 python3 scripts/validate_content.py Sources/GRECore/Resources/Content/*.json
 ```
 
-To add a second mock test, add `mock-test-2.json` next to `mock-test-1.json`. The app
-loads every `mock-test-*.json` it finds. See [docs/CONTENT_FORMAT.md](docs/CONTENT_FORMAT.md).
+To add another mock test, add `mock-test-3.json` next to the others. The app loads every
+`mock-test-*.json` it finds, and the study plan uses the last one as the dress rehearsal.
+See [docs/CONTENT_FORMAT.md](docs/CONTENT_FORMAT.md).

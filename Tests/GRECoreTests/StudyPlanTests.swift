@@ -55,6 +55,10 @@ final class StudyPlanTests: XCTestCase {
         let mockDays = plan.days.filter { $0.tasks.contains { if case .mockTest = $0.kind { return true }; return false } }
         XCTAssertEqual(mockDays.count, 2)
         XCTAssertEqual(mockDays.last?.date, date(25, month: 12))
+        // With more than one mock test, the dress rehearsal is a fresh test rather than a retake.
+        let rehearsal = try XCTUnwrap(library.mockTests.last)
+        XCTAssertNotEqual(rehearsal.id, library.mockTests[0].id)
+        XCTAssertEqual(mockDays.last?.tasks.map(\.kind).contains(.mockTest(rehearsal.id)), true)
         XCTAssertEqual(plan.days[59].tasks.map(\.kind), [.vocabulary, .lightReview])
         XCTAssertEqual(plan.days.last?.tasks.map(\.kind), [.examDay])
         XCTAssertEqual(plan.days.last?.date, calendar.date(from: DateComponents(year: 2027, month: 1, day: 1)))

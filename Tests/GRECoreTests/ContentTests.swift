@@ -10,26 +10,28 @@ final class ContentTests: XCTestCase {
         return try ContentLibrary.loadBundled()
     }
 
-    func testMockTestMatchesCurrentGREFormat() throws {
+    func testMockTestsMatchCurrentGREFormat() throws {
         let library = try loadLibrary()
-        let test = try XCTUnwrap(library.mockTests.first)
-        XCTAssertEqual(test.essay.minutes, 30)
-        XCTAssertEqual(test.steps.first, .essay)
-        XCTAssertEqual(test.steps.count, 5)
+        XCTAssertGreaterThanOrEqual(library.mockTests.count, 2)
+        for test in library.mockTests {
+            XCTAssertEqual(test.essay.minutes, 30, test.id)
+            XCTAssertEqual(test.steps.first, .essay, test.id)
+            XCTAssertEqual(test.steps.count, 5, test.id)
 
-        let expected: [(Measure, Int, Int)] = [(.verbal, 12, 18), (.verbal, 15, 23), (.quant, 12, 21), (.quant, 15, 26)]
-        for (measure, count, minutes) in expected {
-            let stage = count == 12 ? 1 : 2
-            let tiers: [TestSection.Tier] = stage == 1 ? [.standard] : [.easier, .harder]
-            for tier in tiers {
-                let section = try XCTUnwrap(test.section(measure, stage: stage, tier: tier), "\(measure) \(stage) \(tier)")
-                XCTAssertEqual(section.questions.count, count, section.id)
-                XCTAssertEqual(section.minutes, minutes, section.id)
-                XCTAssertTrue(section.questions.allSatisfy { $0.category.measure == measure }, section.id)
+            let expected: [(Measure, Int, Int)] = [(.verbal, 12, 18), (.verbal, 15, 23), (.quant, 12, 21), (.quant, 15, 26)]
+            for (measure, count, minutes) in expected {
+                let stage = count == 12 ? 1 : 2
+                let tiers: [TestSection.Tier] = stage == 1 ? [.standard] : [.easier, .harder]
+                for tier in tiers {
+                    let section = try XCTUnwrap(test.section(measure, stage: stage, tier: tier), "\(test.id) \(measure) \(stage) \(tier)")
+                    XCTAssertEqual(section.questions.count, count, "\(test.id) \(section.id)")
+                    XCTAssertEqual(section.minutes, minutes, "\(test.id) \(section.id)")
+                    XCTAssertTrue(section.questions.allSatisfy { $0.category.measure == measure }, "\(test.id) \(section.id)")
+                }
             }
+            // One path through the test is 30 + 18 + 23 + 21 + 26 = 118 minutes (1 h 58 min).
+            XCTAssertEqual(test.totalMinutes, 118, test.id)
         }
-        // One path through the test is 30 + 18 + 23 + 21 + 26 = 118 minutes (1 h 58 min).
-        XCTAssertEqual(test.totalMinutes, 118)
     }
 
     func testEveryQuestionIsAnswerable() throws {
