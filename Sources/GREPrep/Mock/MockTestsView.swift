@@ -58,6 +58,8 @@ struct MockTestsView: View {
 struct MockTestCard: View {
     @Environment(AppModel.self) private var model
     let test: MockTest
+    /// The later day the coach's plan saves this test for, while the "start early?" question is up.
+    @State private var plannedDay: Date?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -68,13 +70,26 @@ struct MockTestCard: View {
                 }
                 Spacer()
                 Button {
-                    model.startExam(test)
+                    if let day = model.plannedLaterDay(forMockTest: test.id) {
+                        plannedDay = day
+                    } else {
+                        model.startExam(test)
+                    }
                 } label: {
                     Label("Start Test", systemImage: "play.fill")
                         .padding(.horizontal, 6)
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
+                .alert("Start \(test.title) early?", isPresented: Binding(
+                    get: { plannedDay != nil },
+                    set: { if !$0 { plannedDay = nil } }
+                ), presenting: plannedDay) { _ in
+                    Button("Start Anyway") { model.startExam(test) }
+                    Button("Not Now", role: .cancel) {}
+                } message: { day in
+                    Text("Your coach's plan saves this test for \(day.formatted(.dateTime.weekday(.wide).day().month(.wide))), so that it is new to you on that day.")
+                }
             }
             Text(test.description)
                 .fixedSize(horizontal: false, vertical: true)

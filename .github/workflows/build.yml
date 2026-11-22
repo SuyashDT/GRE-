@@ -23,7 +23,9 @@ jobs:
           swift --version
 
       - name: Validate content
-        run: python3 scripts/validate_content.py Sources/GRECore/Resources/Content/*.json
+        run: |
+          python3 scripts/validate_content.py Sources/GRECore/Resources/Content/*.json
+          python3 scripts/validate_content.py --coach docs/examples/coach
 
       - name: Build
         run: swift build

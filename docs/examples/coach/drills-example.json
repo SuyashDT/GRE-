@@ -1,0 +1,111 @@
+{
+  "stimuli": [
+    {
+      "id": "ex-p1",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "For decades, ecologists assumed that large predators shape ecosystems mainly by reducing the number of their prey.",
+          "Studies of wolves returned to one national park suggest a subtler mechanism.",
+          "Elk there, wary of attack, began to avoid the river valleys where they were easiest to catch.",
+          "Willows and aspens that had long been eaten back recovered in those valleys even before elk numbers had fallen appreciably."
+        ]
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "example-verbal-timed",
+      "title": "Example: timed Verbal mix",
+      "measure": "verbal",
+      "summary": "Three Verbal questions of different types against the clock, the way a coach would follow up a mock test.",
+      "timeLimitMinutes": 5,
+      "note": "Aim for about 90 seconds a question. Mark anything you are unsure of and come back to it.",
+      "questions": [
+        {
+          "id": "ex-v-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "Although the committee praised the proposal's ambition, it found the budget so _____ that it asked for a complete revision.",
+          "blanks": [["meticulous", "unrealistic", "modest", "transparent", "conventional"]],
+          "correct": [1],
+          "explanation": "\"Although\" sets the praise against a fault, and the fault is serious enough to need \"a complete revision\". Only *unrealistic* names such a fault. *Meticulous* and *transparent* are virtues, and a *modest* or *conventional* budget would not need to be redone."
+        },
+        {
+          "id": "ex-v-02",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "The professor's lectures were so _____ that even the most diligent students struggled to stay awake.",
+          "options": ["soporific", "riveting", "tedious", "erudite", "animated", "concise"],
+          "selectCount": 2,
+          "correct": [0, 2],
+          "explanation": "\"So … that\" makes the blank the cause of students struggling to stay awake, so the lectures were sleep-inducing or dull: *soporific* and *tedious*. *Riveting* and *animated* would keep students awake, and *erudite* or *concise* lectures are not a reason to fall asleep."
+        },
+        {
+          "id": "ex-v-03",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "ex-p1",
+          "prompt": "The passage suggests that the recovery of willows and aspens in the river valleys resulted mainly from",
+          "options": [
+            "a sharp fall in the number of elk",
+            "a change in where elk chose to feed",
+            "wolves preying on smaller plant-eating animals",
+            "better soil in the river valleys",
+            "less competition among tree species"
+          ],
+          "correct": [1],
+          "explanation": "The trees recovered \"even before elk numbers had fallen appreciably\", which rules out a fall in numbers. The cause the passage gives is that elk \"began to avoid the river valleys\". The passage says nothing about smaller animals, soil or competition among trees."
+        }
+      ]
+    },
+    {
+      "id": "example-quant-mixed",
+      "title": "Example: Quant mix",
+      "measure": "quant",
+      "summary": "Three Quant questions of different types, untimed, with the explanation after each one.",
+      "questions": [
+        {
+          "id": "ex-q-01",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "x > 0",
+          "quantityA": "(x + 1)/(x + 2)",
+          "quantityB": "(x + 2)/(x + 3)",
+          "correct": [1],
+          "explanation": "Both denominators are positive, so cross-multiply: compare (x + 1)(x + 3) = x² + 4x + 3 with (x + 2)² = x² + 4x + 4. The second is always 1 greater, so Quantity B is greater for every positive x. Check with x = 1: 2/3 against 3/4."
+        },
+        {
+          "id": "ex-q-02",
+          "category": "numericEntry",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "numeric",
+          "prompt": "If 2^(x + 3) − 2^x = 112, what is the value of x?",
+          "answerValue": 4,
+          "answerDisplay": "4",
+          "explanation": "Factor out 2^x: 2^x × (2³ − 1) = 2^x × 7 = 112, so 2^x = 16 and x = 4. Check: 2⁷ − 2⁴ = 128 − 16 = 112."
+        },
+        {
+          "id": "ex-q-03",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A store sold 60% of its stock on Monday and 25% of the remaining stock on Tuesday. What percent of the original stock was left after Tuesday?",
+          "options": ["10%", "15%", "25%", "30%", "35%"],
+          "correct": [3],
+          "explanation": "After Monday, 40% is left. Tuesday's sales are 25% of that 40%, so 75% of it remains: 0.75 × 40% = 30%. The trap is 15%, which subtracts 25% of the *original* stock instead of 25% of what remained."
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,30 @@
 import Foundation
 
-/// All study content, decoded from the JSON files in `Resources/Content`.
+/// All study content, decoded from the JSON files in `Resources/Content`,
+/// plus any drill sets a coach has put in the `Coach` folder (see `CoachFolder`).
 public struct ContentLibrary: Sendable {
     public let mockTests: [MockTest]
+    /// Bundled drill sets first, then the coach's.
     public let drills: DrillLibrary
     public let vocabulary: [VocabWord]
     public let lessons: [Lesson]
+    /// Ids of the drill sets that came from the coach, newest file first.
+    public let coachSetIds: [String]
+    let coachStimulusIds: Set<String>
 
     public init(mockTests: [MockTest], drills: DrillLibrary, vocabulary: [VocabWord], lessons: [Lesson]) {
+        self.init(mockTests: mockTests, drills: drills, vocabulary: vocabulary, lessons: lessons,
+                  coachSetIds: [], coachStimulusIds: [])
+    }
+
+    init(mockTests: [MockTest], drills: DrillLibrary, vocabulary: [VocabWord], lessons: [Lesson],
+         coachSetIds: [String], coachStimulusIds: Set<String>) {
         self.mockTests = mockTests
         self.drills = drills
         self.vocabulary = vocabulary
         self.lessons = lessons
+        self.coachSetIds = coachSetIds
+        self.coachStimulusIds = coachStimulusIds
     }
 
     public enum LoadError: Error, LocalizedError {
@@ -76,7 +89,8 @@ public struct ContentLibrary: Sendable {
         }
         // Verbal drills first, then quant, each in category order.
         let categoryOrder = Dictionary(uniqueKeysWithValues: QuestionCategory.allCases.enumerated().map { ($1, $0) })
-        sets.sort { (categoryOrder[$0.category] ?? 0) < (categoryOrder[$1.category] ?? 0) }
+        let order: (DrillSet) -> Int = { set in set.category.flatMap { categoryOrder[$0] } ?? Int.max }
+        sets.sort { order($0) < order($1) }
 
         let vocabulary = files.contains("vocabulary.json") ? try decode(VocabularyList.self, "vocabulary.json").words : []
         let lessons = files.contains("lessons.json") ? try decode(LessonList.self, "lessons.json").lessons : []
@@ -97,6 +111,46 @@ public struct ContentLibrary: Sendable {
         guard let id else { return nil }
         return drills.stimuli.first { $0.id == id }
     }
+
+    /// The passage or data set a question uses, looked up where the question lives
+    /// (its mock test, or the drill stimuli).
+    public func stimulus(for question: Question) -> Stimulus? {
+        guard let id = question.stimulusId else { return nil }
+        for test in mockTests where test.allQuestions.contains(where: { $0.id == question.id }) {
+            return test.stimulus(id)
+        }
+        return drillStimulus(id)
+    }
+
+    // MARK: Coach sets
+
+    /// The same library with the coach's accepted drill sets added after the bundled ones.
+    /// Sets from an earlier call are replaced, so it is safe to call again after a reload.
+    public func adding(_ coach: CoachContent) -> ContentLibrary {
+        ContentLibrary(
+            mockTests: mockTests,
+            drills: DrillLibrary(
+                stimuli: drills.stimuli.filter { !coachStimulusIds.contains($0.id) } + coach.stimuli,
+                sets: bundledDrillSets + coach.sets
+            ),
+            vocabulary: vocabulary,
+            lessons: lessons,
+            coachSetIds: coach.sets.map(\.id),
+            coachStimulusIds: Set(coach.stimuli.map(\.id))
+        )
+    }
+
+    /// Drill sets that ship with the app.
+    public var bundledDrillSets: [DrillSet] {
+        coachSetIds.isEmpty ? drills.sets : drills.sets.filter { !coachSetIds.contains($0.id) }
+    }
+
+    /// Drill sets from the coach, newest file first.
+    public var coachDrillSets: [DrillSet] {
+        coachSetIds.compactMap { id in drills.sets.first { $0.id == id } }
+    }
+
+    public func isCoachSet(_ id: String) -> Bool { coachSetIds.contains(id) }
 
     public func mockTest(id: String) -> MockTest? {
         mockTests.first { $0.id == id }

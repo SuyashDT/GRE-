@@ -64,6 +64,18 @@ struct SettingsView: View {
                     }
                     Button("Reset All Progress…", role: .destructive) { confirmReset = true }
                 }
+                Section {
+                    LabeledContent("Coach folder") {
+                        Text(model.coachFolderPath)
+                            .font(.caption)
+                            .textSelection(.enabled)
+                    }
+                } header: {
+                    Text("Coach")
+                } footer: {
+                    Text("A coach can put a study plan (plan.json) and extra drill sets (drills-*.json) in this folder. The app reads them when it opens and each time you come back to it, and never changes them.")
+                        .foregroundStyle(.secondary)
+                }
             }
             .formStyle(.grouped)
             .tabItem { Label("Study", systemImage: "book") }

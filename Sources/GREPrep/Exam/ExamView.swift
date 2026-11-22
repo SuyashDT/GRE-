@@ -336,8 +336,8 @@ struct SectionIntroView: View {
 
 // MARK: - Review screen
 
-struct ReviewScreen: View {
-    let session: ExamSession
+struct ReviewScreen<Session: SectionReviewing>: View {
+    let session: Session
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

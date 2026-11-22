@@ -13,10 +13,11 @@ dashboard.
 | **Exam interface** | Modelled on the real test: Quit / Exit Section / Review / Mark / Back / Next, a section timer you can hide, a Review screen, the on-screen calculator (order of operations, memory, Transfer Display), and an essay editor with spell-check turned off. |
 | **Score report** | Estimated Verbal and Quant scores (130–170) with likely range, which second-section tier you reached, per-question correctness and timing, and full explanations. |
 | **Essay grading** | Claude grades the essay on the 0–6 Issue rubric through the Claude Code CLI, with a score per criterion, strengths, improvements and next steps. You can also score it yourself against the rubric. |
-| **Practice drills** | 58 untimed questions in 8 sets, one per question type, with an explanation after each answer. |
+| **Practice drills** | 58 untimed questions in 8 sets, one per question type, with an explanation after each answer. Every question you last got wrong, in a drill or a mock test, is collected into a "missed questions" set to redo, and leaves it when you get it right. |
 | **Vocabulary** | 320 high-frequency GRE words with definitions, example sentences and synonyms, scheduled with spaced repetition (SM-2). |
 | **Strategy lessons** | 15 lessons: test format, pacing, the Issue essay, every question type, the calculator and a quant review. |
 | **Study plan** | Set your test date, daily study time and a rest day, and the app lays out every day until the test: a diagnostic mock test, every lesson with its drill, daily vocabulary, weak-spot practice, a dress rehearsal a week out and a light day before. Lessons, drills, tests and vocabulary tick themselves off as you do them. |
+| **Coach files** | A coach (a tutor, or Claude) can put a plan and extra practice sets in a folder, and the app shows them without being rebuilt: the coach's plan replaces the generated one, and the sets appear in Practice Drills. A set can mix question types and can be timed, in which case it runs like a section of the real test. The app saves which answer you picked, so the coach can see your mistakes. See [docs/COACH.md](docs/COACH.md). |
 | **Dashboard** | Score history, accuracy by question type and content area, time per question against target pace, study streak and suggested next steps. |
 
 ### The test format it follows
@@ -101,23 +102,27 @@ Package.swift
 Sources/GRECore/          platform-independent logic (also builds on Linux)
   Models/                 questions, passages, mock tests, drills, vocabulary, lessons
   Engine/                 answer checking, adaptive routing and scoring, calculator, spaced repetition
-  Progress/               saved progress, analytics
+  Progress/               saved progress, analytics, the study plan
+  Coach/                  the Coach folder: a coach's plan and extra drill sets
   AI/                     essay prompt, Claude Code runner and output parsing
   Resources/Content/      all study content as JSON
 Sources/GREPrep/          the SwiftUI app
 Tests/GRECoreTests/       unit tests, including checks that every answer key is gradable
 scripts/build-app.sh      builds "GRE Prep.app"
-scripts/validate_content.py   checks content files
+scripts/validate_content.py   checks content files, and a coach's folder
 docs/CONTENT_FORMAT.md    how to add questions, drills, words and lessons
+docs/COACH.md             the Coach folder: a coach's plan and practice sets
 ```
 
-Progress is saved to `~/Library/Application Support/GRE Prep/progress.json`.
+Progress is saved to `~/Library/Application Support/GRE Prep/progress.json`. A coach's files go in the
+`Coach` folder beside it. Set `GREPREP_DATA_DIR` to run a build against another folder.
 
 ## Development
 
 ```sh
 swift test                                                   # runs on macOS or Linux
 python3 scripts/validate_content.py Sources/GRECore/Resources/Content/*.json
+python3 scripts/validate_content.py --coach docs/examples/coach   # a coach folder
 ```
 
 To add another mock test, add `mock-test-3.json` next to the others. The app loads every

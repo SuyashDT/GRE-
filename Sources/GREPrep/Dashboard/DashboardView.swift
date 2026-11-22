@@ -7,13 +7,13 @@ struct DashboardView: View {
 
     var body: some View {
         // Re-render every minute so "cards due" and the streak stay current.
-        TimelineView(.everyMinute) { _ in
-            dashboard
+        TimelineView(.everyMinute) { context in
+            dashboard(now: context.date)
         }
         .navigationTitle("Dashboard")
     }
 
-    private var dashboard: some View {
+    private func dashboard(now: Date) -> some View {
         let analytics = model.analytics
         return ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -66,6 +66,8 @@ struct DashboardView: View {
                     )
                 }
 
+                planCard(now: now)
+
                 nextSteps(analytics)
 
                 if analytics.scoreHistory.count >= 1 {
@@ -113,13 +115,6 @@ struct DashboardView: View {
                 suggestion("Set your test date to get a day-by-day study plan.", systemImage: "calendar") {
                     model.selection = .studyPlan
                 }
-            } else {
-                let left = model.openPlanTaskCount()
-                if left > 0 {
-                    suggestion("Today's study plan: \(left) task\(left == 1 ? "" : "s") left.", systemImage: "calendar") {
-                        model.selection = .studyPlan
-                    }
-                }
             }
             if !hasMock {
                 suggestion("Take Mock Test 1 to get a baseline score.", systemImage: "doc.text.magnifyingglass") {
@@ -133,7 +128,7 @@ struct DashboardView: View {
                 }
             }
             ForEach(weakest) { stat in
-                if stat.accuracy < 0.8, let drill = model.content?.drills.sets.first(where: { $0.category == stat.category }) {
+                if stat.accuracy < 0.8, let drill = model.content?.bundledDrillSets.first(where: { $0.category == stat.category }) {
                     suggestion("Practise \(stat.category.title) — \(Format.percent(stat.accuracy)) correct so far.",
                                systemImage: Theme.icon(for: stat.category)) {
                         model.selection = .drills
@@ -147,6 +142,38 @@ struct DashboardView: View {
                     model.lessonPath = [overview.id]
                 }
             }
+        }
+    }
+
+    /// Today's tasks from the study plan: the coach's plan when there is one, else the generated one.
+    @ViewBuilder
+    private func planCard(now: Date) -> some View {
+        if let plan = model.studyPlan, let day = plan.day(for: now) {
+            let left = model.openPlanTaskCount(now: now)
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                    Text("Today's plan").font(.title2.weight(.semibold))
+                    if plan.isCoachPlan {
+                        Pill(text: "From your coach", color: .accentColor)
+                    }
+                    Spacer()
+                    Text(day.isRestDay ? "Rest day" : (left == 0 ? "All done" : "\(left) task\(left == 1 ? "" : "s") left"))
+                        .foregroundStyle(.secondary)
+                    Button("Open Study Plan") { model.selection = .studyPlan }
+                        .buttonStyle(.link)
+                }
+                if let focus = day.focus {
+                    Text(focus).foregroundStyle(.secondary)
+                }
+                VStack(alignment: .leading, spacing: 6) {
+                    ForEach(day.tasks) { task in
+                        PlanTaskRow(task: task, day: day, compact: true)
+                    }
+                }
+            }
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(.background.secondary, in: RoundedRectangle(cornerRadius: 12))
         }
     }
 

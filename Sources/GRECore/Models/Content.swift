@@ -176,9 +176,36 @@ public struct DrillSet: Codable, Identifiable, Hashable, Sendable {
     public let id: String
     public let title: String
     public let measure: Measure
-    public let category: QuestionCategory
+    /// The one question type of the set. `nil` for a set that mixes question types of its measure.
+    public let category: QuestionCategory?
     public let summary: String
     public let questions: [Question]
+    /// A timed set runs against this clock like an exam section, with explanations only at the end.
+    public let timeLimitMinutes: Int?
+    /// A line from the coach, shown with the set.
+    public let note: String?
+
+    public init(id: String, title: String, measure: Measure, category: QuestionCategory? = nil, summary: String,
+                questions: [Question], timeLimitMinutes: Int? = nil, note: String? = nil) {
+        self.id = id
+        self.title = title
+        self.measure = measure
+        self.category = category
+        self.summary = summary
+        self.questions = questions
+        self.timeLimitMinutes = timeLimitMinutes
+        self.note = note
+    }
+
+    public var isTimed: Bool { (timeLimitMinutes ?? 0) > 0 }
+
+    /// The question types in the set, in the order they first appear.
+    public var categories: [QuestionCategory] {
+        questions.map(\.category).reduce(into: [QuestionCategory]()) { if !$0.contains($1) { $0.append($1) } }
+    }
+
+    /// "Text Completion" for a one-type set, "Mixed" otherwise.
+    public var categoryTitle: String { category?.title ?? "Mixed" }
 }
 
 public struct DrillLibrary: Codable, Hashable, Sendable {

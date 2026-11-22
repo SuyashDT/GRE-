@@ -14,18 +14,37 @@ struct DrillsView: View {
                         Text("Untimed sets by question type. You'll see the answer and an explanation after each question.")
                             .foregroundStyle(.secondary)
                     }
+                    CoachWarning(problems: model.coachDrillProblems)
+                    let missed = Measure.allCases.compactMap { model.missedSet(for: $0) }
+                    if !missed.isEmpty {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Your missed questions").font(.title2.weight(.semibold))
+                            Text("Every question whose latest answer was wrong. Answer one correctly and it leaves the list.")
+                                .foregroundStyle(.secondary)
+                        }
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 260), spacing: 14, alignment: .top)], spacing: 14) {
+                            ForEach(missed) { drillSet in
+                                NavigationLink(value: drillSet.id) {
+                                    MissedCard(drill: drillSet)
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                    }
+                    let coachSets = model.content?.coachDrillSets ?? []
+                    if !coachSets.isEmpty {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("From your coach").font(.title2.weight(.semibold))
+                            Text("Sets written for you, newest first. A timed set runs against the clock like a section of the real test.")
+                                .foregroundStyle(.secondary)
+                        }
+                        grid(coachSets)
+                    }
                     ForEach(Measure.allCases, id: \.self) { measure in
-                        let sets = (model.content?.drills.sets ?? []).filter { $0.measure == measure }
+                        let sets = (model.content?.bundledDrillSets ?? []).filter { $0.measure == measure }
                         if !sets.isEmpty {
                             Text(measure.title).font(.title2.weight(.semibold))
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 260), spacing: 14)], spacing: 14) {
-                                ForEach(sets) { drillSet in
-                                    NavigationLink(value: drillSet.id) {
-                                        DrillCard(drill: drillSet, attempts: model.drillAttempts(setId: drillSet.id))
-                                    }
-                                    .buttonStyle(.plain)
-                                }
-                            }
+                            grid(sets)
                         }
                     }
                 }
@@ -35,10 +54,103 @@ struct DrillsView: View {
             }
             .navigationTitle("Practice Drills")
             .navigationDestination(for: String.self) { setId in
-                if let drillSet = model.content?.drillSet(id: setId) {
-                    DrillSessionView(drill: drillSet)
+                if let measure = MissedQuestions.measure(forSetId: setId) {
+                    MissedQuestionsView(measure: measure)
+                } else if let drillSet = model.content?.drillSet(id: setId) {
+                    if drillSet.isTimed {
+                        TimedSetView(drill: drillSet)
+                    } else {
+                        DrillSessionView(drill: drillSet)
+                    }
+                } else {
+                    ContentUnavailableView("This set is no longer here", systemImage: "questionmark.folder",
+                                           description: Text("It may have been removed from the Coach folder."))
                 }
             }
+        }
+    }
+
+    private func grid(_ sets: [DrillSet]) -> some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 260), spacing: 14, alignment: .top)], spacing: 14) {
+            ForEach(sets) { drillSet in
+                NavigationLink(value: drillSet.id) {
+                    DrillCard(drill: drillSet, attempts: model.drillAttempts(setId: drillSet.id))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+}
+
+/// One line saying that something in the Coach folder couldn't be used. Hidden when all is well.
+struct CoachWarning: View {
+    let problems: [String]
+
+    var body: some View {
+        if let first = problems.first {
+            Label(problems.count > 1 ? "\(first) (and \(problems.count - 1) more)" : first,
+                  systemImage: "exclamationmark.triangle.fill")
+                .foregroundStyle(.orange)
+                .lineLimit(2)
+                .help(problems.joined(separator: "\n"))
+                .accessibilityLabel("Coach folder problem: \(problems.joined(separator: ". "))")
+        }
+    }
+}
+
+/// The card for the missed questions of one measure.
+struct MissedCard: View {
+    let drill: DrillSet
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Image(systemName: "arrow.uturn.backward.circle")
+                    .font(.title2)
+                    .foregroundStyle(Theme.color(for: drill.measure))
+                Spacer()
+                Text("\(drill.questions.count) to redo").font(.caption).foregroundStyle(.secondary)
+            }
+            Text(drill.title).font(.headline)
+            Text(drill.categories.map(\.title).joined(separator: ", "))
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .lineLimit(3, reservesSpace: true)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 12))
+        .contentShape(Rectangle())
+    }
+}
+
+/// Runs the missed questions of one measure as a drill. The list is fixed when the page opens,
+/// so questions don't vanish from under the learner as they get them right.
+struct MissedQuestionsView: View {
+    @Environment(AppModel.self) private var model
+    let measure: Measure
+
+    @State private var drill: DrillSet?
+    @State private var loaded = false
+
+    var body: some View {
+        Group {
+            if let drill {
+                DrillSessionView(drill: drill)
+            } else if loaded {
+                ContentUnavailableView(
+                    "Nothing to redo", systemImage: "checkmark.seal",
+                    description: Text("Your latest answer to every \(measure.shortTitle) question you've met is right.")
+                )
+                .navigationTitle("Missed \(measure.shortTitle) questions")
+            } else {
+                Color.clear
+            }
+        }
+        .onAppear {
+            guard !loaded else { return }
+            drill = model.missedSet(for: measure)
+            loaded = true
         }
     }
 }
@@ -50,17 +162,27 @@ struct DrillCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Image(systemName: Theme.icon(for: drill.category))
+                Image(systemName: drill.category.map(Theme.icon(for:)) ?? "square.grid.2x2")
                     .font(.title2)
                     .foregroundStyle(Theme.color(for: drill.measure))
+                if let minutes = drill.timeLimitMinutes, drill.isTimed {
+                    Pill(text: "Timed · \(minutes) min", color: .orange)
+                }
                 Spacer()
-                Text("\(drill.questions.count) questions").font(.caption).foregroundStyle(.secondary)
+                Text("\(drill.questions.count) question\(drill.questions.count == 1 ? "" : "s")")
+                    .font(.caption).foregroundStyle(.secondary)
             }
             Text(drill.title).font(.headline)
             Text(drill.summary)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineLimit(3, reservesSpace: true)
+            if let note = drill.note, !note.isEmpty {
+                Label(note, systemImage: "person.crop.circle.badge.checkmark")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
             if let best = attempts.map(\.correctCount).max() {
                 Text("Best: \(best)/\(drill.questions.count) · \(attempts.count) attempt\(attempts.count == 1 ? "" : "s")")
                     .font(.caption.weight(.medium))
@@ -98,9 +220,14 @@ struct DrillSessionView: View {
             if finished {
                 summary
             } else if let question {
+                if let note = drill.note, !note.isEmpty, index == 0, revealed.isEmpty {
+                    CoachNote(text: note)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 10)
+                }
                 QuestionScreen(
                     question: question,
-                    stimulus: model.content?.drillStimulus(question.stimulusId),
+                    stimulus: model.content?.stimulus(for: question),
                     response: Binding(
                         get: { responses[question.id] ?? Response(blankChoices: Array(repeating: nil, count: question.blanks?.count ?? 0)) },
                         set: { responses[question.id] = $0 }
@@ -188,18 +315,10 @@ struct DrillSessionView: View {
 
     private func recordIfNeeded() {
         guard !recorded else { return }
-        let results = drill.questions.filter { revealed.contains($0.id) }.map { question in
-            QuestionResult(
-                questionId: question.id, category: question.category, topic: question.topic,
-                difficulty: question.difficulty,
-                answered: question.state(of: responses[question.id]) == .answered,
-                correct: question.isCorrect(responses[question.id]),
-                seconds: timeSpent[question.id] ?? 0
-            )
-        }
-        guard !results.isEmpty else { return }
+        let attempt = drill.makeAttempt(responses: responses, timeSpent: timeSpent, including: revealed, timed: false)
+        guard !attempt.results.isEmpty else { return }
         recorded = true
-        model.recordDrill(DrillAttempt(setId: drill.id, results: results))
+        model.recordDrill(attempt)
     }
 
     private var summary: some View {
@@ -235,7 +354,7 @@ struct DrillSessionView: View {
                 HStack {
                     Button("Practice Again") { restart() }
                         .buttonStyle(.borderedProminent)
-                    if let lesson = model.content?.lessons(for: drill.category).first {
+                    if let category = drill.category, let lesson = model.content?.lessons(for: category).first {
                         Button("Read the \(lesson.title) lesson") {
                             model.selection = .lessons
                             model.lessonPath = [lesson.id]

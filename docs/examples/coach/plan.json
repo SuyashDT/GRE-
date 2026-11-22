@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "title": "Example plan",
+  "examDate": "2026-12-18",
+  "updated": "2026-11-22",
+  "note": "An example of a coach's plan. Days the coach leaves out are simply not shown.",
+  "days": [
+    {
+      "date": "2026-11-22",
+      "focus": "Baseline",
+      "tasks": [
+        { "id": "1122-overview", "kind": "lesson", "ref": "gre-overview" },
+        { "id": "1122-mock1", "kind": "mockTest", "ref": "mock-test-1", "title": "Diagnostic: Mock Test 1", "detail": "One sitting. No pausing and no looking things up." },
+        { "id": "1122-class", "kind": "note", "title": "Class with your coach", "detail": "Go through every question you missed.", "minutes": 60 },
+        { "id": "1122-vocab", "kind": "vocabulary", "detail": "Your first 20 words.", "minutes": 30 }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "focus": "Text Completion",
+      "tasks": [
+        { "id": "1123-vocab", "kind": "vocabulary" },
+        { "id": "1123-tc", "kind": "lesson", "ref": "tc" },
+        { "id": "1123-tc-drill", "kind": "drill", "ref": "d-tc" },
+        { "id": "1123-timed", "kind": "drill", "ref": "example-verbal-timed" },
+        { "id": "1123-official", "kind": "note", "title": "Official practice test", "detail": "Take it on the test maker's site and bring the score to class.", "minutes": 120, "carryOver": true }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "tasks": [
+        { "id": "1205-rest", "kind": "rest", "title": "Day off" }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "focus": "Dress rehearsal",
+      "tasks": [
+        { "id": "1206-mock2", "kind": "mockTest", "ref": "mock-test-2" }
+      ]
+    },
+    {
+      "date": "2026-12-18",
+      "tasks": [
+        { "id": "1218-exam", "kind": "exam" }
+      ]
+    }
+  ]
+}

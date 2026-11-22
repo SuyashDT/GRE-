@@ -8,6 +8,8 @@ struct RootView: View {
         Group {
             if let exam = model.exam {
                 ExamView(session: exam)
+            } else if let timed = model.timedDrill {
+                TimedDrillView(session: timed)
             } else if let error = model.loadError {
                 ContentUnavailableView("Couldn't load study content", systemImage: "exclamationmark.triangle", description: Text(error))
             } else if model.content == nil {
@@ -24,6 +26,15 @@ struct RootView: View {
                     .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8))
                     .padding()
                     .onTapGesture { model.saveError = nil }
+            }
+        }
+        .background { if UITestOptions.current.background { InvisibleWindow() } }
+        .task {
+            // The Coach folder is also read when the app becomes active (see AppDelegate). This catches
+            // files the coach writes while the app stays in front. It only reads a few file dates.
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(20))
+                model.reloadCoach()
             }
         }
     }

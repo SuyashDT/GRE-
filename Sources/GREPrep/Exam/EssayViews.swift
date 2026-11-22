@@ -116,9 +116,9 @@ struct PlainTextEditor: NSViewRepresentable {
     }
 }
 
-/// Floating, draggable GRE-style calculator.
-struct CalculatorPanel: View {
-    @Bindable var session: ExamSession
+/// Floating, draggable GRE-style calculator, for a mock-test section or a timed drill set.
+struct CalculatorPanel<Host: CalculatorHosting>: View {
+    let session: Host
     @State private var offset: CGSize = .zero
     @GestureState private var drag: CGSize = .zero
 
