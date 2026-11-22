@@ -195,7 +195,10 @@ final class ProgressCompatibilityTests: XCTestCase {
                 differences(pair.0, pair.1, path: "\(path)[\(index)]")
             }
         default:
-            return (old as? NSObject) == (new as? NSObject) ? [] : ["\(path): \(new) was \(old)"]
+            if let before = old as? NSObject, let after = new as? NSObject {
+                return before == after ? [] : ["\(path): \(new) was \(old)"]
+            }
+            return "\(old)" == "\(new)" ? [] : ["\(path): \(new) was \(old)"]
         }
     }
 
