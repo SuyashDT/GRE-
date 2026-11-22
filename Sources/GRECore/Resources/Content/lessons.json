@@ -1,0 +1,644 @@
+{
+  "lessons": [
+    {
+      "id": "gre-overview",
+      "title": "The GRE in 2026: Format and Scoring",
+      "measure": "general",
+      "minutes": 6,
+      "summary": "How the shorter GRE General Test is structured, timed, adapted and scored, so nothing on test day surprises you.",
+      "blocks": [
+        {
+          "heading": "The shape of the test",
+          "body": "Since September 22, 2023, the GRE General Test has been the shorter version: about **1 hour 58 minutes** in total, with no scheduled break. If you come across older materials describing two essays, a test of nearly four hours, or an unscored research section, they describe the old format.\n\nAnalytical Writing always comes first. After it come two Verbal Reasoning sections and two Quantitative Reasoning sections; the order of the Verbal and Quant sections varies from test to test. Here is the full timing:\n\n- **Analytical Writing** — one “Analyze an Issue” task, 30 minutes\n- **Verbal Reasoning, Section 1** — 12 questions, 18 minutes\n- **Verbal Reasoning, Section 2** — 15 questions, 23 minutes\n- **Quantitative Reasoning, Section 1** — 12 questions, 21 minutes\n- **Quantitative Reasoning, Section 2** — 15 questions, 26 minutes\n- **Total** — one essay plus 54 questions, about 1 hour 58 minutes\n\nThat is 27 Verbal questions in 41 minutes and 27 Quant questions in 47 minutes. The “Analyze an Argument” essay was removed, and the shorter test has no unscored or research section, so every section you see counts toward your score."
+        },
+        {
+          "heading": "How the adaptive design works",
+          "body": "The GRE adapts at the section level, not question by question. Your performance on the **first section** of a measure determines the difficulty of the **second section** of that measure. Do well on Verbal Section 1 and Verbal Section 2 will be harder; struggle, and it will be easier. Quant works the same way, independently of Verbal.\n\nWithin a section the test behaves like a paper exam. You can move back and forth, **Mark** questions to revisit, open the **Review** screen to see which questions are answered, unanswered or marked, and change any answer until the section’s time runs out. Once a section ends, you cannot go back to it.\n\nScoring takes question difficulty into account, so the harder second section is what gives you access to the top of the score scale. That is why the first section of each measure deserves your sharpest focus; the Pacing lesson explains how to use this."
+        },
+        {
+          "heading": "Scores and question types",
+          "body": "- **Verbal Reasoning:** 130–170, in 1-point increments\n- **Quantitative Reasoning:** 130–170, in 1-point increments\n- **Analytical Writing:** 0–6, in half-point increments\n\nThere is **no penalty for wrong answers**. Your score depends only on what you get right, so never leave a question blank; a guess can only help.\n\nVerbal has three question types. **Text Completion** has one to three blanks: one-blank questions have five choices, two- and three-blank questions have three choices per blank, and there is no partial credit. **Sentence Equivalence** has six choices; you pick exactly two, again with no partial credit. **Reading Comprehension** questions ask you to select one answer, select one or more of three choices, or select a sentence in the passage.\n\nQuant has **Quantitative Comparison** (four fixed choices), **multiple choice — select one** (five choices), **multiple choice — select one or more**, and **Numeric Entry** (type an integer, decimal or fraction; fractions need not be reduced). Some questions come in **Data Interpretation** sets that share one table or graph. An on-screen calculator is available throughout the Quant sections."
+        },
+        {
+          "heading": "The essay, test options and score reports",
+          "body": "Your essay is scored by a trained human rater and by the e-rater scoring engine. The essay editor lets you cut, paste and undo, but it has **no spell-check or grammar check**, so practice writing without them.\n\nYou can take the test at a test center or at home; the content and format are the same either way. You may retake the test once every 21 days, up to five times in any rolling 12-month period. With **ScoreSelect** you choose which scores to send to schools, and scores are reportable for five years.\n\nTwo practical consequences: pick a first test date that leaves room for a retake before your earliest application deadline, and take your full-length practice tests in one sitting of just under two hours with no break, exactly as the real test runs."
+        }
+      ],
+      "keyTips": [
+        "Memorize the timing: Verbal is 12 questions in 18 minutes, then 15 in 23; Quant is 12 in 21, then 15 in 26.",
+        "Treat the first section of each measure as the most important, because it sets the difficulty of the second.",
+        "Answer every question; there is no penalty for wrong answers.",
+        "Use Mark and the Review screen freely; you can change any answer until the section’s time runs out.",
+        "Take practice tests in one two-hour sitting with no break, since the real test has none.",
+        "Book your first attempt early enough that a retake, at least 21 days later, still beats your deadlines."
+      ],
+      "commonTraps": [
+        "Studying from old materials that include the Argument essay, a much longer test or an unscored section.",
+        "Coasting through the first section to “save energy”: a weak first section limits the difficulty, and the scoring ceiling, of the second.",
+        "Leaving questions blank when time runs out instead of guessing.",
+        "Practicing essays with spell-check on; the real editor has none.",
+        "Expecting partial credit on multi-blank Text Completion or Sentence Equivalence; every part must be right."
+      ]
+    },
+    {
+      "id": "pacing",
+      "title": "Pacing and the Two-Pass Strategy",
+      "measure": "general",
+      "minutes": 6,
+      "summary": "Spend your time where it earns points, using per-question budgets, a two-pass approach with Mark and Review, smart guessing and extra care in each measure’s first section.",
+      "blocks": [
+        {
+          "heading": "Your time budget",
+          "body": "Divide each section’s time by its number of questions to get your average budget:\n\n- **Verbal Section 1:** 18 minutes for 12 questions — 1.5 minutes each\n- **Verbal Section 2:** 23 minutes for 15 questions — just over 1.5 minutes each\n- **Quant Section 1:** 21 minutes for 12 questions — 1.75 minutes each\n- **Quant Section 2:** 26 minutes for 15 questions — just over 1.7 minutes each\n\nThese are averages, not limits. In Verbal, a well-prepared test taker finishes many Sentence Equivalence and one-blank Text Completion questions in under a minute, which banks time for Reading Comprehension and three-blank Text Completions. In Quant, many Quantitative Comparisons take about a minute, while Data Interpretation and multi-step word problems often need two or more.\n\nUse checkpoints instead of timing every question. When half the section’s time is gone, you should be at or past the halfway question: around question 6 of 12, or question 7 or 8 of 15. If you’re behind, pick up speed on the next few questions rather than panicking."
+        },
+        {
+          "heading": "The two-pass strategy",
+          "body": "Because you can move freely within a section, you don’t have to fight every question in order.\n\n- **Pass 1:** Work through the section in order. Answer everything you can solve within roughly your budget. When a question is clearly going to take much longer, or you’re stuck after about a minute of honest effort, eliminate what you can, select your best guess, click **Mark** and move on.\n- **Pass 2:** Open the **Review** screen, which shows every question as answered, not answered or marked. Return to the marked questions, starting with the ones you felt closest to solving.\n\nAlways select an answer **before** you mark and move on. If time runs out during pass 2, every question still has a response. Finishing pass 1 with two or three minutes left for pass 2 is a good target.\n\nThe approach works because hard and easy questions are mixed together and each counts toward your score. Spending four minutes on one brutal question can cost you two easy ones at the end of the section."
+        },
+        {
+          "heading": "Guessing well",
+          "body": "There is no penalty for wrong answers, so a blank is a guaranteed miss. When you guess, guess intelligently:\n\n- Eliminate every choice you can rule out; each elimination improves your odds.\n- On Quantitative Comparison, if both quantities are fixed numbers with no variables, the answer cannot be (D).\n- On select-one-or-more questions there is no partial credit, but a sensible attempt can still be fully right, so select the choices you believe are correct.\n- In the final minute, check the Review screen for any question marked “not answered” and fill it in.\n\nDuring review, change an answer only when you find a specific error or a clue you missed. A vague feeling that another choice “might be better” is not a reason."
+        },
+        {
+          "heading": "Why the first section matters most",
+          "body": "Your performance on the first section of each measure decides whether you get a harder or easier second section, and scoring accounts for question difficulty. A strong first section unlocks the harder second section, where the highest scores are available. A weak one routes you to the easier second section, which limits how high you can score even if you answer everything there correctly.\n\nSo in the first section, slow down just enough to avoid careless errors on questions you know how to do: reread what the question asks, check units and signs, and confirm you clicked the choice you meant. Careless misses on easy questions are the most expensive mistakes on the test.\n\nDon’t try to work out from how the second section feels whether you were routed up or down. That impression is unreliable and distracting. Every question in both sections counts, so give each one your best effort."
+        }
+      ],
+      "keyTips": [
+        "Average budgets: about 1.5 minutes per Verbal question and about 1.75 minutes per Quant question.",
+        "Move quickly on Sentence Equivalence, one-blank Text Completion and simple comparisons to bank time.",
+        "Select an answer before you mark a question, so nothing is blank if time runs out.",
+        "Check your pace at the halfway point of the clock rather than after every question.",
+        "In the first section of each measure, spend a few extra seconds verifying easy questions."
+      ],
+      "commonTraps": [
+        "Refusing to let go of one hard question and running out of time for easy ones.",
+        "Marking questions without answering them, then never getting back to them.",
+        "Changing correct answers during review without a concrete reason.",
+        "Trying to guess whether the second section is the harder or easier version instead of focusing on the question in front of you."
+      ]
+    },
+    {
+      "id": "awa-issue",
+      "title": "Analytical Writing: Analyze an Issue",
+      "measure": "writing",
+      "minutes": 8,
+      "summary": "Plan and write a focused, well-supported Issue essay in 30 minutes, tailored to the specific instruction you are given.",
+      "blocks": [
+        {
+          "heading": "What the task asks",
+          "body": "You get one short statement on a broad topic, such as education, technology, government, science or the arts, and 30 minutes to write a response that takes a position on it. There is no correct side. Raters score how well you reason: a clear position, relevant and specific support, logical organization and controlled, precise prose.\n\nThe statement is always followed by instructions, and the instructions are not interchangeable. There are six main variants:\n\n- **Statement — might or might not hold true:** agree or disagree, and consider situations in which the statement would and would not be true.\n- **Statement or claim — address challenges:** agree or disagree, and address the most compelling reasons or examples that could be used against your position.\n- **Recommendation:** agree or disagree, and describe specific circumstances in which adopting the recommendation would or would not be advantageous.\n- **Policy:** give your view, and consider the likely consequences of implementing the policy.\n- **Two views:** decide which of two stated views is closer to your own, and address both views.\n- **Claim and reason:** agree or disagree with both the claim *and* the reason offered for it; you must evaluate each.\n\nAn essay that ignores its specific instruction can’t earn a top score, so build the instruction into your outline rather than bolting it on in the last paragraph."
+        },
+        {
+          "heading": "A five-paragraph plan",
+          "body": "A reliable structure for 30 minutes:\n\n- **Introduction (3–4 sentences):** frame the issue in your own words and state a qualified thesis, such as “largely true, except when…” or “mistaken, although in one kind of case it holds.”\n- **Body 1:** your strongest reason, supported by one specific, developed example.\n- **Body 2:** a second, different reason, ideally with an example from another field (history, science, business, public policy, personal observation).\n- **Body 3:** the paragraph your instruction demands — the strongest counterargument, the circumstances where the statement fails, the consequences of the policy, or the other view — followed by an explanation of how it shapes your position.\n- **Conclusion (2–3 sentences):** restate your qualified position and why it holds.\n\nSpecific examples beat generic ones. “Many scientists have changed their minds” is weak; a concrete account of how a field revised a theory in response to new evidence is strong. Hypothetical examples are fine if they are detailed and realistic."
+        },
+        {
+          "heading": "Spending your 30 minutes",
+          "body": "- **5 minutes — outline.** Pick your position, list two reasons with an example for each, and note the counterpoint or condition your instruction requires. Choose the side you can support best, not necessarily the one you feel most strongly about.\n- **22 minutes — write.** Write the introduction quickly and spend most of your time developing the body paragraphs. Use clear transitions such as “Admittedly,” “More importantly” and “This is not to say that…”.\n- **3 minutes — proofread.** Fix typos, missing words and unclear sentences. The editor has cut, paste and undo but no spell-check or grammar check, so read the words you actually typed.\n\nIf you’re running short on time, finish the body paragraphs and write a one- or two-sentence conclusion. A short ending is far better than an essay that stops mid-argument."
+        },
+        {
+          "heading": "What separates a 4 from a 6",
+          "body": "A **4** is adequate: it takes a clear position, offers relevant reasons and examples, is reasonably well organized and shows sufficient control of language, with some errors. A **6** is outstanding: its position is insightful, its reasons are compelling and its examples persuasive, its ideas flow logically from one to the next, and its language is precise and varied, with very few errors.\n\nIn practice, the jump from 4 to 6 comes from development and nuance. A 6 explains *why* each example supports the thesis, acknowledges complexity without becoming noncommittal, and answers the specific instruction directly. Longer essays tend to score higher only because thorough development takes words; padding and repetition don’t help.\n\nThis app grades your practice essays with Claude, using an ETS-style 0–6 rubric that looks at your position, support, organization and language. Treat the result as a practice estimate, not an official score."
+        }
+      ],
+      "keyTips": [
+        "Read the instruction twice and identify its variant before you outline.",
+        "Take a qualified position: clear, but honest about where it has limits.",
+        "Develop two specific examples thoroughly rather than listing four thin ones.",
+        "Give the instruction’s required element (counterargument, circumstances, consequences or both views) its own paragraph.",
+        "Save three minutes to proofread; there is no spell-check."
+      ],
+      "commonTraps": [
+        "Writing a generic essay that ignores the specific instruction.",
+        "Hedging so much that you never take a position.",
+        "Listing examples without explaining how they support the thesis.",
+        "Spending ten minutes or more outlining and running out of time for the body.",
+        "Reaching for impressive vocabulary you can’t control; precision beats ornament."
+      ],
+      "example": {
+        "question": "**Claim:** Now that almost any fact can be looked up in seconds, expertise matters less than it once did.\n\n**Instructions:** Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing your position, address the most compelling reasons or examples that could be used to challenge it.",
+        "walkthrough": "**Step 1 — Identify the variant (30 seconds).** This is the *address challenges* variant, so one body paragraph must deal seriously with the best case for the claim.\n\n**Step 2 — Choose a position (1 minute).** Mostly disagree: instant access makes *facts* cheap, but it makes *judgment* — deciding which information is reliable and how to apply it — more valuable.\n\n**Step 3 — Outline (3–4 minutes).**\n\n- **Intro:** Information is now abundant, but the claim confuses information with expertise. Thesis: expertise is shifting from recall to evaluation, which makes it more valuable, not less.\n- **Body 1 — Medicine:** patients can search their symptoms, but a list of possible conditions is not a diagnosis. A physician weighs history and test results; patients armed with search results often need *more* expert interpretation, not less.\n- **Body 2 — Software:** code snippets are free to copy, but knowing which one is secure and how it fits a larger system is exactly what experienced engineers are paid for.\n- **Body 3 — The strongest challenge:** some routine expertise really has lost value; finding a fact no longer requires a specialist. Concede this, then show how it shapes the position: memorized information is worth less, but evaluating and applying it is worth more.\n- **Conclusion:** expertise is not disappearing; its center has moved from knowing facts to judging them.\n\n**Step 4 — Write and proofread.** About 22 minutes to draft, mostly on the body paragraphs, and 3 minutes to fix errors. Each body paragraph develops one concrete example and ties it back to the thesis."
+      }
+    },
+    {
+      "id": "tc",
+      "title": "Text Completion",
+      "measure": "verbal",
+      "category": "textCompletion",
+      "minutes": 6,
+      "summary": "Use the passage’s own clues and signal words to predict each missing word before you look at the choices.",
+      "blocks": [
+        {
+          "heading": "How the question works",
+          "body": "A Text Completion gives you a sentence or a short passage of up to five sentences with one, two or three blanks. One-blank questions have five choices; two- and three-blank questions have three choices for each blank. There is no partial credit: you must get every blank right to earn the point.\n\nThe answer is never a matter of taste. The passage always contains evidence, called the clue, that determines what each blank must mean. Your job is to find that evidence, not to pick the word that sounds most sophisticated."
+        },
+        {
+          "heading": "Find the clue and the signal",
+          "body": "Every blank is tied to something else in the passage. Look for two things:\n\n- **The clue:** a word or phrase that describes the idea the blank refers to. In “The critic, usually _____, praised the film lavishly,” the clue is “praised the film lavishly.”\n- **The signal:** a word that tells you whether the blank continues or reverses the clue. In the example, “usually” implies that this time was different, so the critic is normally the opposite of lavish with praise — perhaps “stingy” or “severe.”\n\nCommon signals:\n\n- **Contrast:** but, yet, although, though, despite, however, while, rather than, instead, far from, surprisingly\n- **Continuation:** and, also, moreover, indeed, in fact, not only… but also, a colon or semicolon\n- **Cause and effect:** because, since, therefore, thus, so, consequently, as a result\n\nWatch for negations: *not*, *hardly*, *anything but* and *far from* flip the meaning of whatever follows."
+        },
+        {
+          "heading": "Predict, then match",
+          "body": "Before you look at the choices, cover them and fill the blank with your own simple word or phrase. Your prediction doesn’t need to be elegant: “positive,” “hiding the truth” or “the opposite of careful” all work. Then find the choice that matches your prediction.\n\nPredicting first protects you from choices that are related to the topic but don’t fit the logic. If two choices both seem to match, plug each into the full passage and see which one the clue actually requires.\n\nIf you don’t know some of the choices, judge the ones you do know first. Eliminate known words that don’t fit; if none of the known words fits, an unfamiliar word is probably the answer."
+        },
+        {
+          "heading": "Multi-blank strategy",
+          "body": "With two or three blanks, don’t automatically start with blank (i). Start with the blank whose clue is clearest, which is often the second or third. Once you’ve locked in one blank, it becomes a clue for the others.\n\nBecause each blank has only three choices, testing combinations is quick. After you’ve chosen every blank, reread the whole passage with your answers in place. It must read as one coherent, logical thought. Many wrong combinations fit each blank on its own but contradict each other."
+        }
+      ],
+      "keyTips": [
+        "Cover the choices and predict a word for each blank in your own words.",
+        "Identify the clue and the signal word before you choose.",
+        "On multi-blank questions, start with the blank whose clue is clearest.",
+        "Reread the whole passage with every answer in place before moving on.",
+        "When you don’t know a word, evaluate the choices you do know and eliminate."
+      ],
+      "commonTraps": [
+        "Choosing a word that fits the topic but not the passage’s logic.",
+        "Missing a reversal such as *far from*, *not* or *usually* that flips the meaning.",
+        "Picking the hardest-sounding word because it seems more “GRE-like.”",
+        "Answering each blank in isolation and never checking that the combination makes sense."
+      ],
+      "example": {
+        "question": "Although the senator’s public remarks on trade were studiously (i) _____, her voting record revealed a remarkably (ii) _____ stance: for a decade she had backed every tariff bill that reached the floor.\n\n- **Blank (i):** cogent / equivocal / belligerent\n- **Blank (ii):** consistent / ambivalent / novel",
+        "walkthrough": "**Step 1 — Start with the clearer blank.** Blank (ii) has a strong clue after the colon: for a decade she backed *every* tariff bill. That describes a firm, unchanging stance. Prediction for (ii): “steady.”\n\n**Step 2 — Match blank (ii).** *Consistent* matches. *Ambivalent* (having mixed feelings) contradicts the evidence, and *novel* (new) clashes with “for a decade.”\n\n**Step 3 — Use the signal for blank (i).** “Although” sets her remarks against her firm voting record, so the remarks must have been the opposite of firm: vague or noncommittal. Prediction for (i): “vague.”\n\n**Step 4 — Match blank (i).** *Equivocal* (deliberately ambiguous) matches. *Cogent* (clear and convincing) and *belligerent* (hostile) don’t create the needed contrast with a steady record.\n\n**Step 5 — Reread.** “Although the senator’s public remarks on trade were studiously equivocal, her voting record revealed a remarkably consistent stance.” It reads logically. **Answer: equivocal, consistent.**\n\nNotice the trap: *ambivalent* is close in meaning to *equivocal*, which makes it tempting if you match the blanks to each other instead of to the clue."
+      },
+      "drillId": "d-tc"
+    },
+    {
+      "id": "se",
+      "title": "Sentence Equivalence",
+      "measure": "verbal",
+      "category": "sentenceEquivalence",
+      "minutes": 5,
+      "summary": "Find the two choices that each complete the sentence logically and give it the same meaning.",
+      "blocks": [
+        {
+          "heading": "How the question works",
+          "body": "A Sentence Equivalence question gives you a single sentence with one blank and six answer choices. You must select exactly two, and both must (1) fit the sentence logically and (2) produce two completed sentences that are alike in meaning. There is no partial credit: one right and one wrong earns nothing.\n\nThe two answers are usually close synonyms, but they don’t have to be perfect ones. They only have to make the sentence mean the same thing. What matters is the sentence, not the dictionary."
+        },
+        {
+          "heading": "Predict first, then find the pair",
+          "body": "Use the same method as Text Completion: cover the choices, find the clue and the signal words, and predict a word for the blank. Then scan all six choices for every word that matches your prediction.\n\nIdeally you’ll find exactly two. If three seem to fit, compare them closely; one usually differs in shade or strength, such as a word meaning “critical” against one meaning “hostile.” If you find only one, reconsider your prediction or look for a second meaning of another choice."
+        },
+        {
+          "heading": "Synonym pairs are a starting point, not the answer",
+          "body": "Test writers often include a pair of synonyms that doesn’t fit the sentence. If you look only for synonyms, you’ll find that pair and pick it. Always check that your pair fits the clue.\n\nOn the other hand, a choice with no synonym among the options can’t be correct, even if it fits the sentence well, because there’s no second choice to make an equivalent sentence. That makes “lonely” choices easy to eliminate when you’re unsure.\n\nSome common words appear with a secondary meaning. *Qualify* can mean “limit,” *temper* can mean “moderate,” *check* can mean “restrain” and *pedestrian* can mean “dull and ordinary.” If a familiar word seems to fit oddly, consider its other meanings."
+        },
+        {
+          "heading": "When you don’t know every word",
+          "body": "- Group the words you know by meaning; any known pair that fits your prediction is a strong candidate.\n- Eliminate known words that don’t fit and known words that have no partner.\n- If you must guess, pair an unfamiliar word with a known word that fits, or pair two unfamiliar words when no known pair works.\n\nThen plug both of your choices into the sentence one at a time and confirm that the two versions say the same thing."
+        }
+      ],
+      "keyTips": [
+        "Predict the blank before reading the six choices.",
+        "Look for two choices that fit your prediction, not merely two that mean the same thing.",
+        "Eliminate any choice with no partner among the options.",
+        "Consider secondary meanings of everyday words such as qualify, temper and check.",
+        "Plug both answers into the sentence to confirm they produce the same meaning."
+      ],
+      "commonTraps": [
+        "Choosing a synonym pair that contradicts the sentence’s clue.",
+        "Pairing the one perfect-fitting word with a word that means something different.",
+        "Ignoring a signal such as *far from* or *although*.",
+        "Assuming the two answers must be exact dictionary synonyms."
+      ],
+      "example": {
+        "question": "The documentary’s portrait of the explorer is far from _____: it dwells on his cruelty toward his crew as readily as on his courage.\n\n- (A) hagiographic\n- (B) unflinching\n- (C) balanced\n- (D) adulatory\n- (E) censorious\n- (F) even-handed",
+        "walkthrough": "**Step 1 — Read the clue.** After the colon, the documentary gives equal weight to the explorer’s cruelty and his courage. It is honest and critical, not flattering.\n\n**Step 2 — Use the signal.** “Far from _____” means the documentary is the *opposite* of the blank. Since it isn’t flattering, the blank must mean “flattering” or “idealizing.”\n\n**Step 3 — Scan for matches.** *Hagiographic* (treating a subject with excessive reverence, like a saint’s biography) and *adulatory* (praising excessively) both mean “idealizing.”\n\n**Step 4 — Check the trap pair.** *Balanced* and *even-handed* are near-synonyms, so they look like a pair, but the documentary *is* balanced; “far from balanced” contradicts the clue. *Unflinching* also describes the documentary rather than its opposite, and *censorious* (severely critical) has no partner.\n\n**Answer: (A) hagiographic and (D) adulatory.** A synonym pair is only right if it fits the logic of the sentence."
+      },
+      "drillId": "d-se"
+    },
+    {
+      "id": "rc",
+      "title": "Reading Comprehension",
+      "measure": "verbal",
+      "category": "readingComprehension",
+      "minutes": 7,
+      "summary": "Read actively for structure and purpose, map the passage, and prove every answer with evidence from the text.",
+      "blocks": [
+        {
+          "heading": "Active reading",
+          "body": "GRE passages range from a single paragraph to several, on topics from the sciences, social sciences, humanities and everyday life. You don’t need outside knowledge, and you shouldn’t use it: every correct answer is supported by the passage.\n\nRead for the big picture first. As you read, ask yourself:\n\n- **What is the topic,** and what is the author’s main point about it?\n- **Why does each paragraph exist?** To introduce a view, give evidence, raise an objection or offer a new interpretation?\n- **What is the author’s attitude?** Neutral, approving, critical, cautiously optimistic?\n\nPay close attention to structural words. *However*, *but*, *yet* and *nevertheless* signal a shift; *moreover* and *furthermore* add support; *for example* introduces evidence; *thus* and *therefore* introduce conclusions. Phrases like *traditionally* or *some scholars argue* often set up a view the author is about to challenge.\n\nDon’t get bogged down in technical details on the first read. Note where they are, and come back when a question asks about them."
+        },
+        {
+          "heading": "Map the passage",
+          "body": "For anything longer than a paragraph, jot a quick map on scratch paper: a few words per paragraph describing its role. For example:\n\n- P1: old view — X caused Y\n- P2: new evidence against the old view\n- P3: author: both factors matter\n\nThen add a one-line statement of the main point. This takes about 20–30 seconds and pays off immediately: main-idea and function questions become easy, and you know where to look for details."
+        },
+        {
+          "heading": "Formats and question types",
+          "body": "Reading Comprehension uses three formats:\n\n- **Select one answer:** five choices, exactly one correct.\n- **Select one or more answers:** three choices, of which one, two or all three may be correct. There is no partial credit, so evaluate each choice independently against the passage.\n- **Select-in-passage:** click the sentence in the passage that fits a description, such as “the sentence that presents evidence the author later questions.”\n\nThe questions ask about:\n\n- **Main idea or primary purpose** — the passage’s overall point.\n- **Detail** — what the passage states explicitly.\n- **Inference** — what must be true based on the passage. GRE inferences are small and directly supported, not creative leaps.\n- **Function** — why the author includes a word, sentence or paragraph.\n- **Vocabulary in context** — what a word means as it’s used here, often a less common meaning.\n- **Author’s attitude** — the author’s tone or view toward a subject."
+        },
+        {
+          "heading": "Eliminating wrong answers",
+          "body": "Wrong answers fall into recognizable patterns:\n\n- **Too extreme:** words like *always*, *never*, *entirely* or *proves* when the passage is measured.\n- **Out of scope:** reasonable-sounding claims the passage never discusses.\n- **Distortion or reversal:** uses the passage’s words but changes the relationship, for example by swapping cause and effect or stating the opposite of a view.\n- **True but irrelevant:** accurate statements that don’t answer the question asked, such as a detail offered for a main-idea question.\n- **Half right:** starts well but ends with something unsupported.\n\nFor every answer you choose, you should be able to point to the words in the passage that support it."
+        }
+      ],
+      "keyTips": [
+        "Read for structure and the author’s purpose rather than memorizing details.",
+        "Map each paragraph’s role in a few words, then write the main point.",
+        "On select-one-or-more questions, judge each of the three choices on its own.",
+        "For inference questions, choose what must be true, not what could be true.",
+        "Go back to the passage to confirm your answer before selecting it."
+      ],
+      "commonTraps": [
+        "Choosing extreme language when the author is cautious or qualified.",
+        "Bringing in outside knowledge the passage doesn’t support.",
+        "Picking an accurate detail for a main-idea question.",
+        "Confusing a view the author describes with the view the author holds."
+      ],
+      "example": {
+        "question": "*Passage:* For much of the twentieth century, historians treated medieval guilds chiefly as cartels: associations that restricted entry to a trade, fixed prices and discouraged innovation. Recent scholarship has complicated this picture. Drawing on guild records from several cities, some historians argue that guilds also served as guarantors of quality, giving distant buyers confidence in goods they could not inspect in advance. These scholars do not deny that guilds restricted competition; rather, they contend that the cartel view mistakes one function of the institution for the whole.\n\n*Question:* The primary purpose of the passage is to\n\n- (A) defend the traditional view of guilds as cartels\n- (B) describe a revision of an earlier interpretation of an institution\n- (C) argue that guilds did not restrict competition\n- (D) compare the guilds of several medieval cities\n- (E) explain why historians long ignored guild records",
+        "walkthrough": "**Step 1 — Map the passage.** Sentence 1: the old view (guilds were cartels). Sentence 2: the pivot (“complicated this picture”). Sentences 3–4: the newer view, that guilds also guaranteed quality and that the old view is incomplete rather than wrong.\n\n**Step 2 — State the main point in your own words.** Newer historians have broadened the older cartel interpretation of guilds.\n\n**Step 3 — Evaluate the choices.**\n\n- (A) Reversal: the passage presents a challenge to the traditional view, not a defense of it.\n- (B) Matches: an earlier interpretation (cartels) is being revised (cartels *and* guarantors of quality).\n- (C) Contradicted: the scholars “do not deny that guilds restricted competition.”\n- (D) Distortion: records from several cities are a source of evidence, not the subject of a comparison.\n- (E) Out of scope: the passage never says the records were ignored.\n\n**Answer: (B).**"
+      },
+      "drillId": "d-rc"
+    },
+    {
+      "id": "rc-arguments",
+      "title": "Argument Paragraphs",
+      "measure": "verbal",
+      "category": "readingComprehension",
+      "minutes": 7,
+      "summary": "Break short arguments into premises and a conclusion, find the gap between them, and use it to answer assumption, strengthen, weaken and paradox questions.",
+      "blocks": [
+        {
+          "heading": "Anatomy of an argument",
+          "body": "Some Reading Comprehension passages are a single paragraph that makes an argument, followed by one question. Every argument has:\n\n- **Premises:** the facts or evidence offered. Accept them as true.\n- **A conclusion:** the claim the premises are meant to support. Look for *therefore*, *thus*, *so*, *hence*, *consequently*, *which shows that*, or a recommendation (*should*, *plans to*).\n- **An assumption:** an unstated idea the author needs for the premises to lead to the conclusion. It’s the gap in the reasoning.\n\nStart every argument question by identifying the conclusion, then ask: “What does the author take for granted to get there?”"
+        },
+        {
+          "heading": "Classic gaps to look for",
+          "body": "Most GRE arguments rely on one of a handful of patterns:\n\n- **Correlation taken as causation:** two things happened together, so one must have caused the other. The assumption is that nothing else explains the result.\n- **Unrepresentative sample:** a survey of one group is used to draw conclusions about a different or larger group.\n- **Faulty analogy:** what worked in one place or time will work in another.\n- **Rates versus totals:** a percentage or rate changed, so the total must have changed the same way, or the reverse.\n- **The plan will work:** a proposal will achieve its goal, assuming no obstacle or side effect undermines it.\n\nNaming the pattern tells you what an assumption, a strengthener or a weakener will look like."
+        },
+        {
+          "heading": "Assumption, strengthen and weaken",
+          "body": "- **Assumption** questions ask what the argument depends on. Use the **negation test**: negate the choice, and if the argument falls apart, it’s a required assumption.\n- **Weaken** questions want new information that widens the gap, usually an alternative explanation, a flaw in the evidence or a reason the plan will fail.\n- **Strengthen** questions want information that narrows the gap, such as ruling out an alternative explanation or confirming that a sample is representative.\n- **Evaluate** questions ask what would be most useful to know. The right answer is a question whose answer would strengthen the argument if it came out one way and weaken it if it came out the other.\n\nOn strengthen and weaken questions, treat every answer choice as true, even if it seems surprising. Your job is to judge its effect on the conclusion, not its realism. The right answer doesn’t have to prove or destroy the argument; it just has to affect it more than the other choices do."
+        },
+        {
+          "heading": "Paradoxes, inferences and roles",
+          "body": "**Paradox** (explain-the-discrepancy) questions describe two facts that seem to conflict; for instance, a town’s population grew while its total water use fell. The right answer shows how both can be true at once, such as the widespread adoption of water-efficient appliances. Wrong answers often explain only one fact, or make the conflict worse.\n\n**Inference** questions ask what must follow from the statements. Stay close to the text: the correct answer is often a modest combination of two statements, and anything extreme or speculative is usually wrong.\n\n**Role** questions ask what a particular statement does: is it a premise, the main conclusion, an intermediate conclusion, or a view the author opposes? Find the main conclusion first; everything else is defined by its relationship to it."
+        }
+      ],
+      "keyTips": [
+        "Find the conclusion first; everything else is evidence or background.",
+        "Put the gap between premises and conclusion into your own words before reading the choices.",
+        "Use the negation test on assumption questions.",
+        "Treat strengthen and weaken choices as true, and ask how each one affects the conclusion.",
+        "For a paradox, choose the answer that lets both facts be true."
+      ],
+      "commonTraps": [
+        "Choosing an answer that is on topic but doesn’t affect the conclusion.",
+        "Picking a strengthener on a weaken question; reread the question stem.",
+        "Attacking the premises instead of the link between premises and conclusion.",
+        "On paradox questions, picking an answer that explains only one side."
+      ],
+      "example": {
+        "question": "Last year the town of Marlow installed brighter streetlights along its main shopping avenue. In the twelve months since, reported nighttime burglaries of shops on the avenue fell by 30 percent. The town council concludes that brighter lighting deters burglary and plans to install the same lights throughout the town.\n\nWhich of the following, if true, most seriously weakens the council’s conclusion?\n\n- (A) The brighter streetlights use more electricity than the old ones did.\n- (B) During the same twelve months, a private security firm began patrolling the avenue’s shops every night.\n- (C) Some residents have complained that the new lights shine into their windows.\n- (D) Over the same period, nighttime burglaries rose slightly in nearby towns that kept their old lights.\n- (E) Shop owners on the avenue report that customers say they feel safer shopping there in the evening.",
+        "walkthrough": "**Step 1 — Find the conclusion.** Brighter lighting deters burglary, so the town should install it everywhere.\n\n**Step 2 — Find the evidence and the gap.** After the lights went in, burglaries fell 30 percent. This is correlation taken as causation: the council assumes nothing *else* caused the drop.\n\n**Step 3 — Predict.** A weakener will offer another explanation for the decline.\n\n**Step 4 — Evaluate the choices.**\n\n- (A) Cost is irrelevant to whether lighting deters burglary.\n- (B) An alternative cause: nightly patrols began at the same time and could explain the drop. This weakens the causal claim.\n- (C) Complaints don’t bear on whether the lights deter burglary.\n- (D) Burglaries rose elsewhere without new lights, which *strengthens* the council’s case.\n- (E) How safe customers feel says nothing about actual burglary rates.\n\n**Answer: (B).**"
+      },
+      "drillId": "d-rc"
+    },
+    {
+      "id": "vocab-strategy",
+      "title": "Building a GRE Vocabulary",
+      "measure": "verbal",
+      "minutes": 5,
+      "summary": "Learn GRE vocabulary efficiently with spaced repetition, word roots and real context, so the words are there when you need them.",
+      "blocks": [
+        {
+          "heading": "Why vocabulary still matters",
+          "body": "Text Completion and Sentence Equivalence test words directly, and Reading Comprehension passages use demanding vocabulary throughout. Strategy gets you a long way, but when you don’t know the key words in the answer choices, a question often comes down to a guess. A steady vocabulary habit is one of the most reliable ways to raise a Verbal score.\n\nThe goal isn’t to memorize a dictionary. It’s to know the high-frequency GRE words well enough to recognize them instantly, including their tone (positive, negative or neutral) and their common secondary meanings."
+        },
+        {
+          "heading": "Spaced repetition with the flashcards",
+          "body": "Memory fades on a predictable curve, and each well-timed review slows the next round of forgetting. Spaced repetition takes advantage of this: you review a word just as you’re about to forget it, so cards you know well come back rarely and cards you struggle with come back often.\n\nThe app’s flashcards work this way. To get the most out of them:\n\n- **Grade yourself honestly.** If you hesitated or only half remembered, say so. Rating a shaky card as easy pushes it away before it’s learned.\n- **Review every day,** even for ten minutes. Reviews stay short when you keep up and pile up when you skip days.\n- **Limit new words** to a number you can sustain; 10 to 20 a day works for most people. Today’s new cards become tomorrow’s reviews.\n- **Start with the most frequent words.** The word list is tiered, so master Tier 1 before moving on to Tiers 2 and 3.\n- **Answer before you flip.** Say the definition out loud, ideally with a short example sentence, before revealing the back of the card."
+        },
+        {
+          "heading": "Roots, prefixes and their limits",
+          "body": "Roots help you remember words and make educated guesses about unfamiliar ones. A few that pay off:\n\n- *bene* (good): benevolent, benign; *mal* (bad): malevolent, malign\n- *loqu*, *locu* (speak): loquacious, circumlocution\n- *cred* (believe): credulous, incredulity\n- *ver* (true): veracity, verisimilitude\n- *chron* (time): anachronism, chronic\n- *pac*, *plac* (peace, calm): pacify, placate, implacable\n- *a-*, *an-* (without): amoral, anomaly, apathy\n\nRoots are hints, not definitions, and some GRE favorites are misleading. *Enervate* means “to weaken,” not “to energize”; *noisome* means “offensive or foul-smelling,” not “noisy”; *restive* means “restless,” not “restful.” When a root-based guess conflicts with the sentence’s clue, trust the sentence."
+        },
+        {
+          "heading": "Learn words in context",
+          "body": "A bare definition is fragile. Seeing a word in use, and using it yourself, makes it stick and shows you how it behaves in a sentence.\n\n- **Read demanding prose:** long-form journalism, science and history magazines, book reviews and essays. When you meet a word you’d only half know on the test, look it up and add it to your study.\n- **Write your own sentence** for each new word, ideally about something from your own life.\n- **Learn in clusters.** Group words by meaning so you learn their shades of difference: *laud*, *extol*, *eulogize* (praise); *castigate*, *excoriate*, *censure* (criticize harshly); *laconic*, *terse*, *succinct* (brief).\n- **Track tone.** Know whether each word is positive, negative or neutral. On the test, tone alone often eliminates half the choices.\n- **Collect secondary meanings:** *qualify* (limit), *temper* (moderate), *arrest* (stop), *sanction* (approve, or penalize), *pedestrian* (unimaginative), *economy* (thrift)."
+        }
+      ],
+      "keyTips": [
+        "Do your flashcard reviews every day; consistency beats long weekend sessions.",
+        "Rate cards honestly so shaky words come back soon.",
+        "Write your own example sentence for every new word.",
+        "Learn words in meaning clusters to master shades of difference.",
+        "Note each word’s tone: positive, negative or neutral."
+      ],
+      "commonTraps": [
+        "Adding so many new words a day that the reviews become overwhelming.",
+        "Trusting a root over the sentence’s clue (enervate, noisome, restive).",
+        "Recognizing a word without being able to define it; test yourself actively.",
+        "Ignoring the secondary meanings of everyday words."
+      ]
+    },
+    {
+      "id": "qc",
+      "title": "Quantitative Comparison",
+      "measure": "quant",
+      "category": "quantitativeComparison",
+      "minutes": 6,
+      "summary": "Decide which quantity is larger without computing more than you need, and test strategic cases to see whether the relationship can change.",
+      "blocks": [
+        {
+          "heading": "The four answer choices",
+          "body": "Every Quantitative Comparison question gives you two quantities, sometimes with information centered above them, and the same four choices:\n\n- **(A)** Quantity A is greater.\n- **(B)** Quantity B is greater.\n- **(C)** The two quantities are equal.\n- **(D)** The relationship cannot be determined from the information given.\n\nMemorize them so you never spend time reading them on test day. Choosing (A), (B) or (C) means that relationship holds in *every* case the given information allows. If different valid cases produce different relationships, the answer is (D)."
+        },
+        {
+          "heading": "Compare, don’t compute",
+          "body": "You only need to know which quantity is larger, not their exact values. Simplify the comparison instead:\n\n- **Do the same thing to both sides.** You can add or subtract the same amount from both quantities, or multiply or divide both by the same *positive* number, without changing the relationship. Never multiply or divide by a negative number, or by a variable whose sign you don’t know.\n- **Cancel common parts.** If Quantity A is 17 × 43 + 5 and Quantity B is 17 × 43 + 6, there’s nothing to calculate: B is greater.\n- **Estimate.** To compare 0.49 × 812 with 401, note that half of 812 is 406 and 0.01 × 812 is about 8, so 0.49 × 812 is about 398, which is less than 401.\n- **Rewrite in a common form.** Express both quantities as fractions with the same denominator, as powers of the same base, or as expressions you can subtract."
+        },
+        {
+          "heading": "Plug in strategic cases",
+          "body": "When variables appear, pick numbers that satisfy the given information and see what happens. Don’t stop at one convenient number like 2 or 3; test the kinds of numbers that tend to break relationships. A handy checklist is **ZONEF**:\n\n- **Z**ero\n- **O**ne\n- **N**egatives\n- **E**xtremes (very large or very small values)\n- **F**ractions between 0 and 1\n\nFor example, x² is greater than x when x = 3, less than x when x = 1/2, and equal to x when x = 1. If your first case gives (A), deliberately look for a case that gives something else. If you find one, the answer is (D); if the strategic cases all agree, trust that relationship.\n\nRespect the constraints. If the question says x is a positive integer, fractions, zero and negatives are off the table."
+        },
+        {
+          "heading": "When (D) is right, and when it can’t be",
+          "body": "- If both quantities are fixed numbers with no variables, the answer can’t be (D): each quantity has one value, so their relationship is fixed.\n- If two valid cases give different results, including one that makes the quantities equal and another that makes one greater, the answer is (D).\n- Geometric figures are not necessarily drawn to scale. Base your conclusions on the stated information and geometry rules, not on how lengths or angles look.\n- (D) is not a safe guess. Choose it because you found two cases that disagree, not because the question felt hard."
+        }
+      ],
+      "keyTips": [
+        "Memorize the four choices so you never reread them.",
+        "Simplify both quantities with the same operation, but never multiply or divide by a negative or by an unknown sign.",
+        "With variables, test Zero, One, Negatives, Extremes and Fractions (ZONEF).",
+        "After one case, actively hunt for a case that gives a different answer.",
+        "No variables means (D) is impossible."
+      ],
+      "commonTraps": [
+        "Testing one “nice” number and missing the case that changes the answer.",
+        "Choosing (A) when one valid case makes the quantities equal.",
+        "Trusting how a figure looks instead of the stated facts.",
+        "Dividing both sides by a variable that might be negative."
+      ],
+      "example": {
+        "question": "Given: 0 < x < 2\n\n- **Quantity A:** x²\n- **Quantity B:** 2x − 1",
+        "walkthrough": "**Step 1 — Compare, don’t compute.** Subtract Quantity B from Quantity A: x² − (2x − 1) = x² − 2x + 1 = (x − 1)².\n\n**Step 2 — Interpret the result.** A square is never negative, so (x − 1)² ≥ 0. Quantity A is always greater than *or equal to* Quantity B. Can they ever be equal?\n\n**Step 3 — Check the boundary case.** x = 1 is allowed, since 0 < 1 < 2. Then Quantity A = 1 and Quantity B = 2(1) − 1 = 1. They’re equal.\n\n**Step 4 — Check another case.** When x = 1/2, Quantity A = 1/4 and Quantity B = 0. Quantity A is greater.\n\n**Step 5 — Decide.** One valid case gives “equal” and another gives “A is greater,” so no single relationship always holds. **Answer: (D).** Many test takers choose (A) because A is *usually* larger, but (A) requires A to be larger in every case."
+      },
+      "drillId": "d-qc"
+    },
+    {
+      "id": "ps",
+      "title": "Multiple Choice: Select One Answer",
+      "measure": "quant",
+      "category": "problemSolving",
+      "minutes": 5,
+      "summary": "Solve single-answer multiple-choice questions faster by working backward from the choices, picking numbers and estimating.",
+      "blocks": [
+        {
+          "heading": "Read, plan, then solve",
+          "body": "Select-one multiple-choice questions have five choices, exactly one of them correct. They cover arithmetic, algebra, geometry and data analysis, often as word problems.\n\nBefore calculating, be sure you know exactly what is being asked. Many wrong choices are answers to a *different* question: the value of x when the question asks for 2x, the number of adults when it asks for children, a fraction when it asks for a percent. Write down the target and its units, and glance at the choices: their form and spread tell you how precise you need to be.\n\nThen choose the most efficient approach. Straight algebra is often fine, but the answer choices give you two powerful alternatives."
+        },
+        {
+          "heading": "Backsolving: work from the answers",
+          "body": "When the choices are numbers and the question asks for a single value, you can test the choices in the problem instead of setting up equations.\n\n- Numeric choices are usually listed in increasing or decreasing order, so start with the **middle choice, (C)**.\n- If (C) works, you’re done. If it gives a result that’s too large, move to the choices that make it smaller, and vice versa. You’ll often finish in two tries.\n- Backsolving shines in word problems with awkward equations: ages, mixtures, tickets, and items shared among people."
+        },
+        {
+          "heading": "Picking numbers",
+          "body": "When the answer choices contain variables, or the problem involves percents or fractions of an unknown total, choose your own numbers.\n\n- **Choose easy numbers** that satisfy every condition: 100 for percent problems, a common multiple of the denominators for fraction problems.\n- **Avoid 0 and 1,** and avoid numbers already in the problem; they can make different expressions look equal.\n- **Compute the target** with your numbers, then plug the same numbers into **every** choice. If more than one matches, pick new numbers and test only the survivors.\n\nThe same idea works for “must be true” questions about number properties. If a question asks which expression must be even when n is odd, try n = 1 and n = 3, and eliminate any choice that fails even once."
+        },
+        {
+          "heading": "Estimate when the choices are spread out",
+          "body": "If the choices are far apart, say 12, 25, 48, 90 and 150, rough arithmetic is enough. Round to friendly numbers, compute quickly and pick the closest choice. Estimation is also a good check on exact work: if you calculated 480 but your estimate was around 50, something went wrong.\n\nDon’t estimate when the choices are close together or written in exact forms such as fractions or square roots; then you need the precise answer."
+        }
+      ],
+      "keyTips": [
+        "Write down exactly what the question asks for, including units, before you solve.",
+        "Backsolve from choice (C) when the choices are numbers and the algebra is messy.",
+        "Pick numbers when the choices contain variables, and test every choice.",
+        "Use 100 for percent problems and a common denominator for fraction problems.",
+        "Let the spread of the choices tell you how precise you need to be."
+      ],
+      "commonTraps": [
+        "Solving for x when the question asks for a different expression.",
+        "Picking 0 or 1 as test numbers and getting several matching choices.",
+        "Stopping at the first choice that matches when picking numbers.",
+        "Estimating when the choices are close together."
+      ],
+      "example": {
+        "question": "A school bought 30 tickets to a play. Adult tickets cost $12 each and student tickets cost $7 each. If the school spent $260 in total, how many adult tickets did it buy?\n\n- (A) 8\n- (B) 10\n- (C) 12\n- (D) 14\n- (E) 16",
+        "walkthrough": "**Step 1 — Backsolve, starting with (C) 12.** 12 adult tickets cost 12 × $12 = $144. The other 18 are student tickets: 18 × $7 = $126. The total is $270, which is $10 too much.\n\n**Step 2 — Move in the right direction.** Adult tickets cost more, so fewer adult tickets means a smaller total. Try (B) 10: 10 × $12 = $120, and 20 × $7 = $140. The total is $260, as required.\n\n**Answer: (B) 10.**\n\n**Algebra check.** Let a be the number of adult tickets. Then 12a + 7(30 − a) = 260, so 12a + 210 − 7a = 260, 5a = 50 and a = 10.\n\n**Shortcut.** Swapping one student ticket for an adult ticket adds $5. Since (C) was $10 too high, you needed two fewer adult tickets, which leads straight to 10."
+      },
+      "drillId": "d-ps"
+    },
+    {
+      "id": "ma",
+      "title": "Multiple Choice: Select One or More",
+      "measure": "quant",
+      "category": "multipleAnswer",
+      "minutes": 5,
+      "summary": "Find every correct choice by working out the full range of valid answers first, then testing each option on its own.",
+      "blocks": [
+        {
+          "heading": "How the question works",
+          "body": "These questions show a list of choices with square checkboxes rather than the round buttons of select-one questions, and you must select every correct choice. The question may tell you how many to choose (“Indicate *two* such numbers”) or simply say “Indicate *all* such values.” In the second case any number of choices may be correct, from one to all of them.\n\nThere is no partial credit. You must select all of the correct choices and none of the incorrect ones, so careful, systematic work matters more than speed."
+        },
+        {
+          "heading": "Find the range first",
+          "body": "Most of these questions really ask, “Which values satisfy these conditions?” Rather than testing each choice from scratch, work out the complete set of valid answers first, then check the choices against it.\n\n- **Inequalities:** solve to get an interval, noting whether each endpoint is included (< versus ≤).\n- **Triangle sides:** the third side must be greater than the difference of the other two sides and less than their sum. If two sides are 5 and 9, the third is between 4 and 14, exclusive.\n- **Minimum and maximum scenarios:** for questions like “Which could be the average?” or “Which could be the total?”, compute the smallest and largest possible values, then select every choice in between that also meets any other condition, such as being an integer.\n- **Number properties:** for “Which must be a factor?” or “Which could be the remainder?”, list the possibilities systematically."
+        },
+        {
+          "heading": "Test each choice independently",
+          "body": "Once you have the range or the rule, go through the choices one at a time. Each choice is its own true-or-false question; whether one choice is correct tells you nothing about its neighbors.\n\n- Check endpoints carefully. They are the most common source of errors.\n- Don’t assume there must be more than one answer, or fewer than all of them.\n- If the question says “Indicate two,” select exactly two.\n\nNotice the wording. When a question asks what *must* be true, a choice is correct only if it holds in every case. When it asks what *could* be true, a single valid case is enough."
+        },
+        {
+          "heading": "Guessing without partial credit",
+          "body": "If you can’t fully solve the question, use what you know: eliminate choices that clearly fail and select the ones you’re confident in. A blank is always wrong, so submit your best complete attempt rather than skipping the question, and mark it to revisit if time allows."
+        }
+      ],
+      "keyTips": [
+        "Read the stem for “Indicate all such…” versus “Indicate two…”.",
+        "Work out the complete range of valid answers before you look at the choices.",
+        "Check whether each endpoint is included (< versus ≤).",
+        "Judge every choice on its own; any number of them may be correct.",
+        "For minimum and maximum questions, compute both extremes and select everything allowed between them."
+      ],
+      "commonTraps": [
+        "Selecting only one answer out of habit from select-one questions.",
+        "Including or excluding an endpoint incorrectly.",
+        "Stopping after finding one correct choice.",
+        "Forgetting a stated constraint, such as integer or positive values."
+      ],
+      "example": {
+        "question": "If 3 < 2x − 5 ≤ 11, which of the following could be the value of x?\n\nIndicate all such values.\n\n- (A) 3\n- (B) 4\n- (C) 5.5\n- (D) 8\n- (E) 9",
+        "walkthrough": "**Step 1 — Find the range.** Add 5 to all three parts: 8 < 2x ≤ 16. Divide all three parts by 2, which is positive, so the inequality signs stay the same: 4 < x ≤ 8.\n\n**Step 2 — Note the endpoints.** x must be strictly greater than 4, but it can equal 8.\n\n**Step 3 — Test each choice.**\n\n- (A) 3: below the range. Not valid.\n- (B) 4: the lower endpoint is excluded, since 2(4) − 5 = 3 is not greater than 3. Not valid.\n- (C) 5.5: inside the range, since 2(5.5) − 5 = 6. Valid.\n- (D) 8: the upper endpoint is included, since 2(8) − 5 = 11 ≤ 11. Valid.\n- (E) 9: above the range. Not valid.\n\n**Answer: (C) and (D).** The endpoints are where the traps are: selecting 4, or leaving out 8, makes the whole answer wrong."
+      },
+      "drillId": "d-ma"
+    },
+    {
+      "id": "ne",
+      "title": "Numeric Entry",
+      "measure": "quant",
+      "category": "numericEntry",
+      "minutes": 5,
+      "summary": "Type the exact answer in the right form and units, rounding only when, and exactly how, the question tells you to.",
+      "blocks": [
+        {
+          "heading": "How the question works",
+          "body": "Numeric Entry questions have no answer choices. You type your answer into a single box for an integer or decimal, or into two boxes, a numerator and a denominator, for a fraction. Because you can’t check your result against choices, accuracy matters more here than anywhere else.\n\nThe rules:\n\n- **Equivalent forms are accepted.** 2.5 and 2.50 are both correct, and fractions do not need to be reduced: 6/8 is accepted for 3/4.\n- **Enter the exact answer** unless the question tells you to round.\n- **Fraction boxes take integers.** Don’t put a decimal in a numerator or denominator.\n- **Negative answers** are entered with a minus sign before the number."
+        },
+        {
+          "heading": "Rounding instructions",
+          "body": "When a question says “round to the nearest tenth” or “give your answer to the nearest whole percent,” follow it precisely, and round only once, at the very end. Rounding intermediate results can push your final answer off by a unit in the last place.\n\nKnow the place names: tenths is one digit after the decimal point, hundredths is two, and “to the nearest cent” means hundredths of a dollar. To round, look at the digit just after the place you’re keeping: 5 or more rounds up, less than 5 leaves it unchanged. For example, 14.0571 to the nearest tenth is 14.1, and 68.2125 to the nearest hundredth is 68.21.\n\nIf the question doesn’t mention rounding, it wants the exact answer. When the exact answer is a fraction like 2/3, which has no finite decimal form, you’ll normally be given fraction boxes, so enter the fraction rather than a rounded decimal."
+        },
+        {
+          "heading": "Units and labels",
+          "body": "Read the labels around the box. A % after the box wants the percent number: for 35 percent, type 35, not 0.35. A $ before the box means dollars, so type only the number. If the question mixes units, such as minutes and hours or inches and feet, convert before you calculate, and make sure the final answer is in the unit the question asks for."
+        },
+        {
+          "heading": "Checking your answer",
+          "body": "Without choices to compare against, build in a quick check:\n\n- **Reread the question** to confirm you answered what was asked: the total rather than one part, the increase rather than the new value.\n- **Estimate** the answer. If your estimate is around 70 and you typed 7.02, find the error.\n- **Use Transfer Display** on the calculator for single-box answers to avoid typing mistakes, then check that the transferred value follows any rounding instruction."
+        }
+      ],
+      "keyTips": [
+        "Enter the exact value unless the question says to round.",
+        "Round only once, at the end of the calculation.",
+        "Fractions don’t need to be reduced, but both boxes must contain integers.",
+        "Read the box labels: % and $ tell you what form the answer takes.",
+        "Estimate before you submit to catch decimal-point errors."
+      ],
+      "commonTraps": [
+        "Rounding intermediate steps and ending up one unit off.",
+        "Typing 0.35 when the box is labeled %.",
+        "Answering in the wrong unit, such as minutes instead of hours.",
+        "Transferring an unrounded calculator display when the question asks for rounding."
+      ],
+      "example": {
+        "question": "A jacket originally priced at $75 is discounted by 15 percent. A sales tax of 7 percent is then applied to the discounted price. What is the final price of the jacket, in dollars, rounded to the nearest cent?\n\n*(The answer box is labeled with a $ sign.)*",
+        "walkthrough": "**Step 1 — Apply the discount.** A 15 percent discount leaves 85 percent of the price: 75 × 0.85 = 63.75.\n\n**Step 2 — Apply the tax to the discounted price.** Adding 7 percent tax means multiplying by 1.07: 63.75 × 1.07 = 68.2125.\n\n**Step 3 — Round once, at the end.** To the nearest cent means to the hundredths place. The digit after it (the thousandths digit) is 2, which is less than 5, so 68.2125 rounds to 68.21.\n\n**Step 4 — Enter it.** The box already shows the $ sign, so type 68.21.\n\n**Why not a shortcut?** You can’t simply take 15 − 7 = 8 percent off: 75 × 0.92 = 69.00, which is wrong. Successive percent changes multiply: 75 × 0.85 × 1.07 = 68.2125."
+      },
+      "drillId": "d-ne"
+    },
+    {
+      "id": "di",
+      "title": "Data Interpretation",
+      "measure": "quant",
+      "category": "dataInterpretation",
+      "minutes": 5,
+      "summary": "Read every table and graph carefully before answering, keep percent change and percentage points apart, and estimate whenever the choices allow.",
+      "blocks": [
+        {
+          "heading": "How data sets work",
+          "body": "Data Interpretation questions come in sets that share one data presentation: a table, a bar graph, a line graph, a circle (pie) graph, a scatterplot, or a combination of them. Each question in the set can use any Quant format: select one, select one or more, or numeric entry. Expect to return to the same data for every question in the set.\n\nThe data is usually realistic and a little messy: several series, totals you must work out, or two graphs that need to be combined. Most questions test careful reading and sound arithmetic, not advanced math."
+        },
+        {
+          "heading": "Read the data before the questions",
+          "body": "Spend 20–30 seconds understanding the presentation before you answer anything:\n\n- **Title:** what is being measured, where and when?\n- **Axes and units:** thousands or millions? Dollars or percent? Does the vertical axis start at zero?\n- **Legend:** which bar or line belongs to which series?\n- **Notes:** definitions or exceptions that change the meaning of the numbers.\n- **The whole:** in pie charts and percentage tables, what is the total? A slice labeled 20% is 20% of that total and nothing else.\n\nWhen two graphs are given, work out how they connect. Often one gives a total and the other gives percentages of it."
+        },
+        {
+          "heading": "Percent change vs. percentage points",
+          "body": "These are the most tested distinctions in data questions.\n\n- **Percent change** = (new − old) ÷ old × 100%. A value rising from 40 to 50 is a 25% increase.\n- **Percentage-point change** is the simple difference between two percentages. A share rising from 40% to 46% is an increase of 6 percentage points, but a percent increase of 15% (6 ÷ 40).\n- **Percent of what?** “What percent of A is B?” is B ÷ A. “By what percent is A greater than B?” uses B as the base.\n- **Shares versus amounts:** a category’s share of the total can fall even while its actual amount rises, if the total grows faster."
+        },
+        {
+          "heading": "Estimate aggressively",
+          "body": "Data graphs on the GRE are drawn to scale, unlike geometry figures, so you can read values by eye. Answer choices on data questions are often far apart, so round to friendly numbers and calculate quickly: 31.8% of 4,970 is close to 32% of 5,000, which is 1,600.\n\nSave exact calculation for choices that are close together or for numeric entry questions with a specific rounding instruction. Use the calculator for the final arithmetic, not as a substitute for reading the graph carefully."
+        }
+      ],
+      "keyTips": [
+        "Read the title, units, legend and notes before the first question.",
+        "Write the percent-change formula before plugging in: (new − old) ÷ old.",
+        "Keep percentage points and percent change separate.",
+        "Estimate when the choices are spread out; data graphs are drawn to scale.",
+        "Reread the relevant part of the data for each question; questions in a set often use different parts."
+      ],
+      "commonTraps": [
+        "Missing a units label such as “in thousands.”",
+        "Using the wrong base for a percent change.",
+        "Giving a percentage-point difference when the question asks for percent change.",
+        "Assuming a larger share means a larger amount when the totals differ."
+      ],
+      "example": {
+        "question": "A company’s revenue by region, in millions of dollars:\n\n- **North:** 40 in 2023, 50 in 2024\n- **South:** 25 in 2023, 30 in 2024\n- **West:** 35 in 2023, 28 in 2024\n\nWhich of the following is closest to the percent increase in the North region’s *share* of the company’s total revenue from 2023 to 2024?\n\n- (A) 6%\n- (B) 8%\n- (C) 16%\n- (D) 25%\n- (E) 46%",
+        "walkthrough": "**Step 1 — Find the totals.** 2023: 40 + 25 + 35 = 100. 2024: 50 + 30 + 28 = 108.\n\n**Step 2 — Find North’s share each year.** 2023: 40 ÷ 100 = 40%. 2024: 50 ÷ 108 ≈ 46.3%.\n\n**Step 3 — Find the percent increase in the share.** The share rose by about 6.3 percentage points. Relative to the original share, that’s 6.3 ÷ 40 ≈ 0.16, or about 16%.\n\n**Answer: (C) 16%.**\n\n**The traps:** (A) is the percentage-point change, not the percent change. (B) is the percent increase in *total* revenue (100 to 108). (D) is the percent increase in North’s revenue (40 to 50), not in its share. (E) is North’s 2024 share itself."
+      },
+      "drillId": "d-di"
+    },
+    {
+      "id": "calculator",
+      "title": "Using the On-Screen Calculator",
+      "measure": "quant",
+      "minutes": 6,
+      "summary": "Know what the GRE calculator can and can’t do, so it saves you time on messy arithmetic without slowing you down on everything else.",
+      "blocks": [
+        {
+          "heading": "What’s on the calculator",
+          "body": "The Quant sections include an on-screen calculator you can open at any time. It’s deliberately basic:\n\n- The four operations: +, −, ×, ÷\n- Square root (√) and parentheses\n- A sign-change key (±) for entering negative numbers\n- Memory keys: **M+** adds the displayed number to memory, **MR** recalls it and **MC** clears it\n- Clear keys: **C** clears the current calculation and **CE** clears only the last entry\n- **Transfer Display**, which copies the displayed number into a Numeric Entry answer box\n\nThere is no exponent key and no percent key. To square 3.7, enter 3.7 × 3.7; to find 18% of 640, enter 0.18 × 640."
+        },
+        {
+          "heading": "It follows the order of operations",
+          "body": "The calculator follows the standard order of operations: multiplication and division happen before addition and subtraction. Entering 2 + 3 × 4 = gives 14, not 20.\n\nThat’s helpful when you type a whole expression, but it means you must group steps deliberately. To compute (3.6 + 4.8) ÷ 1.2, use the parentheses keys or press = after the addition. Entering 3.6 + 4.8 ÷ 1.2 = without parentheses gives 7.6, because the division happens first; the correct value is 7.\n\nThe square root key acts on the number currently displayed. To find √(12.25 + 3.75), compute the sum and press = to get 16, then press √ to get 4."
+        },
+        {
+          "heading": "Memory and Transfer Display",
+          "body": "The memory keys save you from writing down and retyping intermediate results. For a weighted average such as (12 × 85 + 18 × 70) ÷ 30:\n\n- Enter 12 × 85 = to get 1020, then press M+.\n- Enter 18 × 70 = to get 1260, then press M+. Memory now holds 2280.\n- Press MR to recall 2280, then enter ÷ 30 = to get 76.\n\nBecause the calculator respects the order of operations, you could also enter 12 × 85 + 18 × 70 = in one go; memory is most useful when the pieces come from different parts of a problem. Press MC before a new problem so an old value doesn’t sneak into your next calculation.\n\nOn Numeric Entry questions with a single answer box, **Transfer Display** puts the displayed value straight into the box, which eliminates typing errors. If the question asks you to round, edit the transferred value to the required precision."
+        },
+        {
+          "heading": "When not to use it",
+          "body": "Clicking through a calculation is slower than mental math for simple arithmetic, and for many GRE questions the calculator can’t help at all.\n\n- **Simple arithmetic:** 15 × 4, 360 ÷ 12 or 25% of 80 are faster in your head.\n- **Large powers:** questions about 7²⁵ or 2³⁰ test exponent rules and patterns, such as units digits, not computation. Very large results won’t fit on the display anyway.\n- **Quantitative Comparison:** simplifying or estimating usually settles the comparison without exact values.\n- **Exact forms:** answers like 2/7 or 3√2 are easier to keep exact; converting to decimals can introduce rounding errors.\n- **Algebra:** the calculator can’t solve for a variable, so set up the equation first.\n\nUse it for messy decimals, multi-digit multiplication and division, square roots of non-perfect squares, and checking arithmetic in data questions. Estimate first, so you can tell when you’ve mistyped."
+        }
+      ],
+      "keyTips": [
+        "Remember that it follows the order of operations; use parentheses or = to group steps.",
+        "Use M+ and MR instead of writing down and retyping intermediate results, and clear with MC.",
+        "Use Transfer Display for single-box Numeric Entry answers, then check the rounding.",
+        "Do simple arithmetic mentally; it’s faster than clicking.",
+        "Estimate before calculating so you can spot a mistyped entry."
+      ],
+      "commonTraps": [
+        "Entering a + b ÷ c and expecting (a + b) ÷ c.",
+        "Forgetting to clear memory between problems.",
+        "Reaching for the calculator on exponent or units-digit questions designed to test patterns.",
+        "Converting fractions to rounded decimals and losing exactness."
+      ],
+      "example": {
+        "question": "What is the value of (4.25 + 7.75) ÷ 0.4 − √(12.25 + 3.75)?",
+        "walkthrough": "**Step 1 — Look for mental math first.** 4.25 + 7.75 = 12, and 12.25 + 3.75 = 16, so √16 = 4. Both are easy without the calculator.\n\n**Step 2 — Handle the division.** 12 ÷ 0.4 = 30. (Dividing by 0.4 is the same as multiplying by 2.5.) Then 30 − 4 = 26.\n\n**Step 3 — If you use the calculator, group the steps.** Enter 12.25 + 3.75 =, press √ to get 4, and press M+. Then enter ( 4.25 + 7.75 ) ÷ 0.4 = to get 30, press −, press MR and press = to get 26.\n\n**The trap:** entering 4.25 + 7.75 ÷ 0.4 without parentheses divides only 7.75 by 0.4, giving 4.25 + 19.375 = 23.625 before the square root is even subtracted.\n\n**Answer: 26.**"
+      }
+    },
+    {
+      "id": "quant-review",
+      "title": "Quant Review: The Most-Tested Facts",
+      "measure": "quant",
+      "minutes": 8,
+      "summary": "A compact review of the number properties, algebra, geometry and data-analysis facts that come up again and again on the GRE.",
+      "blocks": [
+        {
+          "heading": "Number properties, exponents and roots",
+          "body": "- **Integers:** 0 is even and is neither positive nor negative. Even ± even and odd ± odd are even; even ± odd is odd. A product is even if any factor is even.\n- **Primes** have exactly two positive factors. 2 is the only even prime, and 1 is not prime. The primes below 30 are 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29.\n- **Divisibility:** by 3 or 9 if the digit sum is divisible by 3 or 9; by 4 if the last two digits form a multiple of 4; by 5 if the number ends in 0 or 5.\n- **Factors and multiples:** for two positive integers, GCF × LCM = the product of the numbers. Prime factorizations give you both.\n- **Remainders:** if n divided by d gives quotient q and remainder r, then n = dq + r, with 0 ≤ r < d.\n- **Exponents:** aᵐ × aⁿ = aᵐ⁺ⁿ, aᵐ ÷ aⁿ = aᵐ⁻ⁿ, (aᵐ)ⁿ = aᵐⁿ, a⁰ = 1 for a ≠ 0, and a⁻ⁿ = 1/aⁿ. A negative base raised to an even power is positive.\n- **Roots:** √(ab) = √a × √b, but √(a + b) is *not* √a + √b. Numbers between 0 and 1 get smaller when squared and larger when square-rooted."
+        },
+        {
+          "heading": "Percents, ratios and rates",
+          "body": "- **Percent change** = (new − old) ÷ old × 100%. Successive changes multiply: up 20% and then down 20% gives 1.2 × 0.8 = 0.96, a net 4% decrease.\n- **x% of y = y% of x:** 8% of 50 equals 50% of 8, which is 4.\n- **Ratios:** a ratio of 3 : 5 means the parts are 3/8 and 5/8 of the whole. Write the parts as 3k and 5k.\n- **Rates:** distance = rate × time, and work = rate × time. Average speed for a trip is total distance ÷ total time, not the average of the speeds.\n- **Averages:** sum = average × number of items. To combine groups, add their totals, not their averages."
+        },
+        {
+          "heading": "Algebra and coordinate geometry",
+          "body": "- **Linear systems:** solve by substitution or elimination. You generally need as many equations as unknowns, unless the question asks for a combination such as x + y that appears when you add or subtract the equations.\n- **Quadratics:** know (a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b² and a² − b² = (a + b)(a − b). Solve by factoring or with x = (−b ± √(b² − 4ac)) ÷ (2a). Remember that x² = 9 has two solutions, 3 and −3.\n- **Inequalities:** flip the inequality sign when you multiply or divide by a negative number. |x − a| < b means a − b < x < a + b.\n- **Lines:** slope m = (y₂ − y₁) ÷ (x₂ − x₁), and y = mx + b, where b is the y-intercept. Parallel lines have equal slopes; perpendicular slopes multiply to −1.\n- **Distance and midpoint:** distance = √((x₂ − x₁)² + (y₂ − y₁)²), which is the Pythagorean theorem in disguise; the midpoint is ((x₁ + x₂)/2, (y₁ + y₂)/2)."
+        },
+        {
+          "heading": "Geometry",
+          "body": "- **Lines and angles:** angles on a straight line sum to 180°, and vertical angles are equal.\n- **Triangles:** the angles sum to 180°. Each side is less than the sum and greater than the difference of the other two. The longest side is opposite the largest angle. Area = ½ × base × height.\n- **Right triangles:** a² + b² = c². Common triples are 3-4-5, 5-12-13, 8-15-17 and 7-24-25, plus multiples such as 6-8-10. A 45-45-90 triangle has sides x, x and x√2; a 30-60-90 triangle has sides x, x√3 and 2x.\n- **Circles:** circumference = 2πr and area = πr². An arc or sector is (central angle ÷ 360°) of the full circumference or area. An inscribed angle is half the central angle that intercepts the same arc.\n- **Polygons:** the interior angles of an n-sided polygon sum to (n − 2) × 180°. Rectangle and parallelogram area = base × height; trapezoid area = ½(b₁ + b₂) × h.\n- **Solids:** a rectangular box has volume lwh and surface area 2(lw + lh + wh); a cylinder has volume πr²h."
+        },
+        {
+          "heading": "Statistics, probability and counting",
+          "body": "- **Center:** mean = sum ÷ count; the median is the middle value of the ordered list (the average of the two middle values if the count is even); the mode is the most frequent value.\n- **Spread:** range = maximum − minimum. Standard deviation measures how far values typically are from the mean. Adding the same number to every value doesn’t change it; multiplying every value by k multiplies it by |k|. In a normal distribution, about 68% of values lie within 1 standard deviation of the mean and about 95% within 2.\n- **Quartiles:** Q1, Q2 (the median) and Q3 split ordered data into four groups of roughly equal size. The interquartile range is Q3 − Q1, and a boxplot shows the minimum, Q1, median, Q3 and maximum.\n- **Probability** = favorable outcomes ÷ total outcomes. For independent events, P(A and B) = P(A) × P(B). In general, P(A or B) = P(A) + P(B) − P(A and B), and P(at least one) = 1 − P(none).\n- **Counting:** multiply the number of options at each stage. n distinct items can be arranged in n! ways. Choosing k of n when order matters gives n! ÷ (n − k)! permutations; when order doesn’t matter, n! ÷ (k!(n − k)!) combinations."
+        }
+      ],
+      "keyTips": [
+        "Memorize the Pythagorean triples and the two special right triangles.",
+        "For averages, convert to totals: sum = mean × count.",
+        "Successive percent changes multiply; never just add them.",
+        "Flip an inequality when you multiply or divide by a negative number.",
+        "Ask “Does order matter?” before choosing permutations or combinations."
+      ],
+      "commonTraps": [
+        "Forgetting the negative root: x² = 25 means x = 5 or x = −5.",
+        "Treating 1 as prime or forgetting that 0 is even.",
+        "Averaging two speeds instead of dividing total distance by total time.",
+        "Assuming the median equals the mean.",
+        "Writing √(a + b) = √a + √b."
+      ]
+    }
+  ]
+}

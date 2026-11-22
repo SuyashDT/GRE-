@@ -1,0 +1,510 @@
+{
+  "stimuli": [
+    {
+      "id": "d-qd1",
+      "kind": "data",
+      "title": "Ridgeway Cycles: Sales and Prices, 2024–2025",
+      "intro": "Ridgeway Cycles sells four types of bicycles. The table gives the number of bicycles of each type sold in 2024 and in 2025; the bar chart gives the average selling price per bicycle of each type in each year.",
+      "tables": [
+        {
+          "title": "Bicycles sold, by type",
+          "columns": ["Type", "2024", "2025"],
+          "rows": [
+            ["Road", "120", "150"],
+            ["Mountain", "200", "160"],
+            ["Hybrid", "160", "220"],
+            ["Electric", "40", "90"],
+            ["Total", "520", "620"]
+          ]
+        }
+      ],
+      "charts": [
+        {
+          "title": "Average selling price per bicycle",
+          "type": "bar",
+          "xLabel": "Type",
+          "yLabel": "Price (dollars)",
+          "categories": ["Road", "Mountain", "Hybrid", "Electric"],
+          "series": [
+            { "name": "2024", "values": [1000, 700, 500, 2200] },
+            { "name": "2025", "values": [900, 800, 600, 2400] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d-qd2",
+      "kind": "data",
+      "title": "Lakeview Science Center: Monthly Visitors, January–June 2025",
+      "intro": "The graph shows the number of adult and child visitors to the Lakeview Science Center in each of the first six months of 2025. Throughout this period, an adult ticket cost $15 and a child ticket cost $9, and every visitor bought exactly one ticket.",
+      "charts": [
+        {
+          "title": "Visitors per month",
+          "type": "line",
+          "xLabel": "Month (2025)",
+          "yLabel": "Visitors (thousands)",
+          "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          "series": [
+            { "name": "Adults", "values": [14, 16, 15, 20, 24, 31] },
+            { "name": "Children", "values": [6, 8, 12, 15, 18, 21] }
+          ]
+        }
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "d-qc",
+      "title": "Quantitative Comparison",
+      "measure": "quant",
+      "category": "quantitativeComparison",
+      "summary": "Eight comparisons that build the habit of testing zero, negatives, fractions and non-integers before you commit to an answer.",
+      "questions": [
+        {
+          "id": "d-qc-01",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "35% of 80",
+          "quantityB": "80% of 35",
+          "correct": [2],
+          "explanation": "0.35 × 80 = 28 and 0.80 × 35 = 28, so the quantities are equal. Shortcut: x% of y = (x × y)/100 = y% of x, so swapping the percent and the base never changes the result. Once you spot that pattern, no arithmetic is needed."
+        },
+        {
+          "id": "d-qc-02",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "x² = 5x",
+          "quantityA": "x",
+          "quantityB": "5",
+          "correct": [3],
+          "explanation": "Factor instead of dividing: x² − 5x = 0 gives x(x − 5) = 0, so x = 0 or x = 5. If x = 5 the quantities are equal; if x = 0, Quantity B is greater. Because the relationship changes, it cannot be determined. Trap: dividing both sides by x silently throws away the solution x = 0."
+        },
+        {
+          "id": "d-qc-03",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "Two sides of a triangle have lengths 5 and 9.",
+          "quantityA": "The length of the third side",
+          "quantityB": "4",
+          "correct": [0],
+          "explanation": "By the triangle inequality, the third side s satisfies 9 − 5 < s < 9 + 5, so 4 < s < 14. The inequality is strict: a third side of exactly 4 would flatten the triangle into a line segment. Although s can vary, every possible value is greater than 4, so Quantity A is greater. Trap: choosing \"cannot be determined\" just because the third side is not fixed."
+        },
+        {
+          "id": "d-qc-04",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "A list consists of the four numbers 2, 5, 9 and x, where x > 9.",
+          "quantityA": "The median of the four numbers",
+          "quantityB": "7",
+          "correct": [2],
+          "explanation": "Because x > 9, the ordered list is 2, 5, 9, x, with x always last. With four numbers, the median is the average of the two middle values: (5 + 9)/2 = 7. So the quantities are equal no matter how large x is. Trap: x changes the mean, but it never reaches the middle of the list, so it cannot move the median."
+        },
+        {
+          "id": "d-qc-05",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "−1 < x < 1 and x ≠ 0",
+          "quantityA": "x²",
+          "quantityB": "x³",
+          "correct": [0],
+          "explanation": "Test both sides of zero. x = 1/2: x² = 1/4 is greater than x³ = 1/8. x = −1/2: x² = 1/4 is greater than x³ = −1/8. To be sure, write x² − x³ = x²(1 − x): x² > 0 because x ≠ 0, and 1 − x > 0 because x < 1, so the difference is always positive and Quantity A is greater. Note that if x = 0 were allowed, the quantities could be equal and the answer would become \"cannot be determined.\""
+        },
+        {
+          "id": "d-qc-06",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A fair coin is tossed 4 times.",
+          "quantityA": "The probability of getting exactly 2 heads",
+          "quantityB": "1/2",
+          "correct": [1],
+          "explanation": "Four tosses give 2⁴ = 16 equally likely outcomes. Exactly 2 heads occurs in C(4, 2) = 6 of them (HHTT, HTHT, HTTH, THHT, THTH, TTHH), so the probability is 6/16 = 3/8, which is less than 1/2. Quantity B is greater. Trap: \"half of the tosses are heads\" is not the same as \"probability 1/2\"; the other 10 outcomes have 0, 1, 3 or 4 heads."
+        },
+        {
+          "id": "d-qc-07",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "In triangle PQR, PQ = 6, QR = 8, and angle PQR is greater than 90°.",
+          "quantityA": "The area of triangle PQR",
+          "quantityB": "24",
+          "correct": [1],
+          "explanation": "Take QR = 8 as the base; the height is the perpendicular distance from P to line QR. If angle Q were exactly 90°, that height would be PQ = 6 and the area would be (1/2)(8)(6) = 24. Because angle Q is obtuse, the perpendicular from P meets line QR beyond Q, forming a right triangle whose hypotenuse is PQ, so the height is less than 6. Hence the area is less than 24 and Quantity B is greater. Fact to remember: with two side lengths fixed, a triangle's area is greatest when the angle between them is 90°."
+        },
+        {
+          "id": "d-qc-08",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "x and y are positive numbers, and x + y = 5.",
+          "quantityA": "xy",
+          "quantityB": "6",
+          "correct": [3],
+          "explanation": "Integer pairs are tempting: 1 × 4 = 4 and 2 × 3 = 6 suggest Quantity A is never greater. But x and y need not be integers: x = y = 2.5 gives xy = 6.25, which is greater than 6, while x = 1 and y = 4 give xy = 4, which is less. The relationship cannot be determined. For a fixed sum, a product is largest when the two numbers are equal, so always test the \"split down the middle\" case."
+        }
+      ]
+    },
+    {
+      "id": "d-ps",
+      "title": "Problem Solving",
+      "measure": "quant",
+      "category": "problemSolving",
+      "summary": "Eight five-choice problems spanning percents, algebra, geometry and probability, with the most common wrong answers planted among the choices.",
+      "questions": [
+        {
+          "id": "d-ps-01",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 1,
+          "format": "single",
+          "prompt": "If 3x − 7 = 11, what is the value of 6x − 7?",
+          "options": ["18", "22", "29", "36", "43"],
+          "correct": [2],
+          "explanation": "3x − 7 = 11 gives 3x = 18, so x = 6 and 6x − 7 = 36 − 7 = 29. Faster: 6x − 7 = 2(3x) − 7 = 2(18) − 7 = 29, without ever finding x. Traps: 22 doubles the whole equation (that is 6x − 14), 36 forgets to subtract 7, and 43 adds 7 instead."
+        },
+        {
+          "id": "d-ps-02",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "The price of a jacket is increased by 20%. Later, the new price is decreased by 20%. The final price is what percent of the original price?",
+          "options": ["90%", "96%", "98%", "100%", "104%"],
+          "correct": [1],
+          "explanation": "Use multipliers: a 20% increase multiplies the price by 1.2 and a 20% decrease multiplies it by 0.8, so the final price is 1.2 × 0.8 = 0.96 of the original, or 96%. Picking 100 as the original shows it directly: 100 → 120 → 96. Trap: 100%. The 20% decrease is taken of the larger price (120), so it removes more than the increase added."
+        },
+        {
+          "id": "d-ps-03",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A rectangle has a length of 12 and a diagonal of length 13. What is the area of the rectangle?",
+          "options": ["30", "60", "65", "78", "156"],
+          "correct": [1],
+          "explanation": "The diagonal splits the rectangle into two right triangles with a leg of 12 and a hypotenuse of 13. The other leg (the width) is √(13² − 12²) = √25 = 5, a 5-12-13 triple, so the area is 12 × 5 = 60. Traps: 78 and 156 multiply by the diagonal, which is not a side, and 30 is the area of only one of the two triangles."
+        },
+        {
+          "id": "d-ps-04",
+          "category": "problemSolving",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "The average (arithmetic mean) of five numbers is 18. When a sixth number is added to the list, the average of the six numbers is 20. What is the sixth number?",
+          "options": ["2", "20", "22", "30", "38"],
+          "correct": [3],
+          "explanation": "Work with sums, not averages. The five numbers total 5 × 18 = 90 and the six numbers total 6 × 20 = 120, so the sixth number is 120 − 90 = 30. Another view: the new number must match the old mean (18) and also supply enough extra to lift all six numbers by 2, so it is 18 + 6 × 2 = 30. Traps: 2 is only the change in the average, 22 adds that change to the new average, and 38 adds the two averages."
+        },
+        {
+          "id": "d-ps-05",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "If x + 1/x = 5, what is the value of x² + 1/x²?",
+          "options": ["23", "24", "25", "26", "27"],
+          "correct": [0],
+          "explanation": "Square both sides: (x + 1/x)² = x² + 2(x)(1/x) + 1/x² = x² + 2 + 1/x². So 25 = x² + 1/x² + 2, which gives x² + 1/x² = 23. Don't try to solve for x itself; it is irrational and the squaring trick is much faster. Trap: 25 assumes (x + 1/x)² = x² + 1/x², forgetting the middle term 2, and 27 adds that term instead of subtracting it."
+        },
+        {
+          "id": "d-ps-06",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "What is the area of a regular hexagon with sides of length 4?",
+          "options": ["4√3", "8√3", "12√3", "16√3", "24√3"],
+          "correct": [4],
+          "explanation": "Segments from the center to the six vertices split a regular hexagon into 6 equilateral triangles, each with side 4. Each triangle has area (√3/4)(4²) = 4√3, so the hexagon's area is 6 × 4√3 = 24√3. Traps: 4√3 is just one triangle, 12√3 counts only three of them, and 16√3 is s²√3, which drops the 1/4 from the triangle formula and never multiplies by 6."
+        },
+        {
+          "id": "d-ps-07",
+          "category": "problemSolving",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A committee of 3 people is to be chosen at random from a group of 5 men and 4 women. What is the probability that the committee includes at least one woman?",
+          "options": ["5/42", "10/21", "2/3", "37/42", "20/21"],
+          "correct": [3],
+          "explanation": "Count the complement. There are C(9, 3) = 84 possible committees, and C(5, 3) = 10 of them contain only men. So P(at least one woman) = 1 − 10/84 = 74/84 = 37/42. Trap: 5/42 = 10/84 is the probability of no women, the complement rather than the answer. For \"at least one,\" 1 minus P(none) is almost always the fastest route."
+        },
+        {
+          "id": "d-ps-08",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "How many positive integers less than 100 are divisible by 3 or by 4, but not by both?",
+          "options": ["24", "33", "41", "49", "57"],
+          "correct": [2],
+          "explanation": "Among 1 to 99 there are 33 multiples of 3 (99 ÷ 3 = 33), 24 multiples of 4 (99 ÷ 4 = 24.75) and 8 multiples of both, that is, of 12 (99 ÷ 12 = 8.25). Divisible by 3 only: 33 − 8 = 25; divisible by 4 only: 24 − 8 = 16; together 25 + 16 = 41. Traps: 49 = 33 + 24 − 8 is the count for \"3 or 4\" and still includes the multiples of 12, and 57 = 33 + 24 counts them twice."
+        }
+      ]
+    },
+    {
+      "id": "d-ma",
+      "title": "Multiple Answer",
+      "measure": "quant",
+      "category": "multipleAnswer",
+      "summary": "Six select-all-that-apply questions where every option must be judged on its own, since there is no partial credit.",
+      "questions": [
+        {
+          "id": "d-ma-01",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "Which of the following fractions are greater than 3/5? Indicate all such fractions.",
+          "options": ["2/3", "4/7", "5/8", "7/11", "9/16", "11/19", "13/20"],
+          "correct": [0, 2, 3, 6],
+          "explanation": "Cross-multiply: a/b > 3/5 exactly when 5a > 3b. Greater: 2/3 (10 > 9), 5/8 (25 > 24), 7/11 (35 > 33) and 13/20 (65 > 60). Not greater: 4/7 (20 < 21), 9/16 (45 < 48) and 11/19 (55 < 57). Decimal check against 3/5 = 0.6: 4/7 ≈ 0.571, 9/16 = 0.5625 and 11/19 ≈ 0.579 all fall just short."
+        },
+        {
+          "id": "d-ma-02",
+          "category": "multipleAnswer",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "In the xy-plane, a circle has its center at (1, −2) and a radius of 5. Which of the following points lie on the circle? Indicate all such points.",
+          "options": ["(4, 2)", "(1, 3)", "(3, 2)", "(2, 6)", "(−4, −2)", "(−2, −6)", "(2, −7)"],
+          "correct": [0, 1, 4, 5],
+          "explanation": "A point (x, y) is on the circle exactly when (x − 1)² + (y + 2)² = 25. On the circle: (4, 2) gives 9 + 16 = 25, (1, 3) gives 0 + 25, (−4, −2) gives 25 + 0, and (−2, −6) gives 9 + 16. Not on it: (3, 2) gives 4 + 16 = 20, (2, −7) gives 1 + 25 = 26, and (2, 6) gives 1 + 64 = 65. Trap: (2, 6) works only if you flip the signs and use center (−1, 2); always subtract the center's coordinates."
+        },
+        {
+          "id": "d-ma-03",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "If n is a positive integer and n² is divisible by 18, which of the following must be true? Indicate all such statements.",
+          "options": [
+            "n is divisible by 3",
+            "n is divisible by 4",
+            "n is divisible by 6",
+            "n is divisible by 9",
+            "n is divisible by 18",
+            "n² is divisible by 36",
+            "n² is divisible by 54"
+          ],
+          "correct": [0, 2, 5],
+          "explanation": "18 = 2 × 3², so n² has prime factors 2 and 3. A prime that divides n² must divide n, so n is divisible by 2 and by 3, that is, by 6. That makes n divisible by 3 and n² divisible by 6² = 36. The rest can fail: n = 6 gives n² = 36, which is divisible by 18, yet 6 is not divisible by 4, 9 or 18, and 36 is not divisible by 54. For \"must be true,\" one counterexample eliminates an option."
+        },
+        {
+          "id": "d-ma-04",
+          "category": "multipleAnswer",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "If −3 < x < 2 and 1 < y < 4, which of the following could be the value of xy? Indicate all such values.",
+          "options": ["−13", "−12", "−11.5", "−4", "0", "7.5", "8", "10"],
+          "correct": [2, 3, 4, 5],
+          "explanation": "The extremes of a product come from the endpoint products: (−3)(1) = −3, (−3)(4) = −12, (2)(1) = 2 and (2)(4) = 8. So xy lies strictly between −12 and 8; the endpoints are excluded because the inequalities are strict. Every value in between is reachable: fix y = 3.9, and as x runs from −3 to 2, xy runs from −11.7 to 7.8, covering −11.5, −4, 0 and 7.5. Trap: pairing smallest with smallest, (−3)(1) = −3, and calling that the minimum."
+        },
+        {
+          "id": "d-ma-05",
+          "category": "multipleAnswer",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "Which of the following could be the measure of each interior angle of a regular polygon? Indicate all such measures.",
+          "options": ["72°", "90°", "100°", "108°", "125°", "140°", "144°", "155°"],
+          "correct": [1, 3, 5, 6],
+          "explanation": "Use exterior angles: in a regular n-sided polygon each exterior angle is 360°/n, and the interior angle is 180° minus that. So an interior angle works only if 180° minus it divides 360° a whole number of times (at least 3). 90° gives 360/90 = 4 sides, 108° gives 360/72 = 5, 140° gives 360/40 = 9, and 144° gives 360/36 = 10. The rest fail: 72° gives 360/108 = 10/3, 100° gives 4.5, 125° gives 360/55 ≈ 6.5, and 155° gives 14.4."
+        },
+        {
+          "id": "d-ma-06",
+          "category": "multipleAnswer",
+          "topic": "Data Analysis",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "The list 3, 5, 8, 10, x has a mean equal to its median. Which of the following could be the value of x? Indicate all such values.",
+          "options": ["−1", "0", "5", "6.5", "7", "8", "14", "15"],
+          "correct": [0, 3, 6],
+          "explanation": "The mean is (26 + x)/5, but the median depends on where x falls, so split into cases. If x ≤ 5, the median is 5: (26 + x)/5 = 5 gives x = −1, which fits. If 5 ≤ x ≤ 8, the median is x: (26 + x)/5 = x gives x = 6.5, which fits. If x ≥ 8, the median is 8: (26 + x)/5 = 8 gives x = 14, which fits. Every other option makes them differ; for example, x = 8 gives a mean of 6.8 but a median of 8."
+        }
+      ]
+    },
+    {
+      "id": "d-ne",
+      "title": "Numeric Entry",
+      "measure": "quant",
+      "category": "numericEntry",
+      "summary": "Six fill-in-the-box questions, including fractions and rounded answers, with no answer choices to work backward from.",
+      "questions": [
+        {
+          "id": "d-ne-01",
+          "category": "numericEntry",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "numeric",
+          "prompt": "A jacket originally priced at $80 is discounted by 25%. A sales tax of 10% is then applied to the discounted price. What is the final cost of the jacket, in dollars?",
+          "entryPrefix": "$",
+          "answerValue": 66,
+          "answerDisplay": "66",
+          "explanation": "The discount leaves 75% of the price: 0.75 × $80 = $60. The tax adds 10% of that: 1.10 × $60 = $66. In one step: 80 × 0.75 × 1.1 = 66. Trap: netting the changes to \"15% off\" gives $68; successive percent changes multiply, they don't add."
+        },
+        {
+          "id": "d-ne-02",
+          "category": "numericEntry",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "fraction",
+          "prompt": "If x/y = 3/4 and y/z = 2/5, what is the value of x/z? Give your answer as a fraction.",
+          "answerValue": 0.3,
+          "answerDisplay": "3/10",
+          "explanation": "Chain the ratios so that y cancels: x/z = (x/y) × (y/z) = (3/4) × (2/5) = 6/20 = 3/10. Any equivalent fraction, such as 6/20, is also correct. Trap: dividing the ratios instead of multiplying gives (3/4) ÷ (2/5) = 15/8."
+        },
+        {
+          "id": "d-ne-03",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "numeric",
+          "prompt": "A closed rectangular box measures 3 inches by 4 inches by 6 inches. What is the length, in inches, of the longest line segment that can be drawn between two corners of the box? Give your answer to the nearest tenth.",
+          "entrySuffix": "inches",
+          "answerValue": 7.8,
+          "answerDisplay": "7.8",
+          "explanation": "The longest segment is the interior diagonal, √(a² + b² + c²) = √(3² + 4² + 6²) = √61. Since 7.8² = 60.84 and 7.85² ≈ 61.62, √61 ≈ 7.81 lies between 7.8 and 7.85, so it rounds to 7.8. Trap: 5 is only the diagonal of the 3-by-4 face, and √(4² + 6²) ≈ 7.2 is only the diagonal of the largest face."
+        },
+        {
+          "id": "d-ne-04",
+          "category": "numericEntry",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "numeric",
+          "prompt": "In a class of 40 students, 24 study French, 18 study Spanish, and 8 study both languages. What percent of the students study neither French nor Spanish?",
+          "entrySuffix": "%",
+          "answerValue": 15,
+          "answerDisplay": "15",
+          "explanation": "Students taking at least one language: 24 + 18 − 8 = 34, subtracting the 8 who were counted twice. Neither: 40 − 34 = 6, and 6/40 = 15%. Trap: adding without the overlap gives 24 + 18 = 42 students, more than the whole class, which is a sure sign of double counting."
+        },
+        {
+          "id": "d-ne-05",
+          "category": "numericEntry",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "numeric",
+          "prompt": "A car travels 120 miles from Town A to Town B at an average speed of 40 miles per hour and returns along the same route at an average speed of 60 miles per hour. What is the car's average speed, in miles per hour, for the entire round trip?",
+          "entrySuffix": "miles per hour",
+          "answerValue": 48,
+          "answerDisplay": "48",
+          "explanation": "Average speed = total distance ÷ total time. The trip out takes 120/40 = 3 hours and the trip back takes 120/60 = 2 hours, so the car covers 240 miles in 5 hours: 240/5 = 48 miles per hour. Trap: averaging the two speeds gives 50, but the car spends more time at the slower speed, which pulls the average below 50."
+        },
+        {
+          "id": "d-ne-06",
+          "category": "numericEntry",
+          "topic": "Data Analysis",
+          "difficulty": 5,
+          "format": "fraction",
+          "prompt": "Two fair six-sided dice are rolled. Given that at least one of the dice shows a 6, what is the probability that the sum of the two numbers rolled is at least 10? Give your answer as a fraction.",
+          "answerValue": 0.45454545454545453,
+          "answerDisplay": "5/11",
+          "explanation": "The condition shrinks the sample space to outcomes with at least one 6: 6 with a 6 on the first die plus 6 with a 6 on the second, minus (6, 6) counted twice, for 11 outcomes. Of these, the sum is at least 10 for (6, 4), (4, 6), (6, 5), (5, 6) and (6, 6), which is 5 outcomes. So the probability is 5/11. Traps: a denominator of 12 double-counts (6, 6), and a denominator of 36 ignores the given condition."
+        }
+      ]
+    },
+    {
+      "id": "d-di",
+      "title": "Data Interpretation",
+      "measure": "quant",
+      "category": "dataInterpretation",
+      "summary": "Six questions on a bicycle shop's sales table and price chart and a science center's monthly visitor graph.",
+      "questions": [
+        {
+          "id": "d-di-01",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "d-qd1",
+          "prompt": "By what percent did the number of hybrid bicycles sold increase from 2024 to 2025?",
+          "options": ["27.3%", "33.3%", "37.5%", "60%", "137.5%"],
+          "correct": [2],
+          "explanation": "Percent change = (new − old)/old. Hybrid sales rose from 160 to 220, a change of 60, so the increase is 60/160 = 37.5%. Traps: 27.3% divides by the new value (60/220), 60% confuses the change of 60 bicycles with a percent, and 137.5% is 220/160 written as a percent, which is the new amount relative to the old, not the increase."
+        },
+        {
+          "id": "d-di-02",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "numeric",
+          "stimulusId": "d-qd1",
+          "prompt": "In 2025, how many more dollars of revenue did the shop earn from electric bicycles than from road bicycles? (Revenue = number sold × average selling price.)",
+          "entryPrefix": "$",
+          "answerValue": 81000,
+          "answerDisplay": "81,000",
+          "explanation": "Take the 2025 counts from the table and the 2025 prices from the chart. Electric: 90 × $2,400 = $216,000. Road: 150 × $900 = $135,000. The difference is $216,000 − $135,000 = $81,000. Road bicycles outsold electric ones, yet electric brought in far more money, which is why you must combine both displays."
+        },
+        {
+          "id": "d-di-03",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "d-qd1",
+          "prompt": "For which types of bicycle was the shop's revenue (number sold × average selling price) greater in 2025 than in 2024? Indicate all such types.",
+          "options": ["Road", "Mountain", "Hybrid", "Electric"],
+          "correct": [0, 2, 3],
+          "explanation": "Compute revenue in both years. Road: 120 × $1,000 = $120,000, then 150 × $900 = $135,000 (up, even though the price fell). Mountain: 200 × $700 = $140,000, then 160 × $800 = $128,000 (down, even though the price rose). Hybrid: $80,000, then $132,000 (up). Electric: $88,000, then $216,000 (up). Trap: judging by price or by units alone; a 20% drop in mountain units outweighs a 14% price increase."
+        },
+        {
+          "id": "d-di-04",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "d-qd2",
+          "prompt": "In which month was the ratio of child visitors to adult visitors the greatest?",
+          "options": ["January", "March", "April", "May", "June"],
+          "correct": [1],
+          "explanation": "Divide children by adults for each month (both in thousands): January 6/14 ≈ 0.43, February 8/16 = 0.5, March 12/15 = 0.8, April 15/20 = 0.75, May 18/24 = 0.75 and June 21/31 ≈ 0.68. March has the greatest ratio. Trap: June has the most child visitors, but it also has by far the most adults, so its ratio is lower."
+        },
+        {
+          "id": "d-di-05",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "numeric",
+          "stimulusId": "d-qd2",
+          "prompt": "For January through June combined, child visitors made up what percent of all visitors?",
+          "entrySuffix": "%",
+          "answerValue": 40,
+          "answerDisplay": "40",
+          "explanation": "Add first, then divide. Children: 6 + 8 + 12 + 15 + 18 + 21 = 80 thousand. Adults: 14 + 16 + 15 + 20 + 24 + 31 = 120 thousand. All visitors: 200 thousand, so children made up 80/200 = 40%. Trap: averaging the six monthly percentages gives about 39%, which is wrong because busier months should carry more weight."
+        },
+        {
+          "id": "d-di-06",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 5,
+          "format": "multiple",
+          "stimulusId": "d-qd2",
+          "prompt": "Based on the graph and the ticket prices, which of the following statements are true? Indicate all such statements.",
+          "options": [
+            "The number of adult visitors more than doubled from January to June.",
+            "In every month shown, there were more adult visitors than child visitors.",
+            "In April, ticket revenue from child visitors was more than half of the ticket revenue from adult visitors.",
+            "The greatest month-to-month increase in total visitors occurred from May to June.",
+            "For the six months combined, ticket revenue from adults was more than 2.5 times the ticket revenue from children."
+          ],
+          "correct": [0, 1, 3],
+          "explanation": "Adults more than doubled: true, since 31 thousand is more than 2 × 14 = 28 thousand. More adults every month: true (14 > 6, 16 > 8, 15 > 12, 20 > 15, 24 > 18, 31 > 21). April revenue: false, since children paid 15,000 × $9 = $135,000, which is less than half of 20,000 × $15 = $300,000. Largest increase: true, since the monthly totals are 20, 24, 27, 35, 42 and 52 thousand, giving increases of 4, 3, 8, 7 and 10 thousand. Six-month revenue: false, since $1,800,000 from adults is exactly 2.5 times $720,000 from children, not more than 2.5 times."
+        }
+      ]
+    }
+  ]
+}

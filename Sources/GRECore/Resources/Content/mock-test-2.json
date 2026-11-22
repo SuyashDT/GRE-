@@ -1,0 +1,2028 @@
+{
+  "id": "mock-test-2",
+  "title": "Mock Test 2",
+  "description": "A second full-length practice test with all-new questions, in the current shorter GRE format: one Analyze an Issue essay, then two Verbal and two Quantitative sections. The second section of each measure adapts to how you did on the first.",
+  "formatVersion": "GRE General Test, shorter format (since September 2023)",
+  "essay": {
+    "id": "m2-awa",
+    "statement": "People who are new to a field are more likely than its established experts to produce the ideas that transform it.",
+    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, address the most compelling reasons or examples that could be used to challenge your position.",
+    "minutes": 30
+  },
+  "order": [
+    "verbal-1",
+    "quant-1",
+    "verbal-2",
+    "quant-2"
+  ],
+  "routing": {
+    "verbal": 7,
+    "quant": 7
+  },
+  "stimuli": [
+    {
+      "id": "m2-vp1",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Few ideas in recent ecology have traveled farther beyond the scientific literature than the claim that forest trees are linked by underground fungal networks through which they share resources.",
+          "Many trees form partnerships with mycorrhizal fungi, whose threads wrap around or penetrate the trees’ roots and supply water and minerals in exchange for sugars.",
+          "Because a single fungus can colonize the roots of several trees at once, it has been proposed that these networks act as conduits, allowing large, established trees to channel carbon to shaded seedlings and even to warn their neighbors of insect attack."
+        ],
+        [
+          "Recent reviews of the field evidence have been more cautious.",
+          "In the experiments most often cited, researchers supplied one tree with carbon labeled with a rare isotope and later detected the label in a neighboring tree.",
+          "Such a result shows that carbon moved between the trees, but not that it moved through fungal connections rather than through the soil, where roots release sugars that other roots can absorb; few studies severed the fungal threads while leaving other pathways intact.",
+          "Moreover, the quantities transferred were usually small, and the labeled carbon was most often found in the fungus or in the recipient’s roots rather than in its leaves and stems, leaving open whether the recipient benefited at all."
+        ],
+        [
+          "None of this shows that the networks are unimportant; it shows that the popular account has outrun its evidence.",
+          "Some researchers have even suggested that the fungi themselves may be the principal beneficiaries of any transfer, moving carbon wherever it best serves their own growth.",
+          "If so, the image of the forest as a cooperative community, appealing as it is, may describe the interests of the fungi more accurately than those of the trees."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp2",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "In 2022 the Wexford school district moved the start of the school day at its high schools from 7:30 a.m. to 8:45 a.m.",
+          "In the following school year, the average daily attendance rate at the district’s high schools rose from 89 percent to 93 percent.",
+          "The district’s superintendent has concluded that the later start enabled students to attend school more regularly, and she plans to delay the start of the school day at the district’s middle schools as well."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp3",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "It was long taken for granted that the ancient Greeks and Romans almost never read silently.",
+          "The chief witness for this view was Augustine, who records in his *Confessions* his surprise at finding Ambrose, the bishop of Milan, reading with his eyes moving over the page while his voice and tongue were still.",
+          "If so learned a man as Augustine found silent reading remarkable, the argument ran, it must have been rare indeed.",
+          "Over the past several decades, however, classicists have assembled a considerable body of counterevidence: passages in which ancient writers mention people reading letters or oracles to themselves without any sign that the practice was unusual.",
+          "Augustine, they note, may have been struck less by the fact that Ambrose read silently than by his choosing to do so in the presence of visitors who had come to consult him.",
+          "These scholars have made their case persuasively, and few would now defend the old consensus in its strong form.",
+          "It would be unfortunate, though, if the correction were pushed too far, for the same sources make it equally clear that literary works were composed to be heard, and that a well-off Roman was far more likely to have a book read aloud to him by a trained slave than to read it in solitude."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp4",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "For most of history, predicting the weather more than a few hours ahead was impossible for a simple reason: storms traveled faster than news of them.",
+          "An observer in one town might watch a gale arrive, but no message carried by horse or ship could reach the next town along the coast before the gale itself did."
+        ],
+        [
+          "The electric telegraph removed this obstacle.",
+          "By the 1850s it was possible to gather weather observations from many distant stations within an hour or two and to plot them on a single map showing conditions across a whole region at the same moment.",
+          "In Britain, Robert FitzRoy, a naval officer who headed a small government department set up to collect weather data from ships, used such reports to send storm warnings to ports beginning in 1861, and soon afterward he began publishing daily predictions in newspapers—predictions he called “forecasts,” a word he chose to suggest that they were reasoned judgments rather than prophecies."
+        ],
+        [
+          "The public welcomed the forecasts, but many scientists did not.",
+          "FitzRoy’s methods relied heavily on experience and judgment, and critics complained that no one could say how often his predictions were right or why.",
+          "After his death in 1865, a committee that reviewed his department recommended that the daily forecasts be discontinued, and they were.",
+          "The storm warnings, which had been halted as well, were soon restored, largely because shipowners and fishing communities, who had come to rely on them, demanded their return."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp5",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "To reduce its heating costs, Tellmark Corporation plans to install programmable thermostats in its office buildings that will automatically lower indoor temperatures at night and on weekends.",
+          "Last year a neighboring company installed the same thermostats in buildings of similar size and construction and cut its heating costs by 15 percent.",
+          "Tellmark’s facilities manager therefore predicts that the thermostats will reduce Tellmark’s heating costs by about 15 percent as well."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp6",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "When photography was introduced in the 1830s, many critics denied that it could be an art at all, since the camera, they argued, merely recorded whatever was placed before it.",
+          "Toward the end of the century, photographers who sought artistic standing responded by making their pictures look as much like paintings as possible, using soft focus, textured papers, and elaborate printing processes that allowed them to brush away detail by hand.",
+          "The strategy won exhibitions and admirers, but it conceded the critics’ central premise: that whatever was distinctively photographic about a photograph had no artistic value.",
+          "It was a later generation, insisting on sharp focus and unmanipulated prints, that made the more ambitious claim—that the camera’s precision was itself a resource an artist could use.",
+          "Ironically, it was this claim, rather than the painterly imitation that preceded it, that secured photography a lasting place in museums."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp7",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "In the 1960s and 1970s the physician and demographer Thomas McKeown advanced an argument that unsettled his own profession.",
+          "Examining the causes of death recorded in England and Wales from the 1830s onward, he observed that mortality from tuberculosis, then the leading killer, had been falling for decades before the bacterium responsible was identified and for about a century before an effective drug became available.",
+          "Since much the same pattern held for most other infectious diseases, McKeown concluded that medical treatment could have contributed little to the long decline in mortality, and he attributed that decline chiefly to rising standards of living—above all, to improved nutrition, which strengthened the body’s resistance to infection."
+        ],
+        [
+          "McKeown’s critics have largely accepted his case against medicine while rejecting his alternative to it.",
+          "His argument for nutrition, they point out, proceeded mainly by elimination: having ruled out medical treatment and changes in the virulence of the diseases themselves, and having assigned deliberate public-health measures only a secondary role, he treated better diet as the explanation that remained.",
+          "It was the minor part he assigned to public health that proved most vulnerable.",
+          "In many British industrial towns, the critics have found, death rates stagnated or even rose during decades in which wages were increasing, and they began to fall substantially only after municipal authorities had invested in piped water, sewers, and the inspection of food and housing.",
+          "On this evidence, the decline owed less to the diffuse effects of economic growth than to deliberate decisions about how the proceeds of that growth would be spent."
+        ],
+        [
+          "The two explanations, however, need not exclude each other as completely as the controversy has sometimes implied.",
+          "The waterworks and sewers on which the critics’ case rests were enormously costly, and the towns that built them did so with tax revenues and loans made possible by the very prosperity to which McKeown appealed.",
+          "Growth, on this account, was a precondition of the decline in mortality rather than its mechanism: it supplied the means of improvement without determining whether, or how soon, those means would be used.",
+          "That question was settled in council chambers, often after years of resistance from local taxpayers reluctant to pay for works whose benefits everyone would share—a reminder that a population’s health has depended not only on how much wealth a society produces but also on what it chooses to buy with that wealth."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp8",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Researchers studying robins in and around a large European city found that birds living in the city begin their dawn song earlier, and more often sing through the night, than birds living in the surrounding countryside.",
+          "Because the city is much noisier than the countryside during the day, the researchers concluded that urban robins shift their singing toward the night and early morning in order to be heard over the daytime din."
+        ]
+      ]
+    },
+    {
+      "id": "m2-vp9",
+      "kind": "passage",
+      "paragraphs": [
+        [
+          "Why so many animals live in groups has seemed, to casual observers, a question with an obvious answer: a herd or flock offers its members safety in numbers.",
+          "W. D. Hamilton’s “selfish herd” hypothesis, proposed in 1971, kept the idea that animals group together for protection but changed the account of how grouping protects them.",
+          "Hamilton imagined a predator that appears at a random point and attacks whichever prey animal is nearest.",
+          "Under this assumption each animal can reduce its own danger by moving so that more of its neighbors lie between it and any place the predator might appear—in practice, by moving toward the others.",
+          "As every animal does the same, a group forms, and its members jostle for the comparatively safe positions at its center.",
+          "The striking feature of the model is that the aggregation it produces need not make the population as a whole any safer: if the predator still takes one animal per attack, the group has merely redistributed the risk, concentrating it on those at the margins.",
+          "Grouping, on this view, is less a cooperative arrangement than the cumulative outcome of each animal’s attempt to place others between itself and danger."
+        ]
+      ]
+    },
+    {
+      "id": "m2-qd1",
+      "kind": "data",
+      "title": "Greenfield Public Library: Loans by Format, 2020–2024",
+      "intro": "The bar graph shows the number of items, in thousands, that the Greenfield Public Library lent in each of three formats from 2020 to 2024. The library lends items only in these three formats.",
+      "charts": [
+        {
+          "title": "Items Lent by Format, 2020–2024",
+          "type": "bar",
+          "xLabel": "Year",
+          "yLabel": "Items lent (thousands)",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "series": [
+            {
+              "name": "Print books",
+              "values": [
+                84,
+                78,
+                75,
+                72,
+                70
+              ]
+            },
+            {
+              "name": "E-books",
+              "values": [
+                30,
+                42,
+                48,
+                54,
+                60
+              ]
+            },
+            {
+              "name": "Audiobooks",
+              "values": [
+                6,
+                10,
+                12,
+                15,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-qd2",
+      "kind": "data",
+      "title": "Corner Café: Drinks Sold in One Week",
+      "intro": "The first table shows the number of cups of each kind of drink that the Corner Café sold on each day of one week. The second table shows the price of a cup of each drink, which did not change during the week.",
+      "tables": [
+        {
+          "title": "Cups Sold by Day",
+          "columns": [
+            "Day",
+            "Coffee",
+            "Tea",
+            "Juice"
+          ],
+          "rows": [
+            [
+              "Monday",
+              "120",
+              "45",
+              "30"
+            ],
+            [
+              "Tuesday",
+              "110",
+              "40",
+              "25"
+            ],
+            [
+              "Wednesday",
+              "125",
+              "50",
+              "45"
+            ],
+            [
+              "Thursday",
+              "130",
+              "55",
+              "30"
+            ],
+            [
+              "Friday",
+              "150",
+              "60",
+              "50"
+            ],
+            [
+              "Saturday",
+              "180",
+              "70",
+              "60"
+            ],
+            [
+              "Sunday",
+              "160",
+              "65",
+              "55"
+            ]
+          ]
+        },
+        {
+          "title": "Price per Cup",
+          "columns": [
+            "Drink",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Coffee",
+              "$3.00"
+            ],
+            [
+              "Tea",
+              "$2.50"
+            ],
+            [
+              "Juice",
+              "$4.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2-qd3",
+      "kind": "data",
+      "title": "Brookfield Orchards: Harvest and Prices",
+      "intro": "Brookfield Orchards grows only apples, pears and cherries. The table shows the number of acres of each fruit harvested in 2024 and the yield per acre. The line graph shows the average price per ton the orchard received for each fruit from 2020 to 2024. Revenue from a fruit equals the tons harvested times the average price per ton.",
+      "tables": [
+        {
+          "title": "Acres Harvested and Yield, 2024",
+          "columns": [
+            "Fruit",
+            "Acres harvested",
+            "Yield per acre"
+          ],
+          "rows": [
+            [
+              "Apples",
+              "120",
+              "9 tons"
+            ],
+            [
+              "Pears",
+              "50",
+              "8 tons"
+            ],
+            [
+              "Cherries",
+              "30",
+              "3 tons"
+            ]
+          ]
+        }
+      ],
+      "charts": [
+        {
+          "title": "Average Price per Ton, 2020–2024",
+          "type": "line",
+          "xLabel": "Year",
+          "yLabel": "Dollars per ton",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "series": [
+            {
+              "name": "Apples",
+              "values": [
+                400,
+                420,
+                450,
+                430,
+                480
+              ]
+            },
+            {
+              "name": "Pears",
+              "values": [
+                520,
+                500,
+                540,
+                560,
+                600
+              ]
+            },
+            {
+              "name": "Cherries",
+              "values": [
+                2500,
+                2600,
+                2300,
+                2700,
+                2800
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "V1",
+      "measure": "verbal",
+      "stage": 1,
+      "tier": "standard",
+      "minutes": 18,
+      "questions": [
+        {
+          "id": "m2-v1-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "The naturalist’s field journals, written by lamplight after days of exhausting travel, are surprisingly _____: where one might expect hurried jottings, one finds page after page of careful, finely balanced prose.",
+          "blanks": [
+            [
+              "cursory",
+              "elegant",
+              "derivative",
+              "lugubrious",
+              "perfunctory"
+            ]
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The colon sets what one might expect (“hurried jottings”) against what one actually finds (“careful, finely balanced prose”). The blank describes the journals as they really are, so *elegant* fits. *Cursory* and *perfunctory* are traps: they describe the hurried notes the sentence rules out. Nothing in the sentence suggests the journals are *derivative* (unoriginal) or *lugubrious* (mournful)."
+        },
+        {
+          "id": "m2-v1-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "The firm’s annual report was meant to (i) _____ investors, but its relentlessly upbeat tone had the opposite effect: analysts, (ii) _____ by the absence of any acknowledgment of the company’s well-publicized difficulties, began to wonder what else was being left out.",
+          "blanks": [
+            [
+              "reassure",
+              "alarm",
+              "provoke"
+            ],
+            [
+              "heartened",
+              "unsettled",
+              "unmoved"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "“Had the opposite effect” means the report produced the reverse of its purpose, and the effect was suspicion: analysts “began to wonder what else was being left out.” So the report was meant to *reassure* investors, and the analysts were *unsettled*. *Alarm* and *provoke* name the effect the report actually had, not its aim. *Heartened* contradicts the analysts’ suspicion, and analysts who were *unmoved* would have no reason to start wondering."
+        },
+        {
+          "id": "m2-v1-03",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "Because the reservoir’s water level had fallen so (i) _____ over the summer, the long-submerged ruins of the old village were exposed for the first time in decades, and the sight of them (ii) _____ a flood of memories among the region’s older residents.",
+          "blanks": [
+            [
+              "precipitously",
+              "imperceptibly",
+              "predictably"
+            ],
+            [
+              "suppressed",
+              "unleashed",
+              "feigned"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "The “so … that” structure needs a cause big enough for its effect. Ruins exposed “for the first time in decades” call for a steep drop, so *precipitously*. An *imperceptible* fall would not explain so dramatic a result, and *predictably* says nothing about how far the water fell. The sight of the village produced “a flood of memories,” so it *unleashed* them; *suppressed* reverses the meaning, and memories cannot be *feigned* (faked) by a sight."
+        },
+        {
+          "id": "m2-v1-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "The architect’s final buildings, once (i) _____ as the incoherent work of a mind in decline, are now regarded as her most (ii) _____ achievement; critics who found them chaotic had simply failed to (iii) _____ the unconventional geometry that governs their plans.",
+          "blanks": [
+            [
+              "dismissed",
+              "extolled",
+              "commissioned"
+            ],
+            [
+              "conventional",
+              "audacious",
+              "tentative"
+            ],
+            [
+              "discern",
+              "impose",
+              "transcend"
+            ]
+          ],
+          "correct": [
+            0,
+            1,
+            0
+          ],
+          "explanation": "“Once … are now regarded” signals a reversal: the buildings were once *dismissed* as incoherent and are now admired. Blank (ii) must suit buildings shaped by “unconventional geometry,” so *audacious*; *conventional* contradicts that, and *tentative* is not praise. Critics who saw only chaos failed to *discern* (perceive) the order that was there. *Impose* would mean the critics supplied the order themselves, and *transcend* makes no sense here."
+        },
+        {
+          "id": "m2-v1-05",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp1",
+          "prompt": "The primary purpose of the passage is to",
+          "options": [
+            "argue that mycorrhizal fungi harm the trees whose roots they colonize",
+            "describe the methods researchers use to label carbon with rare isotopes",
+            "explain how established trees warn their neighbors of insect attack",
+            "defend the image of the forest as a cooperative community against recent criticism",
+            "assess the evidence for a widely publicized claim about forests and suggest that the claim has been overstated"
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The first paragraph presents the popular claim that trees share resources through fungal networks. The second shows that the experiments usually cited do not establish it, and the third concludes that “the popular account has outrun its evidence.” That is an assessment of evidence ending in the judgment that a claim is overstated. The author never says the fungi harm trees, mentions isotope labeling only in passing, does not explain how trees warn each other, and questions the cooperative image rather than defending it."
+        },
+        {
+          "id": "m2-v1-06",
+          "category": "readingComprehension",
+          "topic": "Detail",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m2-vp1",
+          "prompt": "Consider each of the choices separately and select all that apply. According to the passage, which of the following is true of the isotope-labeling experiments most often cited?",
+          "options": [
+            "Most of them did not rule out the possibility that carbon traveled between the trees through the soil rather than through fungal threads.",
+            "They generally found the labeled carbon in the receiving tree’s leaves and stems rather than in its roots.",
+            "They showed that carbon passed from one tree to another."
+          ],
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "The first choice is supported by the statement that “few studies severed the fungal threads while leaving other pathways intact,” so most left the soil route open. The third restates “Such a result shows that carbon moved between the trees.” The second reverses the passage: the carbon was “most often found in the fungus or in the recipient’s roots rather than in its leaves and stems.”"
+        },
+        {
+          "id": "m2-v1-07",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp1",
+          "prompt": "The author mentions that the labeled carbon was most often found “in the fungus or in the recipient’s roots rather than in its leaves and stems” primarily in order to",
+          "options": [
+            "suggest that the isotope experiments were too small to be trusted",
+            "raise doubt about whether the transfer of carbon helped the receiving tree",
+            "show that fungi consume most of the sugars that trees produce",
+            "explain why few studies severed the fungal threads",
+            "support the claim that large trees nourish shaded seedlings"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The same sentence draws the conclusion: the finding leaves “open whether the recipient benefited at all.” Carbon that stays in the fungus or the roots may never reach the parts of the tree that grow. The detail does not concern the size of the experiments, does not say how much sugar fungi consume, does not explain the experimental design, and weakens rather than supports the claim about seedlings."
+        },
+        {
+          "id": "m2-v1-08",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Although the scientist’s public lectures were models of clarity, her technical papers were notoriously _____, filled with undefined terms and with derivations that few readers outside her own subfield could follow.",
+          "options": [
+            "lucid",
+            "abstruse",
+            "derivative",
+            "recondite",
+            "meticulous",
+            "concise"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            3
+          ],
+          "explanation": "“Although” contrasts the clear lectures with the papers, and the rest of the sentence (“undefined terms,” derivations “few readers outside her own subfield could follow”) shows that the papers were hard to understand. *Abstruse* and *recondite* both mean difficult to understand. *Lucid* and *concise* also go together, but they fit the lectures, not the papers. *Derivative* and *meticulous* do not mean hard to follow."
+        },
+        {
+          "id": "m2-v1-09",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Because the new manager was so _____, rarely offering an opinion until every member of the team had spoken, meetings that had once been dominated by a few loud voices became genuinely collaborative.",
+          "options": [
+            "domineering",
+            "self-effacing",
+            "garrulous",
+            "imperious",
+            "capricious",
+            "unassuming"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            5
+          ],
+          "explanation": "The manager held back until everyone else had spoken, and as a result meetings stopped being dominated by a few voices. That describes a modest person who keeps in the background: *unassuming* or *self-effacing*. *Domineering* and *imperious* form a pair, but they mean the opposite. *Garrulous* (talkative) and *capricious* (unpredictable) do not fit."
+        },
+        {
+          "id": "m2-v1-10",
+          "category": "readingComprehension",
+          "topic": "Strengthen/Weaken",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp2",
+          "prompt": "Which of the following, if true, most seriously weakens the superintendent’s conclusion?",
+          "options": [
+            "Many parents of middle school students have said that a later start would complicate their work schedules.",
+            "Studies have found that teenagers who get more sleep tend to earn higher grades.",
+            "Attendance at the district’s high schools had declined slightly in each of the three years before 2022.",
+            "At the start of the 2022 school year, the district began counting students who arrived after the first class period as present for the day; previously, such students had been counted as absent.",
+            "The later start required the district to move its after-school sports practices to later in the afternoon."
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "The superintendent infers that the later start made students attend more regularly. If, in the same year, the district began counting late arrivals as present, the recorded attendance rate would rise even if students came to school no more often than before, so the evidence no longer shows what she claims. Parents’ objections concern the new plan, not the evidence; research linking sleep and grades, if anything, supports the policy; a prior decline makes the rise more notable; and rescheduled practices are irrelevant."
+        },
+        {
+          "id": "m2-v1-11",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 2,
+          "format": "sentence",
+          "stimulusId": "m2-vp3",
+          "prompt": "Select the sentence in the passage that offers an alternative explanation for a reaction that had been cited as evidence for the traditional view.",
+          "correct": [
+            4
+          ],
+          "explanation": "The traditional view rested on Augustine’s surprise at seeing Ambrose read silently. The sentence beginning “Augustine, they note” reinterprets that surprise: Augustine may have been struck by Ambrose’s reading silently in front of visitors, not by silent reading as such. The sentence about “a considerable body of counterevidence” challenges the traditional view with other texts but does not reinterpret Augustine’s reaction."
+        },
+        {
+          "id": "m2-v1-12",
+          "category": "readingComprehension",
+          "topic": "Author's Attitude",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp3",
+          "prompt": "The author’s attitude toward the classicists who challenged the traditional view is best described as",
+          "options": [
+            "unqualified admiration",
+            "pointed skepticism",
+            "reluctant tolerance",
+            "approval tempered by a reservation",
+            "studied indifference"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "The author says the classicists “have made their case persuasively,” so the attitude is approving, which rules out skepticism, reluctant tolerance and indifference. But the author then warns that “it would be unfortunate, though, if the correction were pushed too far,” a reservation that rules out unqualified admiration."
+        }
+      ]
+    },
+    {
+      "id": "V2E",
+      "measure": "verbal",
+      "stage": 2,
+      "tier": "easier",
+      "minutes": 23,
+      "questions": [
+        {
+          "id": "m2-v2e-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 1,
+          "format": "blanks",
+          "prompt": "Unlike his _____ older brother, who would talk to anyone about anything, Martin rarely spoke unless someone asked him a direct question.",
+          "blanks": [
+            [
+              "taciturn",
+              "garrulous",
+              "diligent",
+              "pessimistic",
+              "frugal"
+            ]
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "“Unlike” tells you the brother is the opposite of Martin, who rarely speaks, and “would talk to anyone about anything” confirms it. *Garrulous* means excessively talkative. *Taciturn* describes Martin, not his brother, and the other choices do not concern talking at all."
+        },
+        {
+          "id": "m2-v2e-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "The new software was supposed to simplify the billing process, but in practice it proved so _____ that clerks often went back to filling out paper forms by hand.",
+          "blanks": [
+            [
+              "intuitive",
+              "inexpensive",
+              "cumbersome",
+              "reliable",
+              "innovative"
+            ]
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "“Was supposed to simplify … but in practice” signals that the software did the opposite of simplifying, badly enough that clerks returned to paper. *Cumbersome* (awkward and slow to use) fits. *Intuitive*, *reliable* and *innovative* are strengths that would not drive clerks back to paper, and *inexpensive* has nothing to do with how easy the software is to use."
+        },
+        {
+          "id": "m2-v2e-03",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "The chemist was known for her (i) _____: she repeated every experiment at least three times before reporting a result, and she (ii) _____ any conclusion that her data did not fully support.",
+          "blanks": [
+            [
+              "rigor",
+              "impatience",
+              "eloquence"
+            ],
+            [
+              "embraced",
+              "refrained from drawing",
+              "publicized"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "The colon introduces examples of the trait. Repeating every experiment three times shows *rigor*. In keeping with that care, she *refrained from drawing* conclusions her data did not support. *Embraced* and *publicized* would contradict the trait, and neither *impatience* nor *eloquence* matches repeated experiments."
+        },
+        {
+          "id": "m2-v2e-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 2,
+          "format": "blanks",
+          "prompt": "Although the restaurant’s décor is (i) _____—bare walls, plain wooden tables, paper napkins—its food is anything but (ii) _____: each dish is elaborately composed and inventively seasoned.",
+          "blanks": [
+            [
+              "lavish",
+              "spartan",
+              "garish"
+            ],
+            [
+              "simple",
+              "costly",
+              "refined"
+            ]
+          ],
+          "correct": [
+            1,
+            0
+          ],
+          "explanation": "The words between the dashes define the décor: bare, plain, cheap. So it is *spartan*. “Although” contrasts the décor with the food, which is elaborate and inventive, so the food is anything but *simple*. *Lavish* and *garish* contradict the description of the décor, and *costly* and *refined* do not create the contrast that “anything but” requires."
+        },
+        {
+          "id": "m2-v2e-05",
+          "category": "textCompletion",
+          "topic": "Continuation",
+          "difficulty": 3,
+          "format": "blanks",
+          "prompt": "The town’s archive had long been considered (i) _____, its records scattered among church basements and private attics. A volunteer’s decade-long effort to find and catalogue these documents has now made the collection (ii) _____ to researchers, and early studies drawing on it have already (iii) _____ several long-held assumptions: the town, it now appears, was settled nearly a century earlier than its official histories claim.",
+          "blanks": [
+            [
+              "comprehensive",
+              "irretrievable",
+              "counterfeit"
+            ],
+            [
+              "accessible",
+              "irrelevant",
+              "unintelligible"
+            ],
+            [
+              "confirmed",
+              "overturned",
+              "popularized"
+            ]
+          ],
+          "correct": [
+            1,
+            0,
+            1
+          ],
+          "explanation": "Records “scattered among church basements and private attics” would have been thought lost, or *irretrievable*; *comprehensive* contradicts “scattered.” Finding and cataloguing them made the collection *accessible* to researchers. The final clause shows the town is older than “its official histories claim,” so the studies *overturned* earlier assumptions rather than *confirmed* them."
+        },
+        {
+          "id": "m2-v2e-06",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m2-vp4",
+          "prompt": "The passage is primarily concerned with",
+          "options": [
+            "arguing that FitzRoy’s forecasts were more accurate than his scientific critics believed",
+            "criticizing the committee that recommended ending the daily forecasts",
+            "explaining how a new means of communication made weather forecasting possible and describing how the first forecasts were received",
+            "describing the scientific principles on which FitzRoy based his predictions",
+            "tracing the history of the word “forecast” from its origins to the present"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The first two paragraphs explain that forecasting was impossible until the telegraph let observations travel faster than storms, and the last paragraph describes the mixed response to FitzRoy’s forecasts. The passage never judges how accurate the forecasts were, reports the committee’s decision without criticizing it, says FitzRoy relied on “experience and judgment” rather than principles, and mentions the word “forecast” only once."
+        },
+        {
+          "id": "m2-v2e-07",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m2-vp4",
+          "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that",
+          "options": [
+            "before the telegraph, a coastal town could not be warned of an approaching gale by a message sent from a town the gale had already reached",
+            "FitzRoy’s critics objected chiefly that his forecasts were usually wrong",
+            "the storm warnings were valued by at least some groups outside the scientific community"
+          ],
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "The first choice follows from the statement that no message “could reach the next town along the coast before the gale itself did.” The third follows from the restoration of the warnings because shipowners and fishing communities “had come to rely on them.” The second goes beyond the passage: critics complained that “no one could say how often his predictions were right,” which is not a claim that they were usually wrong."
+        },
+        {
+          "id": "m2-v2e-08",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 2,
+          "format": "sentence",
+          "stimulusId": "m2-vp4",
+          "prompt": "Select the sentence in the passage that states the grounds on which some scientists objected to FitzRoy’s predictions.",
+          "correct": [
+            6
+          ],
+          "explanation": "The sentence beginning “FitzRoy’s methods relied heavily on experience and judgment” gives the scientists’ objection: no one could say how often the predictions were right or why. The sentence before it says only that many scientists did not welcome the forecasts, without saying why."
+        },
+        {
+          "id": "m2-v2e-09",
+          "category": "readingComprehension",
+          "topic": "Vocabulary in Context",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m2-vp4",
+          "prompt": "In the context in which it appears, “plot” most nearly means",
+          "options": [
+            "scheme",
+            "chart",
+            "narrate",
+            "calculate",
+            "apportion"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Observations are plotted “on a single map showing conditions across a whole region,” so to plot them is to mark them on the map: to *chart* them. *Scheme* and *narrate* draw on other senses of “plot” (a conspiracy, a story), *apportion* on a plot of land, and *calculate* does not describe placing data on a map."
+        },
+        {
+          "id": "m2-v2e-10",
+          "category": "sentenceEquivalence",
+          "topic": "Definition",
+          "difficulty": 2,
+          "format": "multiple",
+          "prompt": "The witness’s account was so _____ that the jury could not tell from it what had happened first, what had happened next, or who had been present.",
+          "options": [
+            "muddled",
+            "detailed",
+            "incoherent",
+            "persuasive",
+            "succinct",
+            "candid"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "The jury could not work out the order of events or who was there, so the account was confused and disorganized: *muddled* or *incoherent*. *Detailed* and *persuasive* contradict the jury’s confusion, *succinct* concerns length, and *candid* concerns honesty."
+        },
+        {
+          "id": "m2-v2e-11",
+          "category": "sentenceEquivalence",
+          "topic": "Cause and Effect",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Because the critic’s reviews had so often proved _____, anticipating which young novelists would still be widely read a generation later, publishers came to treat her opinions as a guide to future sales.",
+          "options": [
+            "prescient",
+            "caustic",
+            "biased",
+            "farsighted",
+            "trenchant",
+            "verbose"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            3
+          ],
+          "explanation": "The reviews anticipated which novelists would last, and that is why publishers used them to predict sales. The critic was *prescient* or *farsighted*. *Caustic* and *trenchant* are a tempting pair, since both describe sharp criticism, but sharpness would not make her a guide to future sales. *Biased* and *verbose* do not fit."
+        },
+        {
+          "id": "m2-v2e-12",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "The candidate’s speeches, though _____ in tone, contained proposals so radical that even her own advisers were startled by them.",
+          "options": [
+            "incendiary",
+            "measured",
+            "strident",
+            "temperate",
+            "radical",
+            "lengthy"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            3
+          ],
+          "explanation": "“Though” sets the tone of the speeches against their startlingly radical content, so the tone must have been calm and moderate: *measured* or *temperate*. *Incendiary* and *strident* form a pair, but they describe the tone the contrast rules out. *Radical* repeats the content instead of contrasting with it, and *lengthy* is unrelated."
+        },
+        {
+          "id": "m2-v2e-13",
+          "category": "readingComprehension",
+          "topic": "Assumption",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp5",
+          "prompt": "The facilities manager’s prediction depends on which of the following assumptions?",
+          "options": [
+            "The neighboring company’s heating costs were higher than Tellmark’s before the thermostats were installed.",
+            "Tellmark does not already lower the temperature in its offices at night and on weekends by some other means.",
+            "Tellmark’s employees will not object to cooler temperatures during working hours.",
+            "The programmable thermostats will pay for themselves within a year of installation.",
+            "Heating is the largest operating expense in Tellmark’s office buildings."
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The neighbor saved 15 percent by lowering temperatures at night and on weekends, and Tellmark can expect the same saving only if it is not already doing so. If Tellmark’s staff already turned the heat down every evening, the thermostats would save much less. The neighbor’s earlier costs, comfort during working hours (when the thermostats do not lower the temperature), the payback period and the size of heating costs relative to other expenses do not affect whether the percentage saving carries over."
+        },
+        {
+          "id": "m2-v2e-14",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 2,
+          "format": "single",
+          "stimulusId": "m2-vp6",
+          "prompt": "The author mentions “soft focus, textured papers, and elaborate printing processes” primarily in order to",
+          "options": [
+            "illustrate the means by which some photographers tried to make their work resemble paintings",
+            "show that the camera could do more than merely record what was placed before it",
+            "identify the techniques that later photographers used to secure a place in museums",
+            "explain why critics in the 1830s denied that photography could be an art",
+            "suggest that photographers of the late nineteenth century lacked technical skill"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The sentence says these photographers made their pictures “look as much like paintings as possible” and then lists how they did it. The techniques are examples of painterly imitation. It was the later generation, with sharp focus and unmanipulated prints, that won a place in museums; the 1830s critics are discussed in an earlier sentence; and nothing suggests the photographers lacked skill."
+        },
+        {
+          "id": "m2-v2e-15",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-vp6",
+          "prompt": "It can be inferred that the author regards the photographers described in the second sentence of the passage as having",
+          "options": [
+            "rejected the critics’ claim that the camera merely records what is placed before it",
+            "won recognition by means that implicitly accepted their critics’ view of the medium",
+            "insisted that the camera’s precision was a resource an artist could use",
+            "secured photography’s lasting place in museums",
+            "failed to attract any admirers for their work"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The author says the painterly strategy “won exhibitions and admirers” but “conceded the critics’ central premise”: that what was distinctively photographic had no artistic value. So these photographers gained recognition on terms that accepted the critics’ view. It was the later generation that championed the camera’s precision and secured photography’s place in museums, and the strategy did win admirers."
+        }
+      ]
+    },
+    {
+      "id": "V2H",
+      "measure": "verbal",
+      "stage": 2,
+      "tier": "harder",
+      "minutes": 23,
+      "questions": [
+        {
+          "id": "m2-v2h-01",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "Those who know the litigator only from her _____ performances in court are often surprised to discover that in private negotiation she is patient, conciliatory, and soft-spoken.",
+          "blanks": [
+            [
+              "diffident",
+              "pugnacious",
+              "meticulous",
+              "placid",
+              "laconic"
+            ]
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "People are “surprised” to find her patient, conciliatory and soft-spoken in private, so her courtroom manner must be the opposite: *pugnacious* (combative, eager to fight). *Placid* is the trap: it describes her private manner, which would cause no surprise. *Diffident* (shy) points the same way, and *meticulous* and *laconic* do not contrast with being patient and conciliatory."
+        },
+        {
+          "id": "m2-v2h-02",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "Historians long treated the young emperor’s court as a (i) _____ of intrigue, its every decision the product of factional maneuvering; a closer reading of the surviving correspondence, however, suggests that policy was shaped far more by (ii) _____ deliberation than by the scheming of courtiers.",
+          "blanks": [
+            [
+              "hotbed",
+              "bulwark",
+              "casualty"
+            ],
+            [
+              "clandestine",
+              "methodical",
+              "perfunctory"
+            ]
+          ],
+          "correct": [
+            0,
+            1
+          ],
+          "explanation": "A court where every decision came from “factional maneuvering” is a *hotbed* of intrigue; a *bulwark* (defense) or *casualty* of intrigue does not fit. “However” signals that the letters show the opposite: deliberation rather than “the scheming of courtiers.” The deliberation must contrast with scheming, so *methodical*. *Clandestine* is the trap, since secret deliberation would resemble scheming, and *perfunctory* deliberation would hardly shape policy."
+        },
+        {
+          "id": "m2-v2h-03",
+          "category": "textCompletion",
+          "topic": "Cause and Effect",
+          "difficulty": 4,
+          "format": "blanks",
+          "prompt": "So (i) _____ was the evidence for the new particle—a handful of anomalous readings that might easily have been instrumental noise—that the physicists’ decision to announce a discovery struck many colleagues as (ii) _____.",
+          "blanks": [
+            [
+              "tenuous",
+              "incontrovertible",
+              "copious"
+            ],
+            [
+              "injudicious",
+              "belated",
+              "prudent"
+            ]
+          ],
+          "correct": [
+            0,
+            0
+          ],
+          "explanation": "The words between the dashes define the evidence: a few readings “that might easily have been instrumental noise.” It was *tenuous*, not *incontrovertible* or *copious*. Because the evidence was so thin, announcing a discovery seemed *injudicious* (unwise). *Belated* would mean the announcement came too late, and *prudent* contradicts the cause the sentence gives."
+        },
+        {
+          "id": "m2-v2h-04",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "The eighteenth-century moralist’s reputation for (i) _____ rests largely on a handful of famous aphorisms; read in full, his essays prove to be anything but terse, (ii) _____ for pages around a single idea before, in a closing sentence, (iii) _____ it into the compact formula that anthologists have made familiar.",
+          "blanks": [
+            [
+              "erudition",
+              "concision",
+              "levity"
+            ],
+            [
+              "abandoning",
+              "deriding",
+              "circling"
+            ],
+            [
+              "distilling",
+              "repudiating",
+              "obscuring"
+            ]
+          ],
+          "correct": [
+            1,
+            2,
+            0
+          ],
+          "explanation": "A reputation built on aphorisms is a reputation for *concision*, and “anything but terse” confirms that this is the quality the full essays lack. Instead they keep *circling* one idea for pages. The closing sentence then condenses the idea into “the compact formula,” *distilling* it. *Abandoning* or *deriding* the idea would not end in a formula that states it, and *repudiating* or *obscuring* it contradicts the familiar formula."
+        },
+        {
+          "id": "m2-v2h-05",
+          "category": "textCompletion",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "blanks",
+          "prompt": "Although the institute’s white paper presents itself as (i) _____, a disinterested weighing of the evidence on both sides, its selection of sources is anything but (ii) _____: studies favorable to the industry are summarized at length, while those that (iii) _____ its claims are relegated to a single dismissive footnote.",
+          "blanks": [
+            [
+              "provisional",
+              "impartial",
+              "exhaustive"
+            ],
+            [
+              "evenhanded",
+              "current",
+              "scholarly"
+            ],
+            [
+              "corroborate",
+              "anticipate",
+              "impugn"
+            ]
+          ],
+          "correct": [
+            1,
+            0,
+            2
+          ],
+          "explanation": "The phrase “a disinterested weighing of the evidence on both sides” defines how the paper presents itself: *impartial*. “Anything but” reverses that for its sources, which favor the industry, so they are anything but *evenhanded*. The studies pushed into a dismissive footnote must be the unfavorable ones, studies that *impugn* (call into question) the industry’s claims. Studies that *corroborate* them would be favorable."
+        },
+        {
+          "id": "m2-v2h-06",
+          "category": "readingComprehension",
+          "topic": "Main Idea",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m2-vp7",
+          "prompt": "The passage is primarily concerned with",
+          "options": [
+            "defending McKeown’s emphasis on nutrition from the objections raised by his critics",
+            "presenting an influential explanation and a challenge to it, and suggesting how the two accounts might be reconciled",
+            "arguing that medical treatment did more to reduce mortality than McKeown allowed",
+            "describing the engineering advances that made nineteenth-century sanitary reform possible",
+            "showing that the causes of the decline in mortality can never be identified"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The first paragraph sets out McKeown’s nutritional explanation, the second presents the critics’ case for public-health measures, and the third argues that the two “need not exclude each other”: growth supplied the means, and municipal decisions determined their use. The author accepts the critics’ main point rather than defending McKeown, never disputes that medicine contributed little, mentions sewers and waterworks only as examples, and proposes a resolution rather than declaring the causes unknowable."
+        },
+        {
+          "id": "m2-v2h-07",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 5,
+          "format": "multiple",
+          "stimulusId": "m2-vp7",
+          "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that the author would agree with which of the following statements?",
+          "options": [
+            "Rising wages were by themselves sufficient to bring about a substantial decline in urban death rates.",
+            "The timing of a town’s fall in mortality may have been influenced by choices its local government made.",
+            "McKeown gave too little weight to a cause of the decline that he had nonetheless considered."
+          ],
+          "correct": [
+            1,
+            2
+          ],
+          "explanation": "The second statement fits the critics’ finding that death rates fell substantially only after municipal investment and the author’s claim that whether and how soon the means of improvement would be used “was settled in council chambers.” The third fits too: McKeown gave public-health measures “only a secondary role,” and the author calls that judgment the most vulnerable part of his argument, so he considered the factor but underweighted it. The first is contradicted twice: death rates stagnated while wages rose, and growth was “a precondition … rather than its mechanism,” necessary but not sufficient."
+        },
+        {
+          "id": "m2-v2h-08",
+          "category": "readingComprehension",
+          "topic": "Select-in-Passage",
+          "difficulty": 4,
+          "format": "sentence",
+          "stimulusId": "m2-vp7",
+          "prompt": "Select the sentence in the passage that describes how McKeown arrived at the conclusion that improved nutrition was the principal cause of the decline in mortality.",
+          "correct": [
+            4
+          ],
+          "explanation": "The sentence beginning “His argument for nutrition, they point out, proceeded mainly by elimination” describes the method: having set aside the other causes, McKeown treated better diet as “the explanation that remained.” The sentence beginning “Since much the same pattern held” states his conclusion and explains why he dismissed medicine, but it does not say how he arrived at nutrition as the cause."
+        },
+        {
+          "id": "m2-v2h-09",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m2-vp7",
+          "prompt": "The author mentions “years of resistance from local taxpayers” primarily in order to",
+          "options": [
+            "suggest that McKeown underestimated the cost of sanitary reform",
+            "explain why medical treatment contributed little to the decline in mortality",
+            "emphasize that the resources produced by economic growth did not by themselves ensure improvements in public health",
+            "show that the critics have exaggerated the importance of municipal investment",
+            "indicate that the benefits of sanitary works were confined to those who paid for them"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The author has just said that growth “supplied the means of improvement without determining whether, or how soon, those means would be used.” Years of taxpayer resistance show that the money did not turn into sewers and waterworks automatically; someone had to decide to spend it. The detail says nothing about McKeown’s view of costs or about medicine, supports rather than undercuts the importance of municipal investment, and the passage says the benefits were shared by everyone."
+        },
+        {
+          "id": "m2-v2h-10",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Though the novel’s premise is undeniably _____, its execution is so assured that readers quickly forget how improbable the story is.",
+          "options": [
+            "implausible",
+            "conventional",
+            "far-fetched",
+            "hackneyed",
+            "gripping",
+            "ingenious"
+          ],
+          "selectCount": 2,
+          "correct": [
+            0,
+            2
+          ],
+          "explanation": "“Though” contrasts the premise with an execution so assured that readers forget “how improbable the story is,” so the premise itself must be improbable: *implausible* or *far-fetched*. *Conventional* and *hackneyed* form a pair meaning unoriginal, but the sentence is about improbability, not originality. *Gripping* and *ingenious* are praise that would not set up the contrast."
+        },
+        {
+          "id": "m2-v2h-11",
+          "category": "sentenceEquivalence",
+          "topic": "Definition",
+          "difficulty": 4,
+          "format": "multiple",
+          "prompt": "The college president’s _____ was legendary: she could turn down a request so gracefully that the person refused often left feeling flattered.",
+          "options": [
+            "candor",
+            "tact",
+            "obstinacy",
+            "bluntness",
+            "finesse",
+            "erudition"
+          ],
+          "selectCount": 2,
+          "correct": [
+            1,
+            4
+          ],
+          "explanation": "The colon defines the trait: refusing so gracefully that the person refused feels flattered. That is skill in handling people delicately, *tact* or *finesse*. *Candor* and *bluntness* form a pair that points the other way, and *obstinacy* and *erudition* do not describe graceful refusals."
+        },
+        {
+          "id": "m2-v2h-12",
+          "category": "sentenceEquivalence",
+          "topic": "Contrast",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "The mountaineer of popular legend is a _____ adventurer, but the man who emerges from his letters is a cautious planner who turned back short of more than one summit rather than risk his companions’ lives.",
+          "options": [
+            "circumspect",
+            "charismatic",
+            "temerarious",
+            "prudent",
+            "peripatetic",
+            "foolhardy"
+          ],
+          "selectCount": 2,
+          "correct": [
+            2,
+            5
+          ],
+          "explanation": "“But” contrasts the legend with the real man, “a cautious planner” who turned back rather than take risks. The legendary figure must be recklessly bold: *temerarious* or *foolhardy*. *Circumspect* and *prudent* are a pair that describes the real man, not the legend. *Charismatic* and *peripatetic* (traveling from place to place) do not contrast with caution."
+        },
+        {
+          "id": "m2-v2h-13",
+          "category": "readingComprehension",
+          "topic": "Strengthen/Weaken",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m2-vp8",
+          "prompt": "Which of the following, if true, would most strengthen the researchers’ conclusion?",
+          "options": [
+            "Urban robins sing at a higher pitch than rural robins, which makes their songs easier to hear over the low rumble of traffic.",
+            "The city is brightly lit at night, and artificial light is known to disturb the daily rhythms of many bird species.",
+            "Within the city, robins in neighborhoods with heavy daytime traffic sing at night more often than robins in equally well-lit neighborhoods with little daytime traffic.",
+            "Rural robins sing less in cold weather than in warm weather.",
+            "In both the city and the countryside, robins that sing more often attract mates sooner than robins that sing less."
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "The researchers blame daytime noise, but the city differs from the countryside in another obvious way: it is lit at night. A comparison within the city that holds lighting constant and varies only daytime noise shows night singing rising with noise, which is what the conclusion predicts and what the light explanation cannot account for. Higher-pitched song is another response to noise but says nothing about timing. The point about artificial light offers a rival explanation and so weakens the conclusion, and the facts about cold weather and mating do not distinguish the explanations."
+        },
+        {
+          "id": "m2-v2h-14",
+          "category": "readingComprehension",
+          "topic": "Inference",
+          "difficulty": 5,
+          "format": "single",
+          "stimulusId": "m2-vp9",
+          "prompt": "It can be inferred from the passage that, according to Hamilton’s model, an animal would gain the least by moving toward its neighbors if the predator",
+          "options": [
+            "attacked whichever prey animal was nearest to it",
+            "appeared at a point far from the center of the group",
+            "encountered a group in which the other animals were also moving toward their neighbors",
+            "chose its victim at random from the whole population, regardless of where each animal was",
+            "took only one animal in each attack"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "In the model an animal gains by putting others between itself and wherever the predator may appear, because the predator attacks the nearest prey. If the predator chose its victim at random regardless of position, no position would be safer than any other, and moving toward neighbors would gain nothing. Attacking the nearest animal is the model’s own assumption, under which moving inward pays; a predator appearing far from the center makes central positions especially safe; others moving inward is how the group forms; and one animal per attack is the condition the passage itself assumes."
+        },
+        {
+          "id": "m2-v2h-15",
+          "category": "readingComprehension",
+          "topic": "Function",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m2-vp9",
+          "prompt": "The author’s remark that the group “has merely redistributed the risk” serves primarily to",
+          "options": [
+            "concede that the selfish herd hypothesis cannot explain why groups form",
+            "emphasize that the model accounts for grouping without supposing that grouping benefits the population as a whole",
+            "suggest that the animals at the margins of a group are usually its weakest members",
+            "argue that predators are more successful when they attack groups than when they attack solitary animals",
+            "reconcile Hamilton’s model with the view that groups offer their members safety in numbers"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "The remark explains “the striking feature of the model”: the group “need not make the population as a whole any safer,” because the same losses are simply shifted to the animals at the edges. That supports the final sentence, which calls grouping “less a cooperative arrangement than the cumulative outcome” of each animal’s self-protection. The remark does not admit a failure of the model, says nothing about which animals are weakest, makes no claim that predators do better against groups, and sets the model apart from the safety-in-numbers view rather than reconciling the two."
+        }
+      ]
+    },
+    {
+      "id": "Q1",
+      "measure": "quant",
+      "stage": 1,
+      "tier": "standard",
+      "minutes": 21,
+      "questions": [
+        {
+          "id": "m2-q1-01",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "The number of positive divisors of 36",
+          "quantityB": "10",
+          "correct": [
+            1
+          ],
+          "explanation": "The divisors of 36 come in pairs that multiply to 36: 1 × 36, 2 × 18, 3 × 12, 4 × 9, and 6 × 6. The pair 6 × 6 contributes only one divisor, so 36 has 9 positive divisors: 1, 2, 3, 4, 6, 9, 12, 18, 36. Quantity B is greater. Shortcut: 36 = 2² × 3², which has (2 + 1)(2 + 1) = 9 divisors."
+        },
+        {
+          "id": "m2-q1-02",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "x and y are integers, and 2 < x < y < 6.",
+          "quantityA": "x + y",
+          "quantityB": "8",
+          "correct": [
+            3
+          ],
+          "explanation": "x can be 3 or 4, and y must be greater than x and less than 6. The possible pairs are (3, 4), (3, 5) and (4, 5), with sums 7, 8 and 9. Since x + y can be less than, equal to or greater than 8, the relationship cannot be determined."
+        },
+        {
+          "id": "m2-q1-03",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "Circle C has radius 3. Rectangle R has length 7 and width 4.",
+          "quantityA": "The area of circle C",
+          "quantityB": "The area of rectangle R",
+          "correct": [
+            0
+          ],
+          "explanation": "The circle’s area is π × 3² = 9π. Since π > 3.14, 9π > 28.26, which is greater than the rectangle’s area of 7 × 4 = 28. Quantity A is greater. Trap: using π ≈ 3 gives 27 and points the wrong way."
+        },
+        {
+          "id": "m2-q1-04",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "n is a positive integer.",
+          "quantityA": "(−1)ⁿ + (−1)ⁿ⁺¹",
+          "quantityB": "0",
+          "correct": [
+            2
+          ],
+          "explanation": "Consecutive powers of −1 alternate between 1 and −1, so one of (−1)ⁿ and (−1)ⁿ⁺¹ is 1 and the other is −1. Their sum is 0 for every positive integer n, so the quantities are equal. Algebraically, (−1)ⁿ + (−1)ⁿ⁺¹ = (−1)ⁿ(1 + (−1)) = 0."
+        },
+        {
+          "id": "m2-q1-05",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A store sells pens in packs of 12 for $9.00 each or individually for $0.95 each. How much money is saved by buying 36 pens in packs rather than individually?",
+          "options": [
+            "$6.60",
+            "$7.20",
+            "$7.80",
+            "$8.40",
+            "$9.00"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Individually, 36 pens cost 36 × $0.95 = $34.20. In packs, 36 pens are 3 packs, costing 3 × $9.00 = $27.00. The saving is $34.20 − $27.00 = $7.20."
+        },
+        {
+          "id": "m2-q1-06",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "single",
+          "prompt": "If 4ˣ = 8ˣ⁻¹, what is the value of x?",
+          "options": [
+            "−3",
+            "1",
+            "3",
+            "6",
+            "12"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Write both sides as powers of 2: 4ˣ = 2²ˣ and 8ˣ⁻¹ = 2³⁽ˣ⁻¹⁾ = 2³ˣ⁻³. Equal powers of 2 have equal exponents, so 2x = 3x − 3 and x = 3. Check: 4³ = 64 and 8² = 64. Trap: forgetting to distribute the 3 gives 2x = 3x − 1 and x = 1."
+        },
+        {
+          "id": "m2-q1-07",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "In triangle ABC, AB = AC = 10 and BC = 12. What is the length of the altitude from vertex B to side AC?",
+          "options": [
+            "4.8",
+            "8",
+            "9",
+            "9.6",
+            "10"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "First find the area using the altitude from A, which bisects BC in an isosceles triangle: it forms right triangles with legs 6 and h and hypotenuse 10, so h = 8 and the area is (1/2)(12)(8) = 48. The area is also (1/2)(AC)(altitude from B) = (1/2)(10)(altitude), so the altitude from B is 96/10 = 9.6. Trap: 8 is the altitude from A, not from B."
+        },
+        {
+          "id": "m2-q1-08",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "If n is an odd integer, which of the following must be even? Indicate all such expressions.",
+          "options": [
+            "n + 1",
+            "n² + n",
+            "3n",
+            "n² − 1",
+            "2n + 1",
+            "(n + 1)(n + 3)"
+          ],
+          "correct": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "explanation": "With n odd: n + 1 is even. n² + n = n(n + 1) contains the even factor n + 1. 3n is odd × odd = odd. n² − 1 = (n − 1)(n + 1) is even. 2n + 1 is even + 1 = odd. (n + 1)(n + 3) is a product of even numbers. Testing n = 1 quickly confirms: 2, 2, 3, 0, 3, 8."
+        },
+        {
+          "id": "m2-q1-09",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 3,
+          "format": "numeric",
+          "prompt": "In the xy-plane, a triangle has vertices at (−2, 1), (6, 1), and (3, 7). What is the area of the triangle?",
+          "answerValue": 24,
+          "answerDisplay": "24",
+          "explanation": "The vertices (−2, 1) and (6, 1) lie on the horizontal line y = 1, so take that side as the base: its length is 6 − (−2) = 8. The height is the vertical distance from (3, 7) to that line, 7 − 1 = 6. The area is (1/2)(8)(6) = 24."
+        },
+        {
+          "id": "m2-q1-10",
+          "category": "numericEntry",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "fraction",
+          "prompt": "Each letter of the word LEVEL is written on a separate card, and the five cards are placed in a box. If two cards are drawn at random without replacement, what is the probability that the two cards show the same letter?",
+          "answerValue": 0.2,
+          "answerDisplay": "1/5",
+          "explanation": "There are C(5, 2) = 10 equally likely pairs of cards. Only two pairs show the same letter: the two L’s and the two E’s. The probability is 2/10 = 1/5. Trap: V appears once, so it cannot form a matching pair."
+        },
+        {
+          "id": "m2-q1-11",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "single",
+          "stimulusId": "m2-qd1",
+          "prompt": "Approximately what percent of the items the library lent in 2022 were print books?",
+          "options": [
+            "45%",
+            "50%",
+            "56%",
+            "61%",
+            "64%"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "In 2022 the library lent 75 + 48 + 12 = 135 thousand items, of which 75 thousand were print books. 75/135 ≈ 0.556, or about 56%. Trap: comparing print books with e-books alone gives 75/(75 + 48) ≈ 61%."
+        },
+        {
+          "id": "m2-q1-12",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "numeric",
+          "stimulusId": "m2-qd1",
+          "prompt": "In 2023, e-books and audiobooks together made up what percent of all the items the library lent? Give your answer to the nearest whole percent.",
+          "answerValue": 49,
+          "answerDisplay": "49",
+          "entrySuffix": "%",
+          "explanation": "In 2023 the library lent 72 + 54 + 15 = 141 thousand items. E-books and audiobooks account for 54 + 15 = 69 thousand. 69/141 ≈ 0.489, which rounds to 49%. Trap: using 2024 figures gives (60 + 20)/150 ≈ 53%."
+        }
+      ]
+    },
+    {
+      "id": "Q2E",
+      "measure": "quant",
+      "stage": 2,
+      "tier": "easier",
+      "minutes": 26,
+      "questions": [
+        {
+          "id": "m2-q2e-01",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 1,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "25% of 60",
+          "quantityB": "15",
+          "correct": [
+            2
+          ],
+          "explanation": "25% is one quarter, and one quarter of 60 is 15. The quantities are equal."
+        },
+        {
+          "id": "m2-q2e-02",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Two of the angles of a triangle measure 40° and 75°.",
+          "quantityA": "The measure of the third angle of the triangle",
+          "quantityB": "70°",
+          "correct": [
+            1
+          ],
+          "explanation": "The angles of a triangle add up to 180°, so the third angle is 180° − 40° − 75° = 65°. 65° is less than 70°, so Quantity B is greater."
+        },
+        {
+          "id": "m2-q2e-03",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "|x − 2| = 5",
+          "quantityA": "x",
+          "quantityB": "0",
+          "correct": [
+            3
+          ],
+          "explanation": "|x − 2| = 5 means x − 2 = 5 or x − 2 = −5, so x = 7 or x = −3. One value is greater than 0 and the other is less, so the relationship cannot be determined. Trap: solving only x − 2 = 5."
+        },
+        {
+          "id": "m2-q2e-04",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "The list consists of the numbers 4, 7, 7, 9, and 13.",
+          "quantityA": "The range of the numbers in the list",
+          "quantityB": "The average (arithmetic mean) of the numbers in the list",
+          "correct": [
+            0
+          ],
+          "explanation": "The range is the greatest value minus the least: 13 − 4 = 9. The mean is (4 + 7 + 7 + 9 + 13)/5 = 40/5 = 8. Quantity A is greater."
+        },
+        {
+          "id": "m2-q2e-05",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "√48",
+          "quantityB": "7",
+          "correct": [
+            1
+          ],
+          "explanation": "7 = √49, and √48 < √49, so Quantity B is greater. You can also see it by squaring both quantities, which are positive: 48 < 49."
+        },
+        {
+          "id": "m2-q2e-06",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 1,
+          "format": "single",
+          "prompt": "A car’s gas tank holds 14 gallons. If the tank is 1/4 full, how many gallons of gas are needed to fill it?",
+          "options": [
+            "3.5",
+            "7",
+            "9.5",
+            "10",
+            "10.5"
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The tank is 1/4 full, so 3/4 of it is empty. 3/4 × 14 = 10.5 gallons. Trap: 3.5 is the amount already in the tank."
+        },
+        {
+          "id": "m2-q2e-07",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "If (x + 4)/3 = 5, what is the value of 2x − 1?",
+          "options": [
+            "10",
+            "11",
+            "19",
+            "21",
+            "22"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Multiply both sides by 3: x + 4 = 15, so x = 11. Then 2x − 1 = 22 − 1 = 21. Trap: stopping at x = 11 or computing 2x = 22."
+        },
+        {
+          "id": "m2-q2e-08",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "The length of a rectangle is 3 times its width, and its perimeter is 48. What is the area of the rectangle?",
+          "options": [
+            "54",
+            "108",
+            "144",
+            "216",
+            "432"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Let the width be w, so the length is 3w. The perimeter is 2(w + 3w) = 8w = 48, so w = 6 and the length is 18. The area is 6 × 18 = 108. Trap: treating 48 as the sum of the length and width gives a width of 12 and an area of 12 × 36 = 432."
+        },
+        {
+          "id": "m2-q2e-09",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 2,
+          "format": "single",
+          "prompt": "A plumber charges a fixed fee of $45 for each visit plus $30 for each hour of work. If the plumber’s bill for one visit was $210, how many hours did the plumber work?",
+          "options": [
+            "4.5",
+            "5",
+            "5.5",
+            "6",
+            "7"
+          ],
+          "correct": [
+            2
+          ],
+          "explanation": "Subtract the fixed fee: $210 − $45 = $165 was for hours of work. At $30 an hour, that is 165/30 = 5.5 hours. Trap: dividing the whole bill by 30 gives 7."
+        },
+        {
+          "id": "m2-q2e-10",
+          "category": "multipleAnswer",
+          "topic": "Algebra",
+          "difficulty": 3,
+          "format": "multiple",
+          "prompt": "Which of the following values of x satisfy both of the inequalities 2x − 3 > 5 and x² < 40? Indicate all such values.",
+          "options": [
+            "−5",
+            "3",
+            "4",
+            "5",
+            "6",
+            "6.5"
+          ],
+          "correct": [
+            3,
+            4
+          ],
+          "explanation": "2x − 3 > 5 gives x > 4, which rules out −5, 3 and 4 (4 makes 2x − 3 equal to 5, not greater). Of the remaining values, 5² = 25 and 6² = 36 are less than 40, but 6.5² = 42.25 is not. Only 5 and 6 satisfy both."
+        },
+        {
+          "id": "m2-q2e-11",
+          "category": "numericEntry",
+          "topic": "Arithmetic",
+          "difficulty": 2,
+          "format": "numeric",
+          "prompt": "A printer prints 18 pages every 45 seconds. At this rate, how many pages does it print in 4 minutes?",
+          "answerValue": 96,
+          "answerDisplay": "96",
+          "explanation": "4 minutes is 240 seconds. The printer prints 18/45 = 0.4 page per second, so in 240 seconds it prints 0.4 × 240 = 96 pages. Trap: forgetting to convert minutes to seconds."
+        },
+        {
+          "id": "m2-q2e-12",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 2,
+          "format": "numeric",
+          "prompt": "A cube has a total surface area of 150 square inches. What is the volume of the cube, in cubic inches?",
+          "answerValue": 125,
+          "answerDisplay": "125",
+          "explanation": "A cube has 6 congruent square faces, so each face has area 150/6 = 25 and each edge has length 5. The volume is 5³ = 125 cubic inches."
+        },
+        {
+          "id": "m2-q2e-13",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 1,
+          "format": "single",
+          "stimulusId": "m2-qd2",
+          "prompt": "How many cups of tea did the café sell during the entire week?",
+          "options": [
+            "345",
+            "360",
+            "375",
+            "385",
+            "400"
+          ],
+          "correct": [
+            3
+          ],
+          "explanation": "Add the tea column: 45 + 40 + 50 + 55 + 60 + 70 + 65 = 385."
+        },
+        {
+          "id": "m2-q2e-14",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 2,
+          "format": "numeric",
+          "stimulusId": "m2-qd2",
+          "prompt": "How many dollars of revenue did the café receive from juice on Saturday and Sunday combined?",
+          "answerValue": 460,
+          "answerDisplay": "460",
+          "entryPrefix": "$",
+          "explanation": "The café sold 60 + 55 = 115 cups of juice on the weekend, at $4.00 a cup: 115 × $4.00 = $460."
+        },
+        {
+          "id": "m2-q2e-15",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "multiple",
+          "stimulusId": "m2-qd2",
+          "prompt": "On which days did the café sell more than 3 times as many cups of coffee as cups of juice? Indicate all such days.",
+          "options": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "correct": [
+            0,
+            1,
+            3
+          ],
+          "explanation": "Compare coffee with 3 × juice each day: Monday 120 > 90; Tuesday 110 > 75; Wednesday 125 < 135; Thursday 130 > 90; Friday 150 = 150; Saturday 180 = 180; Sunday 160 < 165. Only Monday, Tuesday and Thursday qualify. Trap: on Friday and Saturday coffee is exactly 3 times juice, which is not more than 3 times."
+        }
+      ]
+    },
+    {
+      "id": "Q2H",
+      "measure": "quant",
+      "stage": 2,
+      "tier": "harder",
+      "minutes": 26,
+      "questions": [
+        {
+          "id": "m2-q2h-01",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "x < y < 0",
+          "quantityA": "1/x",
+          "quantityB": "1/y",
+          "correct": [
+            0
+          ],
+          "explanation": "1/x − 1/y = (y − x)/(xy). Here y − x > 0 because y > x, and xy > 0 because both numbers are negative, so the difference is positive and 1/x > 1/y. Check with x = −2 and y = −1: 1/x = −0.5 and 1/y = −1. Trap: assuming that reciprocals reverse the order only for positive numbers."
+        },
+        {
+          "id": "m2-q2h-02",
+          "category": "quantitativeComparison",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "When the positive integer k is divided by 6, the remainder is 4.",
+          "quantityA": "The remainder when k² is divided by 6",
+          "quantityB": "The remainder when k is divided by 6",
+          "correct": [
+            2
+          ],
+          "explanation": "Write k = 6m + 4. Then k² = 36m² + 48m + 16 = 6(6m² + 8m + 2) + 4, so k² also leaves remainder 4 when divided by 6. The quantities are equal. Check: k = 4 gives k² = 16 = 2 × 6 + 4; k = 10 gives 100 = 16 × 6 + 4."
+        },
+        {
+          "id": "m2-q2h-03",
+          "category": "quantitativeComparison",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "List X consists of the integers 1 through 9. List Y consists of the integers 1 through 9 together with one additional number, 5.",
+          "quantityA": "The standard deviation of the numbers in list X",
+          "quantityB": "The standard deviation of the numbers in list Y",
+          "correct": [
+            0
+          ],
+          "explanation": "Both lists have mean 5. Adding a value equal to the mean adds nothing to the sum of squared deviations but increases the number of values, so the typical distance from the mean shrinks. The sum of squared deviations is 60 for both lists, so the variance is 60/9 for X and 60/10 for Y. List Y is less spread out, and Quantity A is greater."
+        },
+        {
+          "id": "m2-q2h-04",
+          "category": "quantitativeComparison",
+          "topic": "Geometry",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "A rectangle has a diagonal of length 10.",
+          "quantityA": "The area of the rectangle",
+          "quantityB": "50",
+          "correct": [
+            3
+          ],
+          "explanation": "If the sides are a and b, then a² + b² = 100. Since (a − b)² ≥ 0, a² + b² ≥ 2ab, so the area ab is at most 50, and it equals 50 only when the rectangle is a square with sides 5√2. A 6-by-8 rectangle has area 48, so the area can be equal to 50 or less than 50. The relationship cannot be determined. Trap: choosing B without noticing the square case."
+        },
+        {
+          "id": "m2-q2h-05",
+          "category": "quantitativeComparison",
+          "topic": "Arithmetic",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "Compare Quantity A and Quantity B.",
+          "quantityA": "The sum of the even integers from 2 to 100, inclusive",
+          "quantityB": "The sum of the odd integers from 1 to 101, inclusive",
+          "correct": [
+            1
+          ],
+          "explanation": "There are 50 even integers from 2 to 100, with average 51, so their sum is 50 × 51 = 2,550. There are 51 odd integers from 1 to 101, with average 51, so their sum is 51 × 51 = 2,601. Quantity B is greater. Pairing 2 with 1, 4 with 3 and so on shows the evens lead by 50, but the extra odd number 101 more than makes up for it."
+        },
+        {
+          "id": "m2-q2h-06",
+          "category": "problemSolving",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A chemist has 40 liters of a solution that is 25 percent acid. How many liters of pure acid must be added to produce a solution that is 40 percent acid?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "8",
+            "10"
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "The solution contains 0.25 × 40 = 10 liters of acid. After adding x liters of pure acid, (10 + x)/(40 + x) = 0.4, so 10 + x = 16 + 0.4x, 0.6x = 6 and x = 10. Check: 20 liters of acid in 50 liters is 40 percent. Trap: 6 liters ignores the fact that the added acid also increases the total volume."
+        },
+        {
+          "id": "m2-q2h-07",
+          "category": "problemSolving",
+          "topic": "Data Analysis",
+          "difficulty": 5,
+          "format": "single",
+          "prompt": "How many odd four-digit positive integers have four different digits?",
+          "options": [
+            "2,240",
+            "2,520",
+            "2,800",
+            "3,024",
+            "4,536"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "Fill the most restricted places first. The units digit must be odd: 5 choices. The thousands digit cannot be 0 or the units digit: 8 choices. The hundreds digit can be any of the 8 digits not yet used, and the tens digit any of the remaining 7. The total is 5 × 8 × 8 × 7 = 2,240. Trap: 4,536 counts all four-digit numbers with distinct digits, odd or not."
+        },
+        {
+          "id": "m2-q2h-08",
+          "category": "problemSolving",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "A circle is inscribed in an equilateral triangle with sides of length 12. What is the area of the circle?",
+          "options": [
+            "12π",
+            "16π",
+            "24π",
+            "36π",
+            "48π"
+          ],
+          "correct": [
+            0
+          ],
+          "explanation": "The altitude of the triangle is 12 × √3/2 = 6√3. In an equilateral triangle, the center of the inscribed circle lies one-third of the way up each altitude, so the radius is 6√3/3 = 2√3 and the area is π(2√3)² = 12π. Trap: 36π takes half the side, 6, as the radius, and 48π is the area of the circle through the vertices, whose radius is two-thirds of the altitude."
+        },
+        {
+          "id": "m2-q2h-09",
+          "category": "problemSolving",
+          "topic": "Arithmetic",
+          "difficulty": 4,
+          "format": "single",
+          "prompt": "In a club, the ratio of boys to girls is 3 to 5. After 6 more boys join the club and no one leaves, the ratio of boys to girls is 3 to 4. How many girls are in the club?",
+          "options": [
+            "24",
+            "30",
+            "32",
+            "36",
+            "40"
+          ],
+          "correct": [
+            4
+          ],
+          "explanation": "Let there be 3k boys and 5k girls. After 6 boys join, (3k + 6)/(5k) = 3/4, so 12k + 24 = 15k and k = 8. There are 5 × 8 = 40 girls. Check: 24 boys + 6 = 30 boys, and 30 to 40 is 3 to 4. Trap: 30 is the number of boys after the new members join, not the number of girls."
+        },
+        {
+          "id": "m2-q2h-10",
+          "category": "multipleAnswer",
+          "topic": "Arithmetic",
+          "difficulty": 5,
+          "format": "multiple",
+          "prompt": "If p is a prime number greater than 3, which of the following must be divisible by 6? Indicate all such expressions.",
+          "options": [
+            "p − 1",
+            "p + 1",
+            "p² − 1",
+            "p² + 5",
+            "3p + 3",
+            "p + 5"
+          ],
+          "correct": [
+            2,
+            3,
+            4
+          ],
+          "explanation": "A prime greater than 3 is odd and not a multiple of 3, so it is 1 or 5 more than a multiple of 6. Then p² − 1 = (p − 1)(p + 1) is a product of two even numbers, one of which is a multiple of 3, so it is divisible by 6. p² + 5 = (p² − 1) + 6 is divisible by 6 as well. 3p + 3 = 3(p + 1), and p + 1 is even, so it is divisible by 6. But p − 1, p + 1 and p + 5 fail for some primes: p = 5 gives 4, 6 and 10; p = 7 gives 6, 8 and 12."
+        },
+        {
+          "id": "m2-q2h-11",
+          "category": "numericEntry",
+          "topic": "Geometry",
+          "difficulty": 4,
+          "format": "numeric",
+          "prompt": "A sector of a circle has a central angle of 72° and an arc length of 4π. If the area of the sector is kπ, what is the value of k?",
+          "answerValue": 20,
+          "answerDisplay": "20",
+          "explanation": "72° is 72/360 = 1/5 of the circle, so the whole circumference is 5 × 4π = 20π and the radius is 10. The circle’s area is 100π, and the sector’s area is 1/5 of that, 20π. So k = 20."
+        },
+        {
+          "id": "m2-q2h-12",
+          "category": "numericEntry",
+          "topic": "Algebra",
+          "difficulty": 4,
+          "format": "fraction",
+          "prompt": "In a sequence, a₁ = 3, and for each n ≥ 2, aₙ = 1/(1 − aₙ₋₁). What is the value of a₃₀?",
+          "answerValue": 0.6666666666666666,
+          "answerDisplay": "2/3",
+          "explanation": "Compute the first few terms: a₁ = 3, a₂ = 1/(1 − 3) = −1/2, a₃ = 1/(1 + 1/2) = 2/3, a₄ = 1/(1 − 2/3) = 3. The sequence repeats every 3 terms. Since 30 is a multiple of 3, a₃₀ = a₃ = 2/3."
+        },
+        {
+          "id": "m2-q2h-13",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "single",
+          "stimulusId": "m2-qd3",
+          "prompt": "In 2024, the orchard’s revenue from cherries was approximately what percent of its total revenue from the three fruits?",
+          "options": [
+            "6%",
+            "25%",
+            "33%",
+            "40%",
+            "51%"
+          ],
+          "correct": [
+            1
+          ],
+          "explanation": "Tons harvested in 2024: apples 120 × 9 = 1,080; pears 50 × 8 = 400; cherries 30 × 3 = 90. Revenue: apples 1,080 × $480 = $518,400; pears 400 × $600 = $240,000; cherries 90 × $2,800 = $252,000. The total is $1,010,400, and 252,000/1,010,400 ≈ 0.249, or about 25%. Trap: 6% is cherries’ share of the tons harvested, not of the revenue."
+        },
+        {
+          "id": "m2-q2h-14",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 3,
+          "format": "numeric",
+          "stimulusId": "m2-qd3",
+          "prompt": "By what percent did the average price per ton of pears increase from 2021 to 2024?",
+          "answerValue": 20,
+          "answerDisplay": "20",
+          "entrySuffix": "%",
+          "explanation": "The price rose from $500 per ton in 2021 to $600 in 2024, an increase of $100. As a percent of the 2021 price, that is 100/500 = 20%. Trap: starting from 2020 ($520) instead of 2021."
+        },
+        {
+          "id": "m2-q2h-15",
+          "category": "dataInterpretation",
+          "topic": "Data Analysis",
+          "difficulty": 4,
+          "format": "multiple",
+          "stimulusId": "m2-qd3",
+          "prompt": "Based on the data, which of the following statements are true? Indicate all such statements.",
+          "options": [
+            "In 2024 the orchard harvested more tons of pears than of cherries.",
+            "From 2020 to 2024, the average price per ton of each fruit was higher every year than in the year before.",
+            "In 2024 the orchard’s revenue from pears was less than its revenue from cherries.",
+            "From 2020 to 2024, the average price per ton of apples increased by a greater percent than the average price per ton of cherries."
+          ],
+          "correct": [
+            0,
+            2,
+            3
+          ],
+          "explanation": "Pears: 50 × 8 = 400 tons; cherries: 30 × 3 = 90 tons, so the first statement is true. The second is false: the apple price fell from $450 in 2022 to $430 in 2023, and the cherry price fell in 2022. The third is true: pears earned 400 × $600 = $240,000 and cherries 90 × $2,800 = $252,000. The fourth is true: apples rose 80/400 = 20%, cherries 300/2,500 = 12%."
+        }
+      ]
+    }
+  ]
+}
