@@ -419,7 +419,8 @@ struct PlanTaskRow: View {
         case let .lesson(id):
             return model.content?.lesson(id: id).map { Theme.color(forArea: $0.measure) } ?? .accentColor
         case let .drill(id):
-            return model.content?.drillSet(id: id).map { Theme.color(for: $0.measure) } ?? .accentColor
+            let measure = model.content?.drillSet(id: id)?.measure ?? MissedQuestions.measure(forSetId: id)
+            return measure.map { Theme.color(for: $0) } ?? .accentColor
         case .weakSpot: return .pink
         case .vocabulary: return Theme.correct
         case .mockTest, .reviewMock: return .blue

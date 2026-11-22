@@ -121,6 +121,10 @@ public enum CoachPlan {
             }
             return make(.lesson(lesson.id), title: "Lesson: \(lesson.title)", detail: lesson.summary, minutes: lesson.minutes)
         case "drill":
+            if let measure = MissedQuestions.measure(forSetId: ref) {
+                return make(.drill(ref), title: "Redo your missed \(measure.shortTitle) questions",
+                            detail: MissedQuestions.summary(for: measure), minutes: 20)
+            }
             guard let set = content.drillSet(id: ref) else {
                 return note(fallbackTitle: ref.isEmpty ? "Drill" : "Drill: \(ref)",
                             problem: ref.isEmpty ? "has no ref" : "points to a drill set that isn't in the app (\"\(ref)\")")

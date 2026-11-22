@@ -75,7 +75,7 @@ When this file exists and can be read, the Study Plan screen, today's plan on th
 | `kind` | `ref` | Button | Ticks itself when |
 | --- | --- | --- | --- |
 | `lesson` | a lesson id, such as `tc` | Read | the lesson has been read |
-| `drill` | a drill set id, the app's own or a coach's | Practise | the set was done on or after the task's day |
+| `drill` | a drill set id: the app's own, a coach's, or `missed-verbal` / `missed-quant` | Practise | the set was done on or after the task's day |
 | `mockTest` | `mock-test-1` or `mock-test-2` | Go to Test | the test was completed on or after the task's day |
 | `vocabulary` | none | Study | any card was reviewed that day |
 | `note` | none | none | never: the learner ticks it. Use it for anything outside the app, such as a class or an official practice test |
@@ -91,7 +91,12 @@ Ids to use in `ref`:
 
 - Lessons: `gre-overview`, `vocab-strategy`, `quant-review`, `tc`, `qc`, `calculator`, `se`, `ps`, `awa-issue`, `rc`, `ma`, `ne`, `rc-arguments`, `di`, `pacing`
 - The app's drill sets: `d-tc`, `d-se`, `d-rc`, `d-qc`, `d-ps`, `d-ma`, `d-ne`, `d-di`
+- The missed questions: `missed-verbal`, `missed-quant` (see below)
 - Mock tests: `mock-test-1`, `mock-test-2`
+
+### Missed questions
+
+The app keeps two sets of its own, shown at the top of Practice Drills when they have anything in them: every Verbal question, and every Quant question, whose latest answer was wrong or left blank, in a drill, a coach's set or a mock test. Answering a question correctly anywhere takes it off the list. A plan can send the learner there with a `drill` task whose `ref` is `missed-verbal` or `missed-quant`; the task ticks itself when the set is redone on or after that day. If nothing is missed that day, the learner ticks it by hand. A coach's own sets may not use these two ids.
 
 ### If something is wrong
 

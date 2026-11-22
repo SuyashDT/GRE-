@@ -356,7 +356,9 @@ def natural_key(name):
 
 def content_ids(folder):
     """Ids used by the app's own content: what a coach's files must not reuse, and what a plan can point to."""
-    ids = {"lessons": set(), "sets": set(), "tests": set(), "questions": set(), "stimuli": set()}
+    # The app makes these two sets itself, from the questions the learner last got wrong.
+    ids = {"lessons": set(), "sets": {"missed-verbal", "missed-quant"}, "tests": set(),
+           "questions": set(), "stimuli": set()}
     try:
         names = sorted(os.listdir(folder))
     except OSError as e:

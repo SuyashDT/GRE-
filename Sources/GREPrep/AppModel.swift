@@ -188,6 +188,11 @@ final class AppModel {
         progress.drillAttempts.filter { $0.setId == setId }
     }
 
+    /// The questions of one measure whose latest answer was wrong, as a set to redo. Nil when there are none.
+    func missedSet(for measure: Measure) -> DrillSet? {
+        content.flatMap { MissedQuestions.set(for: measure, progress: progress, content: $0) }
+    }
+
     func markLessonRead(_ id: String) {
         guard !progress.lessonsRead.contains(id) else { return }
         progress.lessonsRead.insert(id)

@@ -97,7 +97,7 @@ public struct CoachFolder: Sendable {
     }
 
     private func loadDrills(into content: inout CoachContent, bundled: ContentLibrary) {
-        var takenSets = Set(bundled.bundledDrillSets.map(\.id))
+        var takenSets = Set(bundled.bundledDrillSets.map(\.id)).union(MissedQuestions.reservedSetIds)
         var takenQuestions = Set(bundled.mockTests.flatMap(\.allQuestions).map(\.id))
         takenQuestions.formUnion(bundled.bundledDrillSets.flatMap(\.questions).map(\.id))
         var takenStimuli = Set(bundled.mockTests.flatMap(\.stimuli).map(\.id))

@@ -13,7 +13,7 @@ dashboard.
 | **Exam interface** | Modelled on the real test: Quit / Exit Section / Review / Mark / Back / Next, a section timer you can hide, a Review screen, the on-screen calculator (order of operations, memory, Transfer Display), and an essay editor with spell-check turned off. |
 | **Score report** | Estimated Verbal and Quant scores (130–170) with likely range, which second-section tier you reached, per-question correctness and timing, and full explanations. |
 | **Essay grading** | Claude grades the essay on the 0–6 Issue rubric through the Claude Code CLI, with a score per criterion, strengths, improvements and next steps. You can also score it yourself against the rubric. |
-| **Practice drills** | 58 untimed questions in 8 sets, one per question type, with an explanation after each answer. |
+| **Practice drills** | 58 untimed questions in 8 sets, one per question type, with an explanation after each answer. Every question you last got wrong, in a drill or a mock test, is collected into a "missed questions" set to redo, and leaves it when you get it right. |
 | **Vocabulary** | 320 high-frequency GRE words with definitions, example sentences and synonyms, scheduled with spaced repetition (SM-2). |
 | **Strategy lessons** | 15 lessons: test format, pacing, the Issue essay, every question type, the calculator and a quant review. |
 | **Study plan** | Set your test date, daily study time and a rest day, and the app lays out every day until the test: a diagnostic mock test, every lesson with its drill, daily vocabulary, weak-spot practice, a dress rehearsal a week out and a light day before. Lessons, drills, tests and vocabulary tick themselves off as you do them. |

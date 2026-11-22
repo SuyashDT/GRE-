@@ -15,6 +15,22 @@ struct DrillsView: View {
                             .foregroundStyle(.secondary)
                     }
                     CoachWarning(problems: model.coachDrillProblems)
+                    let missed = Measure.allCases.compactMap { model.missedSet(for: $0) }
+                    if !missed.isEmpty {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Your missed questions").font(.title2.weight(.semibold))
+                            Text("Every question whose latest answer was wrong. Answer one correctly and it leaves the list.")
+                                .foregroundStyle(.secondary)
+                        }
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 260), spacing: 14, alignment: .top)], spacing: 14) {
+                            ForEach(missed) { drillSet in
+                                NavigationLink(value: drillSet.id) {
+                                    MissedCard(drill: drillSet)
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                    }
                     let coachSets = model.content?.coachDrillSets ?? []
                     if !coachSets.isEmpty {
                         VStack(alignment: .leading, spacing: 4) {
@@ -38,7 +54,9 @@ struct DrillsView: View {
             }
             .navigationTitle("Practice Drills")
             .navigationDestination(for: String.self) { setId in
-                if let drillSet = model.content?.drillSet(id: setId) {
+                if let measure = MissedQuestions.measure(forSetId: setId) {
+                    MissedQuestionsView(measure: measure)
+                } else if let drillSet = model.content?.drillSet(id: setId) {
                     if drillSet.isTimed {
                         TimedSetView(drill: drillSet)
                     } else {
@@ -76,6 +94,63 @@ struct CoachWarning: View {
                 .lineLimit(2)
                 .help(problems.joined(separator: "\n"))
                 .accessibilityLabel("Coach folder problem: \(problems.joined(separator: ". "))")
+        }
+    }
+}
+
+/// The card for the missed questions of one measure.
+struct MissedCard: View {
+    let drill: DrillSet
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Image(systemName: "arrow.uturn.backward.circle")
+                    .font(.title2)
+                    .foregroundStyle(Theme.color(for: drill.measure))
+                Spacer()
+                Text("\(drill.questions.count) to redo").font(.caption).foregroundStyle(.secondary)
+            }
+            Text(drill.title).font(.headline)
+            Text(drill.categories.map(\.title).joined(separator: ", "))
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .lineLimit(3, reservesSpace: true)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 12))
+        .contentShape(Rectangle())
+    }
+}
+
+/// Runs the missed questions of one measure as a drill. The list is fixed when the page opens,
+/// so questions don't vanish from under the learner as they get them right.
+struct MissedQuestionsView: View {
+    @Environment(AppModel.self) private var model
+    let measure: Measure
+
+    @State private var drill: DrillSet?
+    @State private var loaded = false
+
+    var body: some View {
+        Group {
+            if let drill {
+                DrillSessionView(drill: drill)
+            } else if loaded {
+                ContentUnavailableView(
+                    "Nothing to redo", systemImage: "checkmark.seal",
+                    description: Text("Your latest answer to every \(measure.shortTitle) question you've met is right.")
+                )
+                .navigationTitle("Missed \(measure.shortTitle) questions")
+            } else {
+                Color.clear
+            }
+        }
+        .onAppear {
+            guard !loaded else { return }
+            drill = model.missedSet(for: measure)
+            loaded = true
         }
     }
 }
