@@ -103,20 +103,7 @@ final class TimedDrillSession: SectionReviewing, CalculatorHosting {
     }
 
     func makeAttempt(date: Date = Date()) -> DrillAttempt {
-        let results = questions.map { question in
-            let response = responses[question.id]
-            let state = question.state(of: response)
-            return QuestionResult(
-                questionId: question.id, category: question.category, topic: question.topic,
-                difficulty: question.difficulty,
-                answered: state == .answered,
-                correct: question.isCorrect(response),
-                seconds: timeSpent[question.id] ?? 0,
-                response: state == .unanswered ? nil : response
-            )
-        }
-        return DrillAttempt(setId: drill.id, date: date, results: results, timed: true,
-                            timeLimitMinutes: drill.timeLimitMinutes, secondsUsed: secondsUsed)
+        drill.makeAttempt(responses: responses, timeSpent: timeSpent, timed: true, secondsUsed: secondsUsed, date: date)
     }
 
     // MARK: Navigation

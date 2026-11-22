@@ -71,7 +71,22 @@ struct UITestOptions {
         view.layoutSubtreeIfNeeded()
         guard let bitmap = view.bitmapImageRepForCachingDisplay(in: view.bounds) else { return false }
         view.cacheDisplay(in: view.bounds, to: bitmap)
-        guard let png = bitmap.representation(using: .png, properties: [:]) else { return false }
+        // The window's own background isn't part of the content view, so paint it in behind the picture.
+        guard let flattened = NSBitmapImageRep(
+            bitmapDataPlanes: nil, pixelsWide: bitmap.pixelsWide, pixelsHigh: bitmap.pixelsHigh,
+            bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false,
+            colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0
+        ), let context = NSGraphicsContext(bitmapImageRep: flattened) else { return false }
+        let frame = NSRect(x: 0, y: 0, width: bitmap.pixelsWide, height: bitmap.pixelsHigh)
+        NSGraphicsContext.saveGraphicsState()
+        NSGraphicsContext.current = context
+        window.effectiveAppearance.performAsCurrentDrawingAppearance {
+            NSColor.textBackgroundColor.setFill()
+            frame.fill()
+        }
+        bitmap.draw(in: frame, from: .zero, operation: .sourceOver, fraction: 1, respectFlipped: false, hints: nil)
+        NSGraphicsContext.restoreGraphicsState()
+        guard let png = flattened.representation(using: .png, properties: [:]) else { return false }
         do {
             try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
             try png.write(to: url)

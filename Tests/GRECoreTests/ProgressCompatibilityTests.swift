@@ -261,6 +261,55 @@ final class ProgressCompatibilityTests: XCTestCase {
         XCTAssertNil(attempts[1]["timeLimitMinutes"])
     }
 
+    func testASittingIsRecordedWithWhatTheLearnerAnswered() {
+        func question(_ id: String, _ category: QuestionCategory, format: AnswerFormat, options: [String]? = nil,
+                      blanks: [[String]]? = nil, selectCount: Int? = nil, correct: [Int]? = nil, value: Double? = nil) -> Question {
+            Question(id: id, category: category, topic: category.measure == .verbal ? "Contrast" : "Algebra", difficulty: 3,
+                     format: format, prompt: "p", options: options, blanks: blanks, selectCount: selectCount,
+                     correct: correct, answerValue: value, answerDisplay: value.map { "\($0)" }, explanation: "An explanation.")
+        }
+        let set = DrillSet(
+            id: "coach-set", title: "Coach set", measure: .verbal, summary: "s",
+            questions: [
+                question("q1", .textCompletion, format: .blanks, blanks: [["a", "b", "c", "d", "e"]], correct: [1]),
+                question("q2", .sentenceEquivalence, format: .multiple, options: ["a", "b", "c", "d", "e", "f"], selectCount: 2, correct: [0, 2]),
+                question("q3", .sentenceEquivalence, format: .multiple, options: ["a", "b", "c", "d", "e", "f"], selectCount: 2, correct: [1, 5]),
+                question("q4", .textCompletion, format: .blanks, blanks: [["a", "b", "c", "d", "e"]], correct: [4]),
+            ],
+            timeLimitMinutes: 6
+        )
+        let responses: [String: Response] = [
+            "q1": Response(blankChoices: [1]),          // right
+            "q2": Response(selected: [0, 3]),           // wrong: one of the two is a trap
+            "q3": Response(selected: [1]),              // half-finished when time ran out
+        ]
+        let when = Date(timeIntervalSince1970: 1_795_000_000)
+
+        // A timed set records every question, like a section of a test.
+        let timed = set.makeAttempt(responses: responses, timeSpent: ["q1": 50, "q2": 95, "q3": 120], timed: true, secondsUsed: 360, date: when)
+        XCTAssertEqual(timed.setId, "coach-set")
+        XCTAssertEqual(timed.date, when)
+        XCTAssertTrue(timed.isTimed)
+        XCTAssertEqual(timed.timeLimitMinutes, 6)
+        XCTAssertEqual(timed.secondsUsed, 360)
+        XCTAssertEqual(timed.results.map(\.questionId), ["q1", "q2", "q3", "q4"])
+        XCTAssertEqual(timed.results.map(\.correct), [true, false, false, false])
+        XCTAssertEqual(timed.results.map(\.answered), [true, true, false, false])
+        XCTAssertEqual(timed.results.map(\.seconds), [50, 95, 120, 0])
+        XCTAssertEqual(timed.results[0].response?.blankChoices, [1])
+        XCTAssertEqual(timed.results[1].response?.selected, [0, 3], "the wrong pick is kept for the coach")
+        XCTAssertEqual(timed.results[2].response?.selected, [1], "so is a half-finished answer")
+        XCTAssertNil(timed.results[3].response)
+        XCTAssertEqual(timed.correctCount, 1)
+
+        // An untimed drill records only the questions that were checked or skipped, and no clock.
+        let untimed = set.makeAttempt(responses: responses, timeSpent: ["q1": 50], including: ["q1", "q4"], timed: false, secondsUsed: 99, date: when)
+        XCTAssertEqual(untimed.results.map(\.questionId), ["q1", "q4"])
+        XCTAssertEqual(untimed.timed, false)
+        XCTAssertNil(untimed.timeLimitMinutes)
+        XCTAssertNil(untimed.secondsUsed)
+    }
+
     /// The analytics the dashboard uses count coach-set results like any other drill result.
     func testDashboardCountsTimedAttempts() {
         var progress = ProgressData()

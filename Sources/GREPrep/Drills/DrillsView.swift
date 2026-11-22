@@ -240,20 +240,10 @@ struct DrillSessionView: View {
 
     private func recordIfNeeded() {
         guard !recorded else { return }
-        let results = drill.questions.filter { revealed.contains($0.id) }.map { question in
-            let state = question.state(of: responses[question.id])
-            return QuestionResult(
-                questionId: question.id, category: question.category, topic: question.topic,
-                difficulty: question.difficulty,
-                answered: state == .answered,
-                correct: question.isCorrect(responses[question.id]),
-                seconds: timeSpent[question.id] ?? 0,
-                response: state == .unanswered ? nil : responses[question.id]
-            )
-        }
-        guard !results.isEmpty else { return }
+        let attempt = drill.makeAttempt(responses: responses, timeSpent: timeSpent, including: revealed, timed: false)
+        guard !attempt.results.isEmpty else { return }
         recorded = true
-        model.recordDrill(DrillAttempt(setId: drill.id, results: results, timed: false))
+        model.recordDrill(attempt)
     }
 
     private var summary: some View {
