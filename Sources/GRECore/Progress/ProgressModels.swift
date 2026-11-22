@@ -8,9 +8,12 @@ public struct QuestionResult: Codable, Hashable, Sendable {
     public let answered: Bool
     public let correct: Bool
     public let seconds: Double
+    /// What the learner answered. Saved for drills, so a coach can see which wrong answer was picked.
+    /// Mock tests keep their answers in `MockAttempt.responses`, and files from older versions have none.
+    public let response: Response?
 
     public init(questionId: String, category: QuestionCategory, topic: String, difficulty: Int,
-                answered: Bool, correct: Bool, seconds: Double) {
+                answered: Bool, correct: Bool, seconds: Double, response: Response? = nil) {
         self.questionId = questionId
         self.category = category
         self.topic = topic
@@ -18,6 +21,7 @@ public struct QuestionResult: Codable, Hashable, Sendable {
         self.answered = answered
         self.correct = correct
         self.seconds = seconds
+        self.response = response
     }
 }
 
@@ -70,15 +74,26 @@ public struct DrillAttempt: Codable, Hashable, Sendable, Identifiable {
     public let setId: String
     public let date: Date
     public let results: [QuestionResult]
+    /// Whether the set ran against the clock. Files from older versions don't say (all their drills were untimed).
+    public let timed: Bool?
+    /// The time limit of a timed set.
+    public let timeLimitMinutes: Int?
+    /// Seconds on the clock when a timed set ended.
+    public let secondsUsed: Double?
 
-    public init(id: UUID = UUID(), setId: String, date: Date = Date(), results: [QuestionResult]) {
+    public init(id: UUID = UUID(), setId: String, date: Date = Date(), results: [QuestionResult],
+                timed: Bool? = nil, timeLimitMinutes: Int? = nil, secondsUsed: Double? = nil) {
         self.id = id
         self.setId = setId
         self.date = date
         self.results = results
+        self.timed = timed
+        self.timeLimitMinutes = timeLimitMinutes
+        self.secondsUsed = secondsUsed
     }
 
     public var correctCount: Int { results.filter(\.correct).count }
+    public var isTimed: Bool { timed == true }
 }
 
 /// Spaced-repetition state of one vocabulary card.

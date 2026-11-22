@@ -39,10 +39,16 @@ enum SidebarItem: String, CaseIterable, Identifiable, Hashable {
 @MainActor
 @Observable
 final class AppModel {
+    /// The bundled content plus any drill sets the coach has put in the Coach folder.
     private(set) var content: ContentLibrary?
     private(set) var loadError: String?
     private(set) var progress = ProgressData()
+    /// The plan the app shows: the coach's (`Coach/plan.json`) when there is one, else the generated one.
     private(set) var studyPlan: StudyPlan?
+    /// One line per problem with the coach's plan, shown on the Study Plan screen.
+    private(set) var coachPlanProblems: [String] = []
+    /// One line per coach drills file that was left out, shown on the Practice Drills screen.
+    private(set) var coachDrillProblems: [String] = []
     var saveError: String?
 
     var selection: SidebarItem? = .dashboard
@@ -52,6 +58,8 @@ final class AppModel {
 
     /// The mock test in progress; while set, the window shows only the exam.
     private(set) var exam: ExamSession?
+    /// The timed drill set in progress; while set, the window shows only that set.
+    private(set) var timedDrill: TimedDrillSession?
 
     // MARK: Settings
 
@@ -78,6 +86,10 @@ final class AppModel {
     @ObservationIgnored private let store = ProgressStore.defaultStore()
     @ObservationIgnored private let defaults = UserDefaults.standard
     @ObservationIgnored private var started = false
+    @ObservationIgnored private let coachFolder = CoachFolder.standard()
+    @ObservationIgnored private var bundledContent: ContentLibrary?
+    @ObservationIgnored private var coachContent = CoachContent.empty
+    @ObservationIgnored private var coachSignature: String?
 
     private enum Keys {
         static let claudePath = "claudeCodePath"
@@ -96,7 +108,9 @@ final class AppModel {
         guard !started else { return }
         started = true
         do {
-            content = try ContentLibrary.loadBundled()
+            let bundled = try ContentLibrary.loadBundled()
+            bundledContent = bundled
+            content = bundled
         } catch {
             loadError = error.localizedDescription
         }
@@ -107,8 +121,28 @@ final class AppModel {
             saveError = "Your saved progress couldn't be read, so a fresh file was started."
                 + (backup.map { " The old file was kept at \($0.path)." } ?? "")
         }
+        reloadCoach(force: true)
+        UITestOptions.current.apply(to: self)
+    }
+
+    // MARK: Coach folder
+
+    /// Reads the Coach folder again if anything in it changed. Called at launch and whenever the app
+    /// becomes active, so a plan or set the coach wrote while the app was open shows up without a relaunch.
+    /// A running test or timed set is left alone; the folder is read once it ends.
+    func reloadCoach(force: Bool = false) {
+        guard let bundledContent, exam == nil, timedDrill == nil else { return }
+        let signature = coachFolder.signature()
+        guard force || signature != coachSignature else { return }
+        coachSignature = signature
+        coachContent = coachFolder.load(bundled: bundledContent)
+        content = bundledContent.adding(coachContent)
+        coachDrillProblems = coachContent.drillProblems
         rebuildPlan()
     }
+
+    /// Where the coach's files go, for the Settings screen.
+    var coachFolderPath: String { coachFolder.url.path }
 
     // MARK: Progress
 
@@ -205,19 +239,40 @@ final class AppModel {
         persist()
     }
 
+    /// Deletes the generated plan and its ticks. Ticks on a coach's plan are kept.
     func deleteStudyPlan() {
+        if let generated = generatedPlan() {
+            progress.planChecked.subtract(generated.days.flatMap(\.tasks).map(\.id))
+        }
         progress.studyPlan = nil
-        progress.planChecked = []
         rebuildPlan()
         persist()
     }
 
+    /// The app's own plan. It is built from the bundled content only, so that a coach
+    /// adding or removing a drill set never reshuffles it.
+    private func generatedPlan() -> StudyPlan? {
+        guard let settings = progress.studyPlan, let bundledContent else { return nil }
+        return StudyPlan.make(settings: settings, content: bundledContent, newCardsPerDay: progress.newCardsPerDay)
+    }
+
     private func rebuildPlan() {
-        guard let settings = progress.studyPlan, let content else {
-            studyPlan = nil
-            return
+        var problems = coachContent.planProblems
+        defer { coachPlanProblems = problems }
+        if let file = coachContent.planFile, let content {
+            let resolved = CoachPlan.resolve(file, content: content, newCardsPerDay: progress.newCardsPerDay)
+            problems += resolved.problems
+            if let plan = resolved.plan {
+                studyPlan = plan
+                return
+            }
         }
-        studyPlan = StudyPlan.make(settings: settings, content: content, newCardsPerDay: progress.newCardsPerDay)
+        studyPlan = generatedPlan()
+    }
+
+    /// The later day a coach's plan saves this mock test for, if starting it now would be early.
+    func plannedLaterDay(forMockTest id: String, now: Date = Date()) -> Date? {
+        CoachPlan.upcomingDay(forMockTest: id, in: studyPlan, now: now)
     }
 
     func isDone(_ task: PlanTask, on day: PlanDay) -> Bool {
@@ -248,7 +303,7 @@ final class AppModel {
     /// or the plan's pick until enough questions have been answered.
     func weakSpotDrill(fallback: String) -> (set: DrillSet, weakest: CategoryStat?)? {
         if let weakest = analytics.weakestCategories(limit: 1).first,
-           let set = content?.drills.sets.first(where: { $0.category == weakest.category }) {
+           let set = content?.bundledDrillSets.first(where: { $0.category == weakest.category }) {
             return (set, weakest)
         }
         return content?.drillSet(id: fallback).map { ($0, nil) }
@@ -257,7 +312,7 @@ final class AppModel {
     /// Whether a task has a place in the app to go to.
     func canOpen(_ task: PlanTask) -> Bool {
         switch task.kind {
-        case .rest, .examDay: return false
+        case .note, .rest, .examDay: return false
         case .reviewMock: return !progress.mockAttempts.isEmpty
         default: return true
         }
@@ -288,7 +343,7 @@ final class AppModel {
         case .lightReview:
             selection = .lessons
             lessonPath = ["pacing"]
-        case .rest, .examDay:
+        case .note, .rest, .examDay:
             break
         }
     }
@@ -306,6 +361,7 @@ final class AppModel {
     func quitExam() {
         exam?.stop()
         exam = nil
+        reloadCoach()
     }
 
     private func finishExam(_ attempt: MockAttempt) {
@@ -315,9 +371,38 @@ final class AppModel {
         exam = nil
         selection = .mockTests
         mockPath = [attempt.id]
+        reloadCoach()
         if autoGradeEssays, let essay = attempt.essay, !essay.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             Task { await gradeEssay(attemptId: attempt.id) }
         }
+    }
+
+    // MARK: Timed drill sets
+
+    /// Starts a timed set. The clock starts at once and the window shows only the set until it ends.
+    func startTimedDrill(_ drill: DrillSet) {
+        guard drill.isTimed, exam == nil, timedDrill == nil else { return }
+        let session = TimedDrillSession(drill: drill, stimuli: content?.drills.stimuli ?? [])
+        session.onFinish = { [weak self] attempt in
+            self?.finishTimedDrill(attempt)
+        }
+        timedDrill = session
+        session.begin()
+    }
+
+    /// Stops the set without recording anything.
+    func quitTimedDrill() {
+        timedDrill?.stop()
+        timedDrill = nil
+        reloadCoach()
+    }
+
+    private func finishTimedDrill(_ attempt: DrillAttempt) {
+        recordDrill(attempt)
+        timedDrill = nil
+        selection = .drills
+        drillPath = [attempt.setId]
+        reloadCoach()
     }
 
     func setSelfScore(_ score: Double?, attemptId: UUID) {

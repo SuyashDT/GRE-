@@ -28,11 +28,13 @@ public struct PlanTask: Hashable, Sendable, Identifiable {
         case reviewMock
         case essayOutline
         case lightReview
+        /// Something outside the app (a class, an official practice test), from a coach's plan. Ticked by hand.
+        case note
         case rest
         case examDay
     }
 
-    /// `yyyy-MM-dd/<task>`, unique across the plan.
+    /// Unique across the plan: `yyyy-MM-dd/<task>` in a generated plan, the coach's own id in a coach plan.
     public let id: String
     public let kind: Kind
     public let title: String
@@ -40,12 +42,25 @@ public struct PlanTask: Hashable, Sendable, Identifiable {
     public let minutes: Int
     /// Work done in the app at or after this moment completes the task.
     public let countsFrom: Date
+    /// A coach's note that should stay in the catch-up list until it is ticked.
+    public let staysUntilDone: Bool
+
+    public init(id: String, kind: Kind, title: String, detail: String, minutes: Int, countsFrom: Date,
+                staysUntilDone: Bool = false) {
+        self.id = id
+        self.kind = kind
+        self.title = title
+        self.detail = detail
+        self.minutes = minutes
+        self.countsFrom = countsFrom
+        self.staysUntilDone = staysUntilDone
+    }
 
     /// Whether the app ticks the task off by itself when the work is done in the app.
     public var isTrackedInApp: Bool {
         switch kind {
         case .lesson, .drill, .weakSpot, .vocabulary, .mockTest: return true
-        case .reviewMock, .essayOutline, .lightReview, .rest, .examDay: return false
+        case .reviewMock, .essayOutline, .lightReview, .note, .rest, .examDay: return false
         }
     }
 
@@ -53,6 +68,7 @@ public struct PlanTask: Hashable, Sendable, Identifiable {
     public var carriesOver: Bool {
         switch kind {
         case .lesson, .drill, .mockTest, .reviewMock: return true
+        case .note: return staysUntilDone
         default: return false
         }
     }
@@ -79,6 +95,16 @@ public struct PlanDay: Hashable, Sendable, Identifiable {
     public let date: Date
     public let phase: Phase
     public let tasks: [PlanTask]
+    /// The coach's headline for the day, e.g. "Baseline". Generated plans have none.
+    public let focus: String?
+
+    public init(id: String, date: Date, phase: Phase, tasks: [PlanTask], focus: String? = nil) {
+        self.id = id
+        self.date = date
+        self.phase = phase
+        self.tasks = tasks
+        self.focus = focus
+    }
 
     public var minutes: Int { tasks.map(\.minutes).reduce(0, +) }
     public var isRestDay: Bool { tasks.count == 1 && tasks[0].kind == .rest }
@@ -95,6 +121,17 @@ public struct StudyPlan: Hashable, Sendable {
     public let days: [PlanDay]
     /// Set when the lessons and drills don't fit in `settings.minutesPerDay`: about how many minutes a day they need.
     public let minutesNeeded: Int?
+    /// Set when the plan was written by a coach (`Coach/plan.json`) rather than generated. See `CoachPlan`.
+    public let coach: CoachPlanInfo?
+
+    init(settings: StudyPlanSettings, days: [PlanDay], minutesNeeded: Int?, coach: CoachPlanInfo? = nil) {
+        self.settings = settings
+        self.days = days
+        self.minutesNeeded = minutesNeeded
+        self.coach = coach
+    }
+
+    public var isCoachPlan: Bool { coach != nil }
 
     public static let minutesOptions = [30, 45, 60, 90, 120, 180]
     static let vocabularyMinutes = 15
@@ -107,7 +144,8 @@ public struct StudyPlan: Hashable, Sendable {
     ]
     static let overviewLessonId = "gre-overview"
 
-    public var examDate: Date { days.last?.date ?? settings.examDate }
+    /// A generated plan ends on the test day. A coach's plan says when the test is.
+    public var examDate: Date { isCoachPlan ? settings.examDate : (days.last?.date ?? settings.examDate) }
 
     public func day(for date: Date, calendar: Calendar = .current) -> PlanDay? {
         let key = StudyCalendar.dayKey(date, calendar: calendar)
@@ -335,7 +373,7 @@ public struct StudyPlan: Hashable, Sendable {
         return StudyPlan(settings: settings, days: days, minutesNeeded: minutesNeeded)
     }
 
-    private static func drillMinutes(_ set: DrillSet) -> Int {
+    static func drillMinutes(_ set: DrillSet) -> Int {
         max(10, (set.questions.count * 5 + 1) / 2)
     }
 
@@ -360,6 +398,7 @@ public struct StudyPlan: Hashable, Sendable {
         case .reviewMock: return "review-mock"
         case .essayOutline: return "essay-outline"
         case .lightReview: return "light-review"
+        case .note: return "note"
         case .rest: return "rest"
         case .examDay: return "exam"
         }
@@ -393,7 +432,7 @@ public struct StudyPlan: Hashable, Sendable {
             return progress.cards.values.contains { onDay($0.lastReviewed) }
         case let .mockTest(id):
             return progress.mockAttempts.contains { $0.testId == id && $0.completed && $0.finishedAt >= task.countsFrom }
-        case .reviewMock, .essayOutline, .lightReview, .rest, .examDay:
+        case .reviewMock, .essayOutline, .lightReview, .note, .rest, .examDay:
             return false
         }
     }

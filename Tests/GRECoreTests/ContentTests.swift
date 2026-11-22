@@ -80,11 +80,17 @@ final class ContentTests: XCTestCase {
 
     func testDrillsCoverEveryCategory() throws {
         let library = try loadLibrary()
-        let categories = Set(library.drills.sets.map(\.category))
+        let categories = Set(library.drills.sets.compactMap(\.category))
         XCTAssertEqual(categories, Set(QuestionCategory.allCases))
         for set in library.drills.sets {
-            XCTAssertTrue(set.questions.allSatisfy { $0.category == set.category }, set.id)
+            // Bundled sets are one question type each and untimed; mixed and timed sets come from a coach.
+            let category = try XCTUnwrap(set.category, set.id)
+            XCTAssertTrue(set.questions.allSatisfy { $0.category == category }, set.id)
+            XCTAssertFalse(set.isTimed, set.id)
+            XCTAssertNil(set.note, set.id)
         }
+        XCTAssertEqual(library.coachSetIds, [])
+        XCTAssertEqual(library.bundledDrillSets, library.drills.sets)
     }
 
     func testVocabularyAndLessons() throws {

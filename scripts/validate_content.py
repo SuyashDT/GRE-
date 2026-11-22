@@ -1,16 +1,31 @@
 #!/usr/bin/env python3
 """Validate GRE Prep content JSON files.
 
-Usage: python3 scripts/validate_content.py FILE [FILE ...]
+Usage:
+  python3 scripts/validate_content.py FILE [FILE ...]
+      The app's own content files. The kind is detected from the top-level keys:
+        "sections" -> mock test (or a mock-test part)
+        "sets"     -> drill library
+        "words"    -> vocabulary list
+        "lessons"  -> strategy lessons
 
-The file kind is detected from its top-level keys:
-  "sections" -> mock test (or a mock-test part)
-  "sets"     -> drill library
-  "words"    -> vocabulary list
-  "lessons"  -> strategy lessons
+  python3 scripts/validate_content.py --coach DIR
+      A coach folder (docs/COACH.md): its plan.json and drills-*.json, checked the way
+      the app reads them, including ids that clash with the app's own content.
+
+  python3 scripts/validate_content.py --plan FILE [--coach DIR]
+      One coach plan. Its refs are checked against the app's content and, when --coach
+      is given, the drill sets in that folder.
+
+  --content DIR   where the app's own content is (default: Sources/GRECore/Resources/Content)
+
 Exits non-zero and prints every problem found.
 """
+import argparse
+import datetime
 import json
+import os
+import re
 import sys
 
 VERBAL_CATEGORIES = {"textCompletion", "sentenceEquivalence", "readingComprehension"}
@@ -260,28 +275,236 @@ def validate_mock(data, where):
     return len(allq)
 
 
-def validate_drills(data, where):
+def validate_drills(data, where, coach=False):
+    """A drill library. The app's own sets are one question type each, untimed, with at
+    least 4 questions. A coach's sets (coach=True) may mix the question types of their
+    measure, may be timed, may carry a note, and need only one question."""
     stimuli = collect_stimuli(data, where)
     allq = []
-    for s in data["sets"]:
+    sets = data.get("sets")
+    if not isinstance(sets, list) or not sets:
+        err(where, "needs a non-empty 'sets' list")
+        return 0
+    seen_sets = set()
+    for s in sets:
         sw = f"{where} set {s.get('id')}"
         for k in ("id", "title", "summary"):
             if not isinstance(s.get(k), str) or not s[k].strip():
                 err(sw, f"missing {k}")
+        if s.get("id") in seen_sets:
+            err(sw, "duplicate set id")
+        seen_sets.add(s.get("id"))
         if s.get("measure") not in MEASURES:
             err(sw, "measure must be verbal or quant")
-        if s.get("category") not in CATEGORIES:
-            err(sw, f"bad category {s.get('category')!r}")
+        category = s.get("category")
+        if category is None and coach:
+            pass  # a mixed set
+        elif category not in CATEGORIES:
+            err(sw, f"bad category {category!r}")
+        limit = s.get("timeLimitMinutes")
+        note = s.get("note")
+        if coach:
+            if limit is not None and (not isinstance(limit, int) or isinstance(limit, bool) or limit < 1):
+                err(sw, "timeLimitMinutes must be a whole number of minutes, 1 or more")
+            if note is not None and (not isinstance(note, str) or not note.strip()):
+                err(sw, "note must be a non-empty string")
+        elif limit is not None or note is not None:
+            err(sw, "timeLimitMinutes and note are only for a coach's sets")
         qs = s.get("questions", [])
-        if len(qs) < 4:
-            err(sw, "a drill set needs at least 4 questions")
+        if not isinstance(qs, list):
+            err(sw, "questions must be a list")
+            qs = []
+        minimum = 1 if coach else 4
+        if len(qs) < minimum:
+            err(sw, f"a drill set needs at least {minimum} question{'s' if minimum > 1 else ''}")
         for q in qs:
             check_question(q, sw, stimuli, s.get("measure"))
-            if q.get("category") != s.get("category"):
+            if category is not None and q.get("category") != category:
                 err(sw, f"question {q.get('id')} category differs from set category")
         allq.extend(qs)
     check_ids(allq, where)
+    used = {q.get("stimulusId") for q in allq}
+    if coach:
+        for sid in stimuli:
+            if sid not in used:
+                err(where, f"stimulus {sid} is never used")
     return len(allq)
+
+
+# ---------------------------------------------------------------------------
+# Coach folder: plan.json and drills-*.json (docs/COACH.md)
+
+PLAN_KINDS = ("lesson", "drill", "mockTest", "vocabulary", "note", "rest", "exam")
+PLAN_KINDS_WITH_REF = {"lesson": "lessons", "drill": "sets", "mockTest": "tests"}
+DEFAULT_CONTENT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
+                               "Sources", "GRECore", "Resources", "Content")
+
+
+def load_json(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:  # noqa: BLE001
+        err(path, f"cannot parse JSON: {e}")
+        return None
+
+
+def natural_key(name):
+    """Sorts file names the way the app does: drills-2 before drills-10."""
+    return [int(part) if part.isdigit() else part.lower() for part in re.split(r"(\d+)", name)]
+
+
+def content_ids(folder):
+    """Ids used by the app's own content: what a coach's files must not reuse, and what a plan can point to."""
+    ids = {"lessons": set(), "sets": set(), "tests": set(), "questions": set(), "stimuli": set()}
+    try:
+        names = sorted(os.listdir(folder))
+    except OSError as e:
+        err(folder, f"cannot read the content folder: {e}")
+        return ids
+    for name in names:
+        if not name.endswith(".json"):
+            continue
+        with open(os.path.join(folder, name), encoding="utf-8") as f:
+            data = json.load(f)
+        ids["stimuli"].update(s.get("id") for s in data.get("stimuli", []))
+        if "sections" in data:
+            ids["tests"].add(data.get("id"))
+            for section in data["sections"]:
+                ids["questions"].update(q.get("id") for q in section.get("questions", []))
+        elif "sets" in data:
+            for s in data["sets"]:
+                ids["sets"].add(s.get("id"))
+                ids["questions"].update(q.get("id") for q in s.get("questions", []))
+        elif "lessons" in data:
+            ids["lessons"].update(l.get("id") for l in data["lessons"])
+    return ids
+
+
+def validate_coach_drills(folder, ids):
+    """Checks every drills-*.json in a coach folder, oldest name first as the app does, and
+    adds the sets it accepts to `ids`. A file with any problem is left out by the app."""
+    names = [n for n in os.listdir(folder) if n.startswith("drills-") and n.endswith(".json")]
+    for name in sorted(names, key=natural_key):
+        path = os.path.join(folder, name)
+        data = load_json(path)
+        if data is None:
+            continue
+        if not isinstance(data, dict) or "sets" not in data:
+            err(path, "needs a 'sets' list")
+            continue
+        before = len(errors)
+        n = validate_drills(data, path, coach=True)
+        sets = [s for s in data.get("sets", []) if isinstance(s, dict)]
+        questions = [q for s in sets for q in s.get("questions", []) if isinstance(q, dict)]
+        for s in sets:
+            if s.get("id") in ids["sets"]:
+                err(path, f"set id {s.get('id')!r} is already used")
+        for q in questions:
+            if q.get("id") in ids["questions"]:
+                err(path, f"question id {q.get('id')!r} is already used")
+        for s in data.get("stimuli", []):
+            if s.get("id") in ids["stimuli"]:
+                err(path, f"stimulus id {s.get('id')!r} is already used")
+        if len(errors) > before:
+            continue  # the app leaves the whole file out
+        ids["sets"].update(s.get("id") for s in sets)
+        ids["questions"].update(q.get("id") for q in questions)
+        ids["stimuli"].update(s.get("id") for s in data.get("stimuli", []))
+        timed = sum(1 for s in sets if s.get("timeLimitMinutes"))
+        print(f"{path}: coach drills, {len(sets)} set{'s' if len(sets) != 1 else ''} "
+              f"({timed} timed), {n} questions")
+
+
+def parse_day(text):
+    if not isinstance(text, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
+        return None
+    try:
+        return datetime.date.fromisoformat(text)
+    except ValueError:
+        return None
+
+
+def validate_plan(path, ids):
+    data = load_json(path)
+    if data is None:
+        return
+    if not isinstance(data, dict):
+        err(path, "a plan must be a JSON object")
+        return
+    if data.get("version", 1) != 1:
+        err(path, f"version must be 1, got {data.get('version')!r}")
+    for key in ("title", "note"):
+        if key in data and (not isinstance(data[key], str) or not data[key].strip()):
+            err(path, f"{key} must be a non-empty string")
+    for key in ("examDate", "updated"):
+        if key in data and parse_day(data[key]) is None:
+            err(path, f"{key} must be a date like 2026-12-11, got {data[key]!r}")
+    exam_date = parse_day(data.get("examDate"))
+    days = data.get("days")
+    if not isinstance(days, list) or not days:
+        err(path, "needs a non-empty 'days' list")
+        return
+    seen_days, seen_tasks, task_count = set(), set(), 0
+    for i, day in enumerate(days):
+        if not isinstance(day, dict):
+            err(path, f"day #{i + 1} must be an object")
+            continue
+        date = parse_day(day.get("date"))
+        where = f"{path} {day.get('date')}"
+        if date is None:
+            err(path, f"day #{i + 1}: date must be like 2026-11-22, got {day.get('date')!r}")
+        elif date in seen_days:
+            err(where, "this day appears twice")
+        seen_days.add(date)
+        if "focus" in day and (not isinstance(day["focus"], str) or not day["focus"].strip()):
+            err(where, "focus must be a non-empty string")
+        tasks = day.get("tasks")
+        if not isinstance(tasks, list) or not tasks:
+            err(where, "needs a non-empty 'tasks' list")
+            continue
+        for j, task in enumerate(tasks):
+            if not isinstance(task, dict):
+                err(where, f"task #{j + 1} must be an object")
+                continue
+            tid = task.get("id")
+            tw = f"{where} [{tid}]"
+            task_count += 1
+            if not isinstance(tid, str) or not tid.strip():
+                err(where, f"task #{j + 1} needs an id")
+            elif tid in seen_tasks:
+                err(tw, "task id is used twice in the plan")
+            seen_tasks.add(tid)
+            kind = task.get("kind")
+            if kind not in PLAN_KINDS:
+                err(tw, f"kind must be one of {', '.join(PLAN_KINDS)}, got {kind!r}")
+                continue
+            ref = task.get("ref")
+            if kind in PLAN_KINDS_WITH_REF:
+                if not isinstance(ref, str) or not ref:
+                    err(tw, f"a {kind} task needs a ref")
+                elif ref not in ids[PLAN_KINDS_WITH_REF[kind]]:
+                    err(tw, f"ref {ref!r} is not a {kind} in the app's content"
+                            + (" or the coach folder" if kind == "drill" else ""))
+            elif ref is not None:
+                err(tw, f"a {kind} task takes no ref")
+            for key in ("title", "detail"):
+                if key in task and (not isinstance(task[key], str) or not task[key].strip()):
+                    err(tw, f"{key} must be a non-empty string")
+            if kind == "note" and "title" not in task:
+                err(tw, "a note needs a title")
+            minutes = task.get("minutes")
+            if minutes is not None and (not isinstance(minutes, int) or isinstance(minutes, bool) or minutes < 0):
+                err(tw, "minutes must be a whole number, 0 or more")
+            if "carryOver" in task:
+                if not isinstance(task["carryOver"], bool):
+                    err(tw, "carryOver must be true or false")
+                elif kind != "note":
+                    err(tw, "carryOver is only for notes; lessons, drills and mock tests carry over anyway")
+            if kind == "exam" and exam_date and date and date != exam_date:
+                err(tw, f"the exam task is on {date}, but examDate is {exam_date}")
+    print(f"{path}: coach plan, {len(seen_days)} days, {task_count} tasks"
+          + (f", test on {exam_date}" if exam_date else ""))
 
 
 def validate_words(data, where):
@@ -331,8 +554,32 @@ def validate_lessons(data, where):
     return len(data["lessons"])
 
 
-def main(paths):
-    for path in paths:
+def main(argv):
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("files", nargs="*")
+    parser.add_argument("--coach")
+    parser.add_argument("--plan")
+    parser.add_argument("--content", default=DEFAULT_CONTENT)
+    parser.add_argument("-h", "--help", action="store_true")
+    args = parser.parse_args(argv)
+    if args.help or not (args.files or args.coach or args.plan):
+        print(__doc__)
+        sys.exit(0 if args.help else 2)
+
+    if args.coach or args.plan:
+        ids = content_ids(args.content)
+        if args.coach:
+            if not os.path.isdir(args.coach):
+                err(args.coach, "is not a folder")
+            else:
+                validate_coach_drills(args.coach, ids)
+                plan = os.path.join(args.coach, "plan.json")
+                if os.path.exists(plan):
+                    validate_plan(plan, ids)
+        if args.plan:
+            validate_plan(args.plan, ids)
+
+    for path in args.files:
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
@@ -362,7 +609,4 @@ def main(paths):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(__doc__)
-        sys.exit(2)
     main(sys.argv[1:])

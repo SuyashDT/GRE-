@@ -8,12 +8,10 @@ public struct ProgressStore: Sendable {
         self.fileURL = fileURL
     }
 
-    /// `~/Library/Application Support/GRE Prep/progress.json` on macOS.
+    /// `progress.json` in the data folder: `~/Library/Application Support/GRE Prep` on macOS,
+    /// or the folder named by `GREPREP_DATA_DIR`.
     public static func defaultStore() -> ProgressStore {
-        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
-            ?? URL(fileURLWithPath: NSTemporaryDirectory())
-        return ProgressStore(fileURL: base.appendingPathComponent("GRE Prep", isDirectory: true)
-            .appendingPathComponent("progress.json"))
+        ProgressStore(fileURL: DataFolder.url().appendingPathComponent("progress.json"))
     }
 
     public func load() throws -> ProgressData {

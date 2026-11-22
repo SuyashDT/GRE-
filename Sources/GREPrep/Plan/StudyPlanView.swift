@@ -38,6 +38,7 @@ struct StudyPlanView: View {
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
+                CoachWarning(problems: model.coachPlanProblems)
                 PlanSettingsForm(settings: nil, buttonTitle: "Create Plan")
                     .frame(maxWidth: 560)
             }
@@ -73,9 +74,16 @@ struct StudyPlanView: View {
                             .foregroundStyle(.secondary)
                     }
                     Spacer()
-                    Button("Edit Plan…") { editing = true }
-                    Button("Delete…", role: .destructive) { confirmDelete = true }
+                    if !plan.isCoachPlan {
+                        Button("Edit Plan…") { editing = true }
+                        Button("Delete…", role: .destructive) { confirmDelete = true }
+                    }
                 }
+
+                if let coach = plan.coach {
+                    coachBanner(coach)
+                }
+                CoachWarning(problems: model.coachPlanProblems)
 
                 if let needed = plan.minutesNeeded {
                     Label("All the lessons and drills need about \(needed) minutes a day to fit before your test. Days are fuller than you asked for; allow more time a day or pick a later date if you can.",
@@ -85,16 +93,28 @@ struct StudyPlanView: View {
                 }
 
                 if daysLeft < 0 {
-                    ContentUnavailableView {
-                        Label("Your test date has passed", systemImage: "flag.checkered")
-                    } description: {
-                        Text("If you're taking the test again, set a new date.")
-                    } actions: {
-                        Button("Set a New Date…") { editing = true }
+                    if plan.isCoachPlan {
+                        ContentUnavailableView {
+                            Label("Your test date has passed", systemImage: "flag.checkered")
+                        } description: {
+                            Text("This plan came from your coach. Ask them for a new one if you're taking the test again.")
+                        }
+                    } else {
+                        ContentUnavailableView {
+                            Label("Your test date has passed", systemImage: "flag.checkered")
+                        } description: {
+                            Text("If you're taking the test again, set a new date.")
+                        } actions: {
+                            Button("Set a New Date…") { editing = true }
+                        }
                     }
                 } else {
                     if let todayPlan {
                         todayCard(todayPlan)
+                    } else if plan.isCoachPlan {
+                        card("Today", subtitle: "Your coach's plan has nothing for today.") {
+                            EmptyView()
+                        }
                     }
                     if !dueSoFar.isEmpty {
                         HStack(spacing: 12) {
@@ -126,7 +146,7 @@ struct StudyPlanView: View {
                         }
                     }
                     ForEach(weeks(shownDays, plan: plan), id: \.number) { week in
-                        weekSection(week, today: today)
+                        weekSection(week, today: today, showsPhases: !plan.isCoachPlan)
                     }
                 }
             }
@@ -146,13 +166,38 @@ struct StudyPlanView: View {
         }
     }
 
+    /// Says whose plan this is, when the coach last changed it, and passes on the coach's note.
+    private func coachBanner(_ coach: CoachPlanInfo) -> some View {
+        var label = "From your coach"
+        if let title = coach.title { label += ": \(title)" }
+        if let updated = coach.updated {
+            label += " · updated \(updated.formatted(date: .abbreviated, time: .omitted))"
+        }
+        return VStack(alignment: .leading, spacing: 8) {
+            Label(label, systemImage: "person.crop.circle.badge.checkmark")
+                .font(.headline)
+            if let note = coach.note {
+                Text(note).fixedSize(horizontal: false, vertical: true)
+            }
+            Text("This plan replaces the app's own. Lessons, drills, tests and vocabulary tick themselves off when you do them here; tick the other tasks yourself.")
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: 12))
+    }
+
     private func todayCard(_ day: PlanDay) -> some View {
         let open = day.tasks.filter { !model.isDone($0, on: day) && $0.kind != .rest }
         let subtitle: String
         if day.isRestDay {
-            subtitle = "Rest day"
+            subtitle = day.focus ?? "Rest day"
         } else if open.isEmpty {
             subtitle = "All done for today. Nice work!"
+        } else if let focus = day.focus {
+            subtitle = day.minutes > 0 ? "\(focus) · about \(day.minutes) min" : focus
         } else {
             subtitle = "\(day.phase.title) · about \(day.minutes) min"
         }
@@ -177,8 +222,8 @@ struct StudyPlanView: View {
         return grouped.keys.sorted().map { Week(number: $0 + 1, days: grouped[$0] ?? []) }
     }
 
-    private func weekSection(_ week: Week, today: Date) -> some View {
-        let phases = week.days.map(\.phase).reduce(into: [PlanDay.Phase]()) { if !$0.contains($1) { $0.append($1) } }
+    private func weekSection(_ week: Week, today: Date, showsPhases: Bool) -> some View {
+        let phases = !showsPhases ? [] : week.days.map(\.phase).reduce(into: [PlanDay.Phase]()) { if !$0.contains($1) { $0.append($1) } }
         let range = [week.days.first, week.days.last].compactMap { $0?.date.formatted(.dateTime.month(.abbreviated).day()) }
         return VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 8) {
@@ -214,6 +259,11 @@ struct StudyPlanView: View {
             }
             .frame(width: 70, alignment: .leading)
             VStack(alignment: .leading, spacing: 6) {
+                if let focus = day.focus {
+                    Text(focus)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                }
                 ForEach(day.tasks) { task in
                     PlanTaskRow(task: task, day: day, compact: true)
                 }
@@ -344,7 +394,7 @@ struct PlanTaskRow: View {
         case .vocabulary: return "Study"
         case .mockTest: return "Go to Test"
         case .reviewMock: return "Review"
-        case .rest, .examDay: return "Open"
+        case .note, .rest, .examDay: return "Open"
         }
     }
 
@@ -358,6 +408,7 @@ struct PlanTaskRow: View {
         case .reviewMock: return "magnifyingglass"
         case .essayOutline: return "pencil.and.outline"
         case .lightReview: return "leaf"
+        case .note: return "person.crop.circle.badge.checkmark"
         case .rest: return "moon.zzz"
         case .examDay: return "flag.checkered"
         }
@@ -373,6 +424,7 @@ struct PlanTaskRow: View {
         case .vocabulary: return Theme.correct
         case .mockTest, .reviewMock: return .blue
         case .essayOutline: return .purple
+        case .note: return .orange
         case .lightReview, .rest: return .gray
         case .examDay: return .red
         }

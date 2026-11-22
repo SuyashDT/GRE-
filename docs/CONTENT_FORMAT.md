@@ -123,6 +123,10 @@ one value per category.
               "category": "textCompletion", "summary": "…", "questions": [ … ] } ] }
 ```
 
+The app's own sets are one question type each, untimed, with at least 4 questions.
+A coach's sets use the same format from the `Coach` folder and may also mix question
+types, run against the clock and carry a note: see [COACH.md](COACH.md).
+
 ## Vocabulary
 
 ```jsonc
