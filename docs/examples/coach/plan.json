@@ -1,7 +1,7 @@
 {
   "version": 1,
   "title": "Example plan",
-  "examDate": "2026-12-11",
+  "examDate": "2026-12-18",
   "updated": "2026-11-22",
   "note": "An example of a coach's plan. Days the coach leaves out are simply not shown.",
   "days": [
@@ -40,9 +40,9 @@
       ]
     },
     {
-      "date": "2026-12-11",
+      "date": "2026-12-18",
       "tasks": [
-        { "id": "1211-exam", "kind": "exam" }
+        { "id": "1218-exam", "kind": "exam" }
       ]
     }
   ]

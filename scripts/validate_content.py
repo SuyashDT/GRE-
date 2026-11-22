@@ -441,7 +441,7 @@ def validate_plan(path, ids):
             err(path, f"{key} must be a non-empty string")
     for key in ("examDate", "updated"):
         if key in data and parse_day(data[key]) is None:
-            err(path, f"{key} must be a date like 2026-12-11, got {data[key]!r}")
+            err(path, f"{key} must be a date like 2026-12-18, got {data[key]!r}")
     exam_date = parse_day(data.get("examDate"))
     days = data.get("days")
     if not isinstance(days, list) or not days:

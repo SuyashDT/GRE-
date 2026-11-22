@@ -29,10 +29,10 @@ When this file exists and can be read, the Study Plan screen, today's plan on th
 ```json
 {
   "version": 1,
-  "title": "GRE on Fri 11 Dec",
-  "examDate": "2026-12-11",
+  "title": "GRE on Fri 18 Dec",
+  "examDate": "2026-12-18",
   "updated": "2026-11-22",
-  "note": "IELTS comes first, so GRE is lighter until 5 Dec.",
+  "note": "The first two weeks are lighter. Full days start on 6 Dec.",
   "days": [
     {
       "date": "2026-11-22",

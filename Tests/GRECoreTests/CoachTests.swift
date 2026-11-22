@@ -91,8 +91,8 @@ final class CoachTests: XCTestCase {
 
     func testPlanFileKeepsGoodItemsAndNotesTheBrokenOnes() throws {
         let file = try decodePlan("""
-        { "version": 1, "title": "GRE on Fri 11 Dec", "examDate": "2026-12-11", "updated": "2026-11-22",
-          "note": "IELTS first.", "futureField": { "ignored": true },
+        { "version": 1, "title": "GRE on Fri 18 Dec", "examDate": "2026-12-18", "updated": "2026-11-22",
+          "note": "Lighter days first.", "futureField": { "ignored": true },
           "days": [
             { "date": "2026-11-22", "focus": "Baseline", "tasks": [
                 { "id": "a", "kind": "lesson", "ref": "gre-overview" },
@@ -103,8 +103,8 @@ final class CoachTests: XCTestCase {
             { "focus": "No date" },
             { "date": "2026-11-23" } ] }
         """)
-        XCTAssertEqual(file.title, "GRE on Fri 11 Dec")
-        XCTAssertEqual(file.examDate, "2026-12-11")
+        XCTAssertEqual(file.title, "GRE on Fri 18 Dec")
+        XCTAssertEqual(file.examDate, "2026-12-18")
         XCTAssertEqual(file.days.map(\.date), ["2026-11-22", "2026-11-23"])
         XCTAssertEqual(file.days[0].tasks.map(\.id), ["a", "c"])
         XCTAssertEqual(file.days[1].tasks, [])
@@ -121,7 +121,7 @@ final class CoachTests: XCTestCase {
     func testPlanResolvesAgainstTheContent() throws {
         let library = try loadLibrary()
         let resolved = try resolve("""
-        { "version": 1, "title": "GRE on Fri 11 Dec", "examDate": "2026-12-11", "updated": "2026-11-22", "note": "IELTS first.",
+        { "version": 1, "title": "GRE on Fri 18 Dec", "examDate": "2026-12-18", "updated": "2026-11-22", "note": "Lighter days first.",
           "days": [
             { "date": "2026-11-24", "focus": "Build 1", "tasks": [
                 { "id": "1124-tc", "kind": "lesson", "ref": "tc" },
@@ -137,18 +137,18 @@ final class CoachTests: XCTestCase {
                 { "id": "1122-vocab", "kind": "vocabulary" } ] },
             { "date": "2026-11-22", "tasks": [ { "id": "dup-day", "kind": "rest" } ] },
             { "date": "24 Nov", "tasks": [ { "id": "bad-date", "kind": "rest" } ] },
-            { "date": "2026-12-05", "tasks": [ { "id": "1205-rest", "kind": "rest", "title": "IELTS exam day" } ] },
-            { "date": "2026-12-11", "tasks": [ { "id": "1211-exam", "kind": "exam" } ] } ] }
+            { "date": "2026-12-12", "tasks": [ { "id": "1212-rest", "kind": "rest", "title": "Day off" } ] },
+            { "date": "2026-12-18", "tasks": [ { "id": "1218-exam", "kind": "exam" } ] } ] }
         """, library: library)
         let plan = try XCTUnwrap(resolved.plan)
 
         // Days are sorted, and days that are missing from the file are simply not there.
-        XCTAssertEqual(plan.days.map(\.id), ["2026-11-22", "2026-11-24", "2026-12-05", "2026-12-11"])
-        XCTAssertEqual(plan.examDate, date(11, month: 12))
+        XCTAssertEqual(plan.days.map(\.id), ["2026-11-22", "2026-11-24", "2026-12-12", "2026-12-18"])
+        XCTAssertEqual(plan.examDate, date(18, month: 12))
         XCTAssertTrue(plan.isCoachPlan)
-        XCTAssertEqual(plan.coach?.title, "GRE on Fri 11 Dec")
+        XCTAssertEqual(plan.coach?.title, "GRE on Fri 18 Dec")
         XCTAssertEqual(plan.coach?.updated, date(22))
-        XCTAssertEqual(plan.coach?.note, "IELTS first.")
+        XCTAssertEqual(plan.coach?.note, "Lighter days first.")
         XCTAssertNil(plan.day(for: date(23), calendar: calendar))
 
         let first = plan.days[0]
@@ -178,7 +178,7 @@ final class CoachTests: XCTestCase {
         XCTAssertEqual(second.tasks[3].title, "Something new")
 
         XCTAssertTrue(plan.days[2].isRestDay)
-        XCTAssertEqual(plan.days[2].tasks[0].title, "IELTS exam day")
+        XCTAssertEqual(plan.days[2].tasks[0].title, "Day off")
         XCTAssertEqual(plan.days[3].phase, .examDay)
         XCTAssertEqual(plan.days[3].tasks.map(\.kind), [.examDay])
         XCTAssertEqual(plan.days[2].phase, .finalWeek)
@@ -225,7 +225,7 @@ final class CoachTests: XCTestCase {
     func testCoachTasksTickLikeGeneratedOnes() throws {
         let library = try loadLibrary()
         let plan = try XCTUnwrap(resolve("""
-        { "examDate": "2026-12-11", "days": [
+        { "examDate": "2026-12-18", "days": [
             { "date": "2026-11-24", "tasks": [
                 { "id": "lesson", "kind": "lesson", "ref": "tc" },
                 { "id": "drill", "kind": "drill", "ref": "d-tc" },
@@ -456,7 +456,7 @@ final class CoachTests: XCTestCase {
         XCTAssertEqual(resolved.problems, [])
         let plan = try XCTUnwrap(resolved.plan)
         XCTAssertEqual(plan.days.count, 5)
-        XCTAssertEqual(plan.examDate, date(11, month: 12))
+        XCTAssertEqual(plan.examDate, date(18, month: 12))
         let kinds = plan.days.flatMap(\.tasks).map(\.kind)
         XCTAssertTrue(kinds.contains(.drill("example-verbal-timed")))
         XCTAssertTrue(kinds.contains(.mockTest("mock-test-2")))
